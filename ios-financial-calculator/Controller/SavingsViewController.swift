@@ -37,55 +37,55 @@ class SavingsViewController: UIViewController {
         if let input = pmtFld.text {
             if input.isEmpty {
                 validation = false
-                //                loanAmountFld.showEr÷\r()
+                pmtFld.showErr()
             } else {
                 if let value = Double(input as String) {
                     pmt = value
-                    //                    loanAmountFld.success()
+                    pmtFld.success()
                 }else{
                     validation = false
-                    //                    loanAmountFld.showErr()
+                    pmtFld.showErr()
                 }
             }
         }else{
             validation = false
-            //            loanAmountFld.showErr()
+            pmtFld.showErr()
         }
         
         if let input = interestRateFld.text {
             if input.isEmpty {
                 validation = false
-                //                interestFld.showErr()
+                interestRateFld.showErr()
             } else {
                 if let value = Double(input as String) {
                     interestRate = value
-                    //                    interestFld.success()
+                    interestRateFld.success()
                 }else{
                     validation = false
-                    //                    interestFld.showErr()
+                    interestRateFld.showErr()
                 }
             }
         }else{
             validation = false
-            //            interestFld.showErr()
+            interestRateFld.showErr()
         }
         
         if let input = numOfYearsFld.text {
             if input.isEmpty {
                 validation = false
-                //                noOfYearsFld.showErr()
+                numOfYearsFld.showErr()
             } else {
                 if let value = Int(input as String) {
                     numOfYears = value
-                    //                    noOfYearsFld.success()
+                    numOfYearsFld.success()
                 }else{
                     validation = false
-                    //                    noOfYearsFld.showErr()
+                    numOfYearsFld.showErr()
                 }
             }
         }else{
             validation = false
-            //            noOfYearsFld.showErr()
+            numOfYearsFld.showErr()
             
         }
         

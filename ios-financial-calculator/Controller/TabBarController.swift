@@ -21,3 +21,15 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     }
 
 }
+
+extension UIView{
+    func showErr(){
+        self.layer.borderColor = UIColor.red.cgColor
+        self.layer.borderWidth = 2
+    }
+    
+    func success() {
+        self.layer.borderColor = UIColor.lightText.cgColor
+        self.layer.borderWidth = 0
+    }
+}

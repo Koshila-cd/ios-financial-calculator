@@ -21,8 +21,6 @@ class MortgageViewController: UIViewController {
 
         self.view.applyGradient(colours: [.black, .purple, .darkGray], locations: [0.0, 0.5, 1.0])
         
-        paymentLbl.text = "-"
-        
     }
     
     /**
@@ -39,19 +37,19 @@ class MortgageViewController: UIViewController {
         if let input = loanAmountFld.text {
             if input.isEmpty {
                 validation = false
-//                loanAmountFld.showEr÷\r()
+                loanAmountFld.showErr()
             } else {
                 if let value = Double(input as String) {
                     loanAmount = value
-//                    loanAmountFld.success()
+                    loanAmountFld.success()
                 }else{
                     validation = false
-//                    loanAmountFld.showErr()
+                    loanAmountFld.showErr()
                 }
             }
         }else{
             validation = false
-//            loanAmountFld.showErr()
+            loanAmountFld.showErr()
         }
         
         if let input = interestFld.text {
@@ -61,33 +59,33 @@ class MortgageViewController: UIViewController {
             } else {
                 if let value = Double(input as String) {
                     interestRate = value
-//                    interestFld.success()
+                    interestFld.success()
                 }else{
                     validation = false
-//                    interestFld.showErr()
+                    interestFld.showErr()
                 }
             }
         }else{
             validation = false
-//            interestFld.showErr()
+            interestFld.showErr()
         }
         
         if let input = noOfYearsFld.text {
             if input.isEmpty {
                 validation = false
-//                noOfYearsFld.showErr()
+                noOfYearsFld.showErr()
             } else {
                 if let value = Int(input as String) {
                     numOfYears = value
-//                    noOfYearsFld.success()
+                    noOfYearsFld.success()
                 }else{
                     validation = false
-//                    noOfYearsFld.showErr()
+                    noOfYearsFld.showErr()
                 }
             }
         }else{
             validation = false
-//            noOfYearsFld.showErr()
+            noOfYearsFld.showErr()
             
         }
         
@@ -117,7 +115,7 @@ class MortgageViewController: UIViewController {
         // number of months calculated from the given number of years
         let n = Double(12 * numOfYears)
         let t = Double(numOfYears)
-//        let formulae1: Double = ((loanAmount*n)+interestRate)/n
+
         let formulae1: Double = loanAmount*(interestRate/n)
         
         let formulae2: Double = pow((1+(interestRate/n)),n*t)

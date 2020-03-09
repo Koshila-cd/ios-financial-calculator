@@ -32,6 +32,7 @@
 		458A187D24162AA100FDFC8C /* PresentValueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 458A187B24162AA100FDFC8C /* PresentValueViewController.xib */; };
 		458A187F241665F400FDFC8C /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A187E241665F400FDFC8C /* HelpViewController.swift */; };
 		458A1881241670B900FDFC8C /* Mortgage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A1880241670B900FDFC8C /* Mortgage.swift */; };
+		458A18832416B91700FDFC8C /* InterestUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A18822416B91700FDFC8C /* InterestUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		458A187B24162AA100FDFC8C /* PresentValueViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PresentValueViewController.xib; sourceTree = "<group>"; };
 		458A187E241665F400FDFC8C /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		458A1880241670B900FDFC8C /* Mortgage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mortgage.swift; sourceTree = "<group>"; };
+		458A18822416B91700FDFC8C /* InterestUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +209,7 @@
 				458A18762416261000FDFC8C /* FutureValueViewController.xib */,
 				458A187A24162AA100FDFC8C /* PresentValueViewController.swift */,
 				458A187B24162AA100FDFC8C /* PresentValueViewController.xib */,
+				458A18822416B91700FDFC8C /* InterestUIView.swift */,
 			);
 			path = Forms;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				458A186D2415731400FDFC8C /* LoanViewController.swift in Sources */,
 				458A186B2415702200FDFC8C /* MortgageViewController.swift in Sources */,
 				458A18652415501E00FDFC8C /* InterestViewController.swift in Sources */,
+				458A18832416B91700FDFC8C /* InterestUIView.swift in Sources */,
 				458A185E2415447300FDFC8C /* CalculateViewController.swift in Sources */,
 				458A186924156F9C00FDFC8C /* SavingsViewController.swift in Sources */,
 				458A1832241540A600FDFC8C /* ios_financial_calculator.xcdatamodeld in Sources */,

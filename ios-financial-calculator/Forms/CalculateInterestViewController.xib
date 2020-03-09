@@ -12,15 +12,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalculateInterestViewController" customModule="ios_financial_calculator" customModuleProvider="target">
             <connections>
-                <outlet property="interestLbl" destination="Mgi-tc-cWa" id="eLH-Cs-tRO"/>
-                <outlet property="loanAmountFld" destination="5xD-Zs-yQS" id="Nl8-wC-eNr"/>
-                <outlet property="numOfYearsFld" destination="SB6-u1-qDD" id="hUP-58-UgF"/>
-                <outlet property="totalAmountFld" destination="Ygm-BQ-Xjn" id="ZVy-hn-4nZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="InterestUIView" customModule="ios_financial_calculator" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -86,7 +82,7 @@
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <connections>
-                                <action selector="calculateInterest:" destination="-1" eventType="touchUpInside" id="YbY-7J-q4y"/>
+                                <action selector="calculateInterest:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="i4r-cg-Dik"/>
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mgi-tc-cWa">
@@ -129,6 +125,12 @@
                 <constraint firstItem="YK5-ZV-jPe" firstAttribute="top" secondItem="Ygm-BQ-Xjn" secondAttribute="bottom" constant="15" id="xQF-qh-9lN"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <connections>
+                <outlet property="interestLbl" destination="Mgi-tc-cWa" id="N5v-YB-ANh"/>
+                <outlet property="loanAmountFld" destination="5xD-Zs-yQS" id="HPl-ep-Wj8"/>
+                <outlet property="numOfYearsFld" destination="SB6-u1-qDD" id="lzX-3r-Ox5"/>
+                <outlet property="totalAmountFld" destination="Ygm-BQ-Xjn" id="CWt-3C-QCB"/>
+            </connections>
             <point key="canvasLocation" x="47.826086956521742" y="35.054347826086961"/>
         </view>
     </objects>
