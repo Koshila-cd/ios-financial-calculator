@@ -2,7 +2,7 @@
 //  ios_financial_calculatorUITests.swift
 //  ios-financial-calculatorUITests
 //
-//  Created by IIT on 3/8/20.
+//  Created by Koshila Dissanayake on 3/8/20.
 //  Copyright © 2020 IIT. All rights reserved.
 //
 

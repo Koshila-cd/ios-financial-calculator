@@ -31,6 +31,7 @@
 		458A187C24162AA100FDFC8C /* PresentValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A187A24162AA100FDFC8C /* PresentValueViewController.swift */; };
 		458A187D24162AA100FDFC8C /* PresentValueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 458A187B24162AA100FDFC8C /* PresentValueViewController.xib */; };
 		458A187F241665F400FDFC8C /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A187E241665F400FDFC8C /* HelpViewController.swift */; };
+		458A1881241670B900FDFC8C /* Mortgage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A1880241670B900FDFC8C /* Mortgage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		458A187A24162AA100FDFC8C /* PresentValueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentValueViewController.swift; sourceTree = "<group>"; };
 		458A187B24162AA100FDFC8C /* PresentValueViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PresentValueViewController.xib; sourceTree = "<group>"; };
 		458A187E241665F400FDFC8C /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		458A1880241670B900FDFC8C /* Mortgage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mortgage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 		458A187024160AAC00FDFC8C /* Calculation */ = {
 			isa = PBXGroup;
 			children = (
+				458A1880241670B900FDFC8C /* Mortgage.swift */,
 			);
 			path = Calculation;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				458A185C2415415100FDFC8C /* TabBarController.swift in Sources */,
 				458A182A241540A600FDFC8C /* AppDelegate.swift in Sources */,
 				458A186324154C5000FDFC8C /* CalculateIconViewCell.swift in Sources */,
+				458A1881241670B900FDFC8C /* Mortgage.swift in Sources */,
 				458A186D2415731400FDFC8C /* LoanViewController.swift in Sources */,
 				458A186B2415702200FDFC8C /* MortgageViewController.swift in Sources */,
 				458A18652415501E00FDFC8C /* InterestViewController.swift in Sources */,
