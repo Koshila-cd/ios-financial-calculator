@@ -2,7 +2,7 @@
 //  CalculateViewController.swift
 //  ios-financial-calculator
 //
-//  Created by IIT on 3/8/20.
+//  Created by Koshila Dissanayake on 3/8/20.
 //  Copyright © 2020 IIT. All rights reserved.
 //
 
@@ -16,19 +16,7 @@ class CalculateViewController: UIViewController, UICollectionViewDataSource, UIC
         super.viewDidLoad()
 
         generateCalculateIcons()
-        // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     func generateCalculateIcons() {
         let interest = CalculateIcons(name: "Interest", icon: UIImage(named: "savings-icon")!, segueID: "goToInterestCalculation", cellColour: UIColor(red: 30/255, green: 30/255, blue: 30/255, alpha: 1.00))
@@ -51,7 +39,6 @@ class CalculateViewController: UIViewController, UICollectionViewDataSource, UIC
         cell.calculateIcon.image = calculateIcons[indexPath.row].getCalculateIcon()
         
         
-        //Card(cell) styles
         cell.contentView.backgroundColor = calculateIcons[indexPath.row].getCellColour()
         cell.contentView.layer.cornerRadius = 10.0
         cell.contentView.layer.borderWidth = 1.0

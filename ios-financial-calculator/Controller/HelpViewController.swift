@@ -2,7 +2,7 @@
 //  HelpViewController.swift
 //  ios-financial-calculator
 //
-//  Created by IIT on 3/9/20.
+//  Created by Koshila Dissanayake on 3/9/20.
 //  Copyright © 2020 IIT. All rights reserved.
 //
 
@@ -15,7 +15,6 @@ class HelpViewController: UIViewController {
 
     }
     
-
     @IBOutlet weak var helpView: UIView!
     
 
