@@ -683,9 +683,9 @@
                                 <rect key="frame" x="20" y="99" width="374" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="Compund Interest"/>
-                                    <segment title="Present Value"/>
                                     <segment title="Loan Terms"/>
+                                    <segment title="Principle Amount"/>
+                                    <segment title="Compound Interest"/>
                                 </segments>
                                 <connections>
                                     <action selector="segmentControl:" destination="aLN-e1-hb1" eventType="valueChanged" id="tYc-kJ-tGS"/>
@@ -700,9 +700,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="uGu-au-w5h"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Calculate" id="3LV-xb-dFr">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="W5i-ox-DSw"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Calculate" id="3LV-xb-dFr"/>
                     <connections>
                         <outlet property="segmentView" destination="bVP-YP-su6" id="ycf-BT-HlC"/>
                     </connections>

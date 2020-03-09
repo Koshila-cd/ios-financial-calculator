@@ -35,6 +35,15 @@
 		458A18832416B91700FDFC8C /* InterestUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A18822416B91700FDFC8C /* InterestUIView.swift */; };
 		458A18852416C21B00FDFC8C /* LoanPaymentUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A18842416C21B00FDFC8C /* LoanPaymentUIView.swift */; };
 		458A18872416C98600FDFC8C /* CompundInterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A18862416C98600FDFC8C /* CompundInterestViewController.swift */; };
+		458A188A2416D26300FDFC8C /* CalculateCIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A18882416D26300FDFC8C /* CalculateCIViewController.swift */; };
+		458A188B2416D26300FDFC8C /* CalculateCIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 458A18892416D26300FDFC8C /* CalculateCIViewController.xib */; };
+		458A188D2416D4DB00FDFC8C /* CompoundInterestUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A188C2416D4DB00FDFC8C /* CompoundInterestUIView.swift */; };
+		458A18902416DF1300FDFC8C /* PresentValueCIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A188E2416DF1300FDFC8C /* PresentValueCIViewController.swift */; };
+		458A18912416DF1300FDFC8C /* PresentValueCIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 458A188F2416DF1300FDFC8C /* PresentValueCIViewController.xib */; };
+		458A18942416DFA100FDFC8C /* LoanTermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A18922416DFA100FDFC8C /* LoanTermsViewController.swift */; };
+		458A18952416DFA100FDFC8C /* LoanTermsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 458A18932416DFA100FDFC8C /* LoanTermsViewController.xib */; };
+		458A18972416E43C00FDFC8C /* PresentValueCIUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A18962416E43C00FDFC8C /* PresentValueCIUIView.swift */; };
+		458A189A2416EA2A00FDFC8C /* LoanTermsUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A18992416EA2A00FDFC8C /* LoanTermsUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +98,15 @@
 		458A18822416B91700FDFC8C /* InterestUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestUIView.swift; sourceTree = "<group>"; };
 		458A18842416C21B00FDFC8C /* LoanPaymentUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanPaymentUIView.swift; sourceTree = "<group>"; };
 		458A18862416C98600FDFC8C /* CompundInterestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompundInterestViewController.swift; sourceTree = "<group>"; };
+		458A18882416D26300FDFC8C /* CalculateCIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateCIViewController.swift; sourceTree = "<group>"; };
+		458A18892416D26300FDFC8C /* CalculateCIViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculateCIViewController.xib; sourceTree = "<group>"; };
+		458A188C2416D4DB00FDFC8C /* CompoundInterestUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompoundInterestUIView.swift; sourceTree = "<group>"; };
+		458A188E2416DF1300FDFC8C /* PresentValueCIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentValueCIViewController.swift; sourceTree = "<group>"; };
+		458A188F2416DF1300FDFC8C /* PresentValueCIViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PresentValueCIViewController.xib; sourceTree = "<group>"; };
+		458A18922416DFA100FDFC8C /* LoanTermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanTermsViewController.swift; sourceTree = "<group>"; };
+		458A18932416DFA100FDFC8C /* LoanTermsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoanTermsViewController.xib; sourceTree = "<group>"; };
+		458A18962416E43C00FDFC8C /* PresentValueCIUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentValueCIUIView.swift; sourceTree = "<group>"; };
+		458A18992416EA2A00FDFC8C /* LoanTermsUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanTermsUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +157,7 @@
 		458A1828241540A600FDFC8C /* ios-financial-calculator */ = {
 			isa = PBXGroup;
 			children = (
+				458A18982416E45700FDFC8C /* UIViews */,
 				458A18792416294700FDFC8C /* Forms */,
 				458A187024160AAC00FDFC8C /* Calculation */,
 				458A185F2415498700FDFC8C /* Entity */,
@@ -214,10 +233,26 @@
 				458A18762416261000FDFC8C /* FutureValueViewController.xib */,
 				458A187A24162AA100FDFC8C /* PresentValueViewController.swift */,
 				458A187B24162AA100FDFC8C /* PresentValueViewController.xib */,
-				458A18822416B91700FDFC8C /* InterestUIView.swift */,
-				458A18842416C21B00FDFC8C /* LoanPaymentUIView.swift */,
+				458A18882416D26300FDFC8C /* CalculateCIViewController.swift */,
+				458A18892416D26300FDFC8C /* CalculateCIViewController.xib */,
+				458A188E2416DF1300FDFC8C /* PresentValueCIViewController.swift */,
+				458A188F2416DF1300FDFC8C /* PresentValueCIViewController.xib */,
+				458A18922416DFA100FDFC8C /* LoanTermsViewController.swift */,
+				458A18932416DFA100FDFC8C /* LoanTermsViewController.xib */,
 			);
 			path = Forms;
+			sourceTree = "<group>";
+		};
+		458A18982416E45700FDFC8C /* UIViews */ = {
+			isa = PBXGroup;
+			children = (
+				458A18822416B91700FDFC8C /* InterestUIView.swift */,
+				458A18842416C21B00FDFC8C /* LoanPaymentUIView.swift */,
+				458A188C2416D4DB00FDFC8C /* CompoundInterestUIView.swift */,
+				458A18962416E43C00FDFC8C /* PresentValueCIUIView.swift */,
+				458A18992416EA2A00FDFC8C /* LoanTermsUIView.swift */,
+			);
+			path = UIViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,11 +360,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				458A187D24162AA100FDFC8C /* PresentValueViewController.xib in Resources */,
+				458A188B2416D26300FDFC8C /* CalculateCIViewController.xib in Resources */,
 				458A1837241540A700FDFC8C /* LaunchScreen.storyboard in Resources */,
 				458A18782416261000FDFC8C /* FutureValueViewController.xib in Resources */,
+				458A18912416DF1300FDFC8C /* PresentValueCIViewController.xib in Resources */,
 				458A1834241540A700FDFC8C /* Assets.xcassets in Resources */,
 				458A182F241540A600FDFC8C /* Main.storyboard in Resources */,
 				458A1874241625C000FDFC8C /* CalculateInterestViewController.xib in Resources */,
+				458A18952416DFA100FDFC8C /* LoanTermsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,17 +393,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				458A182C241540A600FDFC8C /* ViewController.swift in Sources */,
+				458A188D2416D4DB00FDFC8C /* CompoundInterestUIView.swift in Sources */,
 				458A185C2415415100FDFC8C /* TabBarController.swift in Sources */,
 				458A182A241540A600FDFC8C /* AppDelegate.swift in Sources */,
+				458A189A2416EA2A00FDFC8C /* LoanTermsUIView.swift in Sources */,
+				458A18942416DFA100FDFC8C /* LoanTermsViewController.swift in Sources */,
+				458A18972416E43C00FDFC8C /* PresentValueCIUIView.swift in Sources */,
 				458A186324154C5000FDFC8C /* CalculateIconViewCell.swift in Sources */,
 				458A1881241670B900FDFC8C /* Mortgage.swift in Sources */,
 				458A186D2415731400FDFC8C /* LoanViewController.swift in Sources */,
 				458A186B2415702200FDFC8C /* MortgageViewController.swift in Sources */,
+				458A18902416DF1300FDFC8C /* PresentValueCIViewController.swift in Sources */,
 				458A18652415501E00FDFC8C /* InterestViewController.swift in Sources */,
 				458A18832416B91700FDFC8C /* InterestUIView.swift in Sources */,
 				458A18872416C98600FDFC8C /* CompundInterestViewController.swift in Sources */,
 				458A185E2415447300FDFC8C /* CalculateViewController.swift in Sources */,
 				458A186924156F9C00FDFC8C /* SavingsViewController.swift in Sources */,
+				458A188A2416D26300FDFC8C /* CalculateCIViewController.swift in Sources */,
 				458A1832241540A600FDFC8C /* ios_financial_calculator.xcdatamodeld in Sources */,
 				458A1873241625C000FDFC8C /* CalculateInterestViewController.swift in Sources */,
 				458A187F241665F400FDFC8C /* HelpViewController.swift in Sources */,

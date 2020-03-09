@@ -2,7 +2,7 @@
 //  CompundInterestViewController.swift
 //  ios-financial-calculator
 //
-//  Created by koshila Dissanayake on 3/10/20.
+//  Created by Koshila Dissanayake on 3/10/20.
 //  Copyright © 2020 IIT. All rights reserved.
 //
 
@@ -20,9 +20,9 @@ class CompundInterestViewController: UIViewController {
         super.viewDidLoad()
         
         self.view.applyGradient(colours: [.black, .purple, .darkGray], locations: [0.0, 0.5, 1.0])
-        compundInterestView = CalculateInterestViewController().view
-        presentValueView = FutureValueViewController().view
-        loanTermsView = PresentValueViewController().view
+        compundInterestView = CalculateCIViewController().view
+        presentValueView = PresentValueCIViewController().view
+        loanTermsView = LoanTermsViewController().view
         
         segmentView.addSubview(compundInterestView)
         segmentView.addSubview(presentValueView)
@@ -31,13 +31,15 @@ class CompundInterestViewController: UIViewController {
     
     
     @IBAction func segmentControl(_ sender: UISegmentedControl) {
-        
         switch sender.selectedSegmentIndex {
-        case 0: segmentView.bringSubviewToFront(compundInterestView)
+        case 0:
+            segmentView.bringSubviewToFront(loanTermsView)
             break
-        case 1: segmentView.bringSubviewToFront(presentValueView)
+        case 1:
+            segmentView.bringSubviewToFront(presentValueView)
             break
-        case 2: segmentView.bringSubviewToFront(loanTermsView)
+        case 2:
+             segmentView.bringSubviewToFront(compundInterestView)
             break
         default:
             break

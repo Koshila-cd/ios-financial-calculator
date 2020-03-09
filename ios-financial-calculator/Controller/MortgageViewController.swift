@@ -8,6 +8,8 @@
 
 import UIKit
 
+let HISTORY_FORMULAR = "MORTGAGE"
+
 class MortgageViewController: UIViewController {
     
     
@@ -93,6 +95,18 @@ class MortgageViewController: UIViewController {
         if validation {
             let mortgage = mortgageFormulae(loanAmount: loanAmount, interestRate: interestRate, numOfYears: numOfYears)
             paymentLbl.text = "£" + String(format:"%.2f", mortgage)
+            
+            let saveMortgage: String = "Loan Amount: \(loanAmount) , Interest Rate: \(interestRate) , Loan Terms: \(numOfYears), Payment Amount : \(mortgage)"
+            print(saveMortgage)
+            var arr = UserDefaults.standard.array(forKey: HISTORY_FORMULAR) as? [String] ?? []
+            arr.append(saveMortgage)
+            UserDefaults.standard.set(arr, forKey: HISTORY_FORMULAR)
+            
+            let alert = UIAlertController(title: "Success", message: "The mortgage calculation was successully saved!", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            
+            
         }
         
         
