@@ -2,7 +2,7 @@
 //  CalculateInterestViewController.swift
 //  ios-financial-calculator
 //
-//  Created by IIT on 3/9/20.
+//  Created by Koshila Dissanayake on 3/9/20.
 //  Copyright © 2020 IIT. All rights reserved.
 //
 
@@ -14,6 +14,8 @@ class CalculateInterestViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        self.view.applyGradient(colours: [.black, .purple, .darkGray], locations: [0.0, 0.5, 1.0])
     }
 
     @IBOutlet weak var amountFld: UITextField!
@@ -22,6 +24,13 @@ class CalculateInterestViewController: UIViewController {
     @IBOutlet weak var interestValueLbl: UILabel!
     
     @IBAction func calculateBtn(_ sender: UIButton) {
+//        var amount: Double = 0
+//        var futureValue: Double = 0
+//        var interest: Double = 0
+        print(amountFld.text ?? 34.00)
+//        if let input = amountFld.text, !input.isEmpty {
+//            print(input)
+//        }
         
     }
     
@@ -34,7 +43,6 @@ class CalculateInterestViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
     
 
 }

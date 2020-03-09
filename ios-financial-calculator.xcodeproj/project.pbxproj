@@ -30,6 +30,7 @@
 		458A18782416261000FDFC8C /* FutureValueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 458A18762416261000FDFC8C /* FutureValueViewController.xib */; };
 		458A187C24162AA100FDFC8C /* PresentValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A187A24162AA100FDFC8C /* PresentValueViewController.swift */; };
 		458A187D24162AA100FDFC8C /* PresentValueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 458A187B24162AA100FDFC8C /* PresentValueViewController.xib */; };
+		458A187F241665F400FDFC8C /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A187E241665F400FDFC8C /* HelpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		458A18762416261000FDFC8C /* FutureValueViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FutureValueViewController.xib; sourceTree = "<group>"; };
 		458A187A24162AA100FDFC8C /* PresentValueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentValueViewController.swift; sourceTree = "<group>"; };
 		458A187B24162AA100FDFC8C /* PresentValueViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PresentValueViewController.xib; sourceTree = "<group>"; };
+		458A187E241665F400FDFC8C /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 				458A186824156F9C00FDFC8C /* SavingsViewController.swift */,
 				458A186A2415702200FDFC8C /* MortgageViewController.swift */,
 				458A186C2415731400FDFC8C /* LoanViewController.swift */,
+				458A187E241665F400FDFC8C /* HelpViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				458A186924156F9C00FDFC8C /* SavingsViewController.swift in Sources */,
 				458A1832241540A600FDFC8C /* ios_financial_calculator.xcdatamodeld in Sources */,
 				458A1873241625C000FDFC8C /* CalculateInterestViewController.swift in Sources */,
+				458A187F241665F400FDFC8C /* HelpViewController.swift in Sources */,
 				458A186724156C4400FDFC8C /* CalculateIconViewController.swift in Sources */,
 				458A1861241549B800FDFC8C /* CalculateIcons.swift in Sources */,
 				458A18772416261000FDFC8C /* FutureValueViewController.swift in Sources */,

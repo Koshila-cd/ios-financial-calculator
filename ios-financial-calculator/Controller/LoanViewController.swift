@@ -8,6 +8,23 @@
 
 import UIKit
 
+//extension UIView {
+//    @discardableResult
+//    func applyGradientLoan(colours: [UIColor]) -> CAGradientLayer {
+//        return self.applyGradient(colours: colours, locations: nil)
+//    }
+//
+//    @discardableResult
+//    func applyGradientLoan(colours: [UIColor], locations: [NSNumber]?) -> CAGradientLayer {
+//        let gradient: CAGradientLayer = CAGradientLayer()
+//        gradient.frame = self.bounds
+//        gradient.colors = colours.map { $0.cgColor }
+//        gradient.locations = locations
+//        self.layer.insertSublayer(gradient, at: 0)
+//        return gradient
+//    }
+//}
+
 class LoanViewController: UIViewController {
 
     @IBOutlet weak var segmentView: UIView!
@@ -19,6 +36,7 @@ class LoanViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.applyGradient(colours: [.black, .purple, .darkGray], locations: [0.0, 0.5, 1.0])
         interestView = CalculateInterestViewController().view
         futureValueView = FutureValueViewController().view
         presentValueView = PresentValueViewController().view
@@ -44,13 +62,13 @@ class LoanViewController: UIViewController {
     @IBAction func calSegment(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
-            segmentView.bringSubviewToFront(interestView)
+            segmentView.bringSubviewToFront(presentValueView)
             break
         case 1:
             segmentView.bringSubviewToFront(futureValueView)
             break
         case 2:
-            segmentView.bringSubviewToFront(presentValueView)
+            segmentView.bringSubviewToFront(interestView)
             break
         default:
             break
