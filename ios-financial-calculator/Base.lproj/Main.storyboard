@@ -311,7 +311,7 @@
                                 </constraints>
                                 <state key="normal" image="loan-100"/>
                                 <connections>
-                                    <segue destination="7yC-J3-ar1" kind="show" id="05d-1C-Ges"/>
+                                    <segue destination="XLl-rY-ETX" kind="show" id="hT2-Ja-EjT"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loans" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="me9-71-1eS">
@@ -322,6 +322,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gzl-tr-YKq">
+                                <rect key="frame" x="208" y="469" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -445,43 +450,43 @@
         <!--Loans-->
         <scene sceneID="30N-Qv-RhZ">
             <objects>
-                <viewController id="7yC-J3-ar1" customClass="LoanViewController" customModule="ios_financial_calculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7yC-J3-ar1" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tLY-K4-BRk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Present Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMq-q4-K84">
-                                <rect key="frame" x="20" y="108" width="94.5" height="18"/>
+                                <rect key="frame" x="20" y="64" width="94.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Future Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUL-zh-Mcq">
-                                <rect key="frame" x="20" y="179" width="86" height="18"/>
+                                <rect key="frame" x="20" y="135" width="86" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7x-gf-LfM">
-                                <rect key="frame" x="20" y="250" width="62" height="22"/>
+                                <rect key="frame" x="20" y="206" width="62" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FlD-3Y-dMt">
-                                <rect key="frame" x="20" y="325" width="60" height="18"/>
+                                <rect key="frame" x="20" y="281" width="60" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Payments per Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RVa-zA-a1v">
-                                <rect key="frame" x="20" y="396" width="205" height="18"/>
+                                <rect key="frame" x="20" y="352" width="205" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X6Y-kc-nzX">
-                                <rect key="frame" x="20" y="134" width="374" height="30"/>
+                                <rect key="frame" x="20" y="90" width="374" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="8Uq-aK-yXx"/>
                                     <constraint firstAttribute="height" constant="30" id="RVU-pZ-PL3"/>
@@ -491,7 +496,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1lj-K3-5nW">
-                                <rect key="frame" x="20" y="205" width="374" height="30"/>
+                                <rect key="frame" x="20" y="161" width="374" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="yf8-Ub-eA2"/>
                                     <constraint firstAttribute="height" constant="30" id="zYJ-IS-Fvu"/>
@@ -501,7 +506,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="48D-fa-9ww">
-                                <rect key="frame" x="20" y="280" width="374" height="30"/>
+                                <rect key="frame" x="20" y="236" width="374" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="EzW-PT-SZr"/>
                                     <constraint firstAttribute="width" constant="374" id="yzZ-x6-q0Y"/>
@@ -511,7 +516,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HaP-BX-Hd0">
-                                <rect key="frame" x="20" y="351" width="374" height="30"/>
+                                <rect key="frame" x="20" y="307" width="374" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Tdq-Cn-xJj"/>
                                     <constraint firstAttribute="width" constant="374" id="h3f-zC-JqK"/>
@@ -521,7 +526,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0vS-ZF-bm6">
-                                <rect key="frame" x="20" y="422" width="374" height="30"/>
+                                <rect key="frame" x="20" y="378" width="374" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="bn0-ft-afe"/>
                                     <constraint firstAttribute="width" constant="374" id="ciR-At-dgE"/>
@@ -531,7 +536,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ADe-ra-wgj">
-                                <rect key="frame" x="20" y="493" width="374" height="30"/>
+                                <rect key="frame" x="20" y="449" width="374" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="xmk-fZ-mAA"/>
                                     <constraint firstAttribute="height" constant="30" id="yOh-le-WnC"/>
@@ -541,7 +546,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compounds per Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOl-8t-BaV">
-                                <rect key="frame" x="20" y="467" width="144.5" height="18"/>
+                                <rect key="frame" x="20" y="423" width="144.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -582,7 +587,44 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="05z-pK-6Ya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1657.9710144927537" y="-255.13392857142856"/>
+            <point key="canvasLocation" x="1570" y="37"/>
+        </scene>
+        <!--Loan View Controller-->
+        <scene sceneID="Bt0-Bq-T9T">
+            <objects>
+                <viewController id="XLl-rY-ETX" customClass="LoanViewController" customModule="ios_financial_calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bHq-hE-Imw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xTa-D7-cvy">
+                                <rect key="frame" x="20" y="101" width="374" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Interest"/>
+                                    <segment title="Final Value"/>
+                                    <segment title="Present value"/>
+                                </segments>
+                                <connections>
+                                    <action selector="calSegment:" destination="XLl-rY-ETX" eventType="valueChanged" id="kTf-yD-LOx"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P6k-j0-xSR">
+                                <rect key="frame" x="20" y="170" width="374" height="596"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Dt3-vh-6fn"/>
+                    </view>
+                    <connections>
+                        <outlet property="segmentView" destination="P6k-j0-xSR" id="vFO-62-4Iz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tIa-f2-I73" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2418.840579710145" y="-189.50892857142856"/>
         </scene>
         <!--Savings-->
         <scene sceneID="Ruq-re-eld">

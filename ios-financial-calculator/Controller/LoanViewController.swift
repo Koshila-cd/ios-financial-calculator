@@ -10,10 +10,24 @@ import UIKit
 
 class LoanViewController: UIViewController {
 
+    @IBOutlet weak var segmentView: UIView!
+    
+    var interestView: UIView!
+    var futureValueView: UIView!
+    var presentValueView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        interestView = CalculateInterestViewController().view
+        futureValueView = FutureValueViewController().view
+        presentValueView = PresentValueViewController().view
+        
+        segmentView.addSubview(interestView)
+        segmentView.addSubview(futureValueView)
+        segmentView.addSubview(presentValueView)
+        
+        
     }
     
 
@@ -27,4 +41,19 @@ class LoanViewController: UIViewController {
     }
     */
 
+    @IBAction func calSegment(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            segmentView.bringSubviewToFront(interestView)
+            break
+        case 1:
+            segmentView.bringSubviewToFront(futureValueView)
+            break
+        case 2:
+            segmentView.bringSubviewToFront(presentValueView)
+            break
+        default:
+            break
+        }
+    }
 }

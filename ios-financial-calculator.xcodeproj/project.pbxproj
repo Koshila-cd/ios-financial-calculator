@@ -24,6 +24,12 @@
 		458A186924156F9C00FDFC8C /* SavingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A186824156F9C00FDFC8C /* SavingsViewController.swift */; };
 		458A186B2415702200FDFC8C /* MortgageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A186A2415702200FDFC8C /* MortgageViewController.swift */; };
 		458A186D2415731400FDFC8C /* LoanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A186C2415731400FDFC8C /* LoanViewController.swift */; };
+		458A1873241625C000FDFC8C /* CalculateInterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A1871241625C000FDFC8C /* CalculateInterestViewController.swift */; };
+		458A1874241625C000FDFC8C /* CalculateInterestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 458A1872241625C000FDFC8C /* CalculateInterestViewController.xib */; };
+		458A18772416261000FDFC8C /* FutureValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A18752416261000FDFC8C /* FutureValueViewController.swift */; };
+		458A18782416261000FDFC8C /* FutureValueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 458A18762416261000FDFC8C /* FutureValueViewController.xib */; };
+		458A187C24162AA100FDFC8C /* PresentValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A187A24162AA100FDFC8C /* PresentValueViewController.swift */; };
+		458A187D24162AA100FDFC8C /* PresentValueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 458A187B24162AA100FDFC8C /* PresentValueViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +73,12 @@
 		458A186824156F9C00FDFC8C /* SavingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsViewController.swift; sourceTree = "<group>"; };
 		458A186A2415702200FDFC8C /* MortgageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageViewController.swift; sourceTree = "<group>"; };
 		458A186C2415731400FDFC8C /* LoanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanViewController.swift; sourceTree = "<group>"; };
+		458A1871241625C000FDFC8C /* CalculateInterestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateInterestViewController.swift; sourceTree = "<group>"; };
+		458A1872241625C000FDFC8C /* CalculateInterestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculateInterestViewController.xib; sourceTree = "<group>"; };
+		458A18752416261000FDFC8C /* FutureValueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureValueViewController.swift; sourceTree = "<group>"; };
+		458A18762416261000FDFC8C /* FutureValueViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FutureValueViewController.xib; sourceTree = "<group>"; };
+		458A187A24162AA100FDFC8C /* PresentValueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentValueViewController.swift; sourceTree = "<group>"; };
+		458A187B24162AA100FDFC8C /* PresentValueViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PresentValueViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +129,8 @@
 		458A1828241540A600FDFC8C /* ios-financial-calculator */ = {
 			isa = PBXGroup;
 			children = (
+				458A18792416294700FDFC8C /* Forms */,
+				458A187024160AAC00FDFC8C /* Calculation */,
 				458A185F2415498700FDFC8C /* Entity */,
 				458A185A241540FE00FDFC8C /* Controller */,
 				458A1829241540A600FDFC8C /* AppDelegate.swift */,
@@ -169,6 +183,26 @@
 				458A186224154C5000FDFC8C /* CalculateIconViewCell.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		458A187024160AAC00FDFC8C /* Calculation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Calculation;
+			sourceTree = "<group>";
+		};
+		458A18792416294700FDFC8C /* Forms */ = {
+			isa = PBXGroup;
+			children = (
+				458A1871241625C000FDFC8C /* CalculateInterestViewController.swift */,
+				458A1872241625C000FDFC8C /* CalculateInterestViewController.xib */,
+				458A18752416261000FDFC8C /* FutureValueViewController.swift */,
+				458A18762416261000FDFC8C /* FutureValueViewController.xib */,
+				458A187A24162AA100FDFC8C /* PresentValueViewController.swift */,
+				458A187B24162AA100FDFC8C /* PresentValueViewController.xib */,
+			);
+			path = Forms;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,9 +309,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				458A187D24162AA100FDFC8C /* PresentValueViewController.xib in Resources */,
 				458A1837241540A700FDFC8C /* LaunchScreen.storyboard in Resources */,
+				458A18782416261000FDFC8C /* FutureValueViewController.xib in Resources */,
 				458A1834241540A700FDFC8C /* Assets.xcassets in Resources */,
 				458A182F241540A600FDFC8C /* Main.storyboard in Resources */,
+				458A1874241625C000FDFC8C /* CalculateInterestViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,8 +349,11 @@
 				458A185E2415447300FDFC8C /* CalculateViewController.swift in Sources */,
 				458A186924156F9C00FDFC8C /* SavingsViewController.swift in Sources */,
 				458A1832241540A600FDFC8C /* ios_financial_calculator.xcdatamodeld in Sources */,
+				458A1873241625C000FDFC8C /* CalculateInterestViewController.swift in Sources */,
 				458A186724156C4400FDFC8C /* CalculateIconViewController.swift in Sources */,
 				458A1861241549B800FDFC8C /* CalculateIcons.swift in Sources */,
+				458A18772416261000FDFC8C /* FutureValueViewController.swift in Sources */,
+				458A187C24162AA100FDFC8C /* PresentValueViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
