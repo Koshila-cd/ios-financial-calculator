@@ -81,6 +81,9 @@
                             <state key="normal" title="Calculate Future Value">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="calculateFutureValue:" destination="-1" eventType="touchUpInside" id="kll-4b-UEN"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="£3000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYV-6w-FQI">
                             <rect key="frame" x="90" y="62" width="77.5" height="30"/>

@@ -25,6 +25,9 @@ class MortgageViewController: UIViewController {
         
     }
     
+    /**
+     - Get values from textfields in the View and pass them into the mortgage formulae for calculation
+     */
     @IBAction func calculateMortgage(_ sender: UIButton) {
         
         var loanAmount: Double = 0
@@ -88,22 +91,30 @@ class MortgageViewController: UIViewController {
             
         }
         
+        // calculate mortgae if all the fields in the view are not empty and is valid
         if validation {
-            let mortgage = calculateMortgage(loanAmount: loanAmount, interestRate: interestRate, numOfYears: numOfYears)
-            paymentLbl.text = String(format:"%.2f",mortgage)
-        } else {
-            paymentLbl.text = "-"
+            let mortgage = mortgageFormulae(loanAmount: loanAmount, interestRate: interestRate, numOfYears: numOfYears)
+            paymentLbl.text = "£" + String(format:"%.2f", mortgage)
         }
         
         
     }
     
-    func calculateMortgage(loanAmount: Double, interestRate: Double, numOfYears: Int)-> Double
+    
+    /**
+     - Calculate amount payable in given interest rate, loan amount and the number of months
+     - it is been payed by passing them to the mortgage formulae
+     - parameters:
+     - loanAmount: The amount loaned
+     - interestRate: The interest rate
+     - numOfYears: The number of years when the payment is complete
+     */
+    func mortgageFormulae(loanAmount: Double, interestRate: Double, numOfYears: Int)-> Double
     {
         
-        //formula here
         var mortgage: Double = 0.0
         
+        // number of months calculated from the given number of years
         let n = Double(12 * numOfYears)
         let t = Double(numOfYears)
 //        let formulae1: Double = ((loanAmount*n)+interestRate)/n

@@ -12,10 +12,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalculateInterestViewController" customModule="ios_financial_calculator" customModuleProvider="target">
             <connections>
-                <outlet property="amountFld" destination="5xD-Zs-yQS" id="9CV-Py-H7B"/>
-                <outlet property="futureValueFld" destination="Ygm-BQ-Xjn" id="71n-XB-xE2"/>
-                <outlet property="interestValueLbl" destination="Mgi-tc-cWa" id="SV4-Vn-oae"/>
-                <outlet property="paymentsFld" destination="SB6-u1-qDD" id="SnY-2C-roE"/>
+                <outlet property="interestLbl" destination="Mgi-tc-cWa" id="eLH-Cs-tRO"/>
+                <outlet property="loanAmountFld" destination="5xD-Zs-yQS" id="Nl8-wC-eNr"/>
+                <outlet property="numOfYearsFld" destination="SB6-u1-qDD" id="hUP-58-UgF"/>
+                <outlet property="totalAmountFld" destination="Ygm-BQ-Xjn" id="ZVy-hn-4nZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -24,14 +24,14 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5c-Fl-eQK">
-                    <rect key="frame" x="19.999999999999996" y="40" width="63.666666666666657" height="21.666666666666671"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loan Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5c-Fl-eQK">
+                    <rect key="frame" x="20" y="40" width="108" height="22"/>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5xD-Zs-yQS">
-                    <rect key="frame" x="20" y="64.666666666666671" width="374" height="30"/>
+                    <rect key="frame" x="20" y="65" width="374" height="30"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="374" id="4Ge-iH-EKO"/>
                         <constraint firstAttribute="height" constant="30" id="rA8-Nn-0V9"/>
@@ -40,30 +40,30 @@
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
                 </textField>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Future Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hN-SQ-GnE">
-                    <rect key="frame" x="19.999999999999993" y="109.66666666666667" width="101.33333333333331" height="21.666666666666671"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Amount (With Interest)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hN-SQ-GnE">
+                    <rect key="frame" x="20" y="110" width="229" height="22"/>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ygm-BQ-Xjn">
-                    <rect key="frame" x="20" y="134.33333333333334" width="374" height="30"/>
+                    <rect key="frame" x="20" y="135" width="374" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="6pr-B9-eN4"/>
                         <constraint firstAttribute="width" constant="374" id="xu8-aB-Gxl"/>
                     </constraints>
                     <nil key="textColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
                 </textField>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compound payments (in months)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YK5-ZV-jPe">
-                    <rect key="frame" x="20" y="179.33333333333334" width="270.33333333333331" height="21.666666666666657"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Years" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YK5-ZV-jPe">
+                    <rect key="frame" x="20" y="180" width="135.33333333333334" height="22"/>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SB6-u1-qDD">
-                    <rect key="frame" x="20" y="204" width="374" height="30"/>
+                    <rect key="frame" x="20" y="205" width="374" height="30"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="374" id="aF4-9P-DSn"/>
                         <constraint firstAttribute="height" constant="30" id="hj6-v1-qg2"/>
@@ -73,7 +73,7 @@
                     <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
                 </textField>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ls6-4H-SIr">
-                    <rect key="frame" x="80" y="284" width="240" height="104"/>
+                    <rect key="frame" x="80" y="285" width="240" height="104"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAA-Kb-Lq4">
                             <rect key="frame" x="8" y="16" width="224" height="30"/>
@@ -86,11 +86,15 @@
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <connections>
-                                <action selector="calculateBtn:" destination="-1" eventType="touchUpInside" id="pvh-sH-Yoz"/>
+                                <action selector="calculateInterest:" destination="-1" eventType="touchUpInside" id="YbY-7J-q4y"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mgi-tc-cWa">
-                            <rect key="frame" x="108" y="62" width="35" height="30"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mgi-tc-cWa">
+                            <rect key="frame" x="8" y="62" width="240" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="43x-Fh-RgJ"/>
+                                <constraint firstAttribute="width" constant="240" id="f8y-Mj-sZ8"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -99,11 +103,11 @@
                     <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="0.16441031678082191" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="104" id="1Ky-Xp-JrG"/>
+                        <constraint firstItem="Mgi-tc-cWa" firstAttribute="top" secondItem="AAA-Kb-Lq4" secondAttribute="bottom" constant="16" id="OOH-Nm-hDQ"/>
+                        <constraint firstItem="Mgi-tc-cWa" firstAttribute="leading" secondItem="ls6-4H-SIr" secondAttribute="leading" constant="8" id="Uja-Ta-xMM"/>
                         <constraint firstItem="AAA-Kb-Lq4" firstAttribute="top" secondItem="ls6-4H-SIr" secondAttribute="top" constant="16" id="chP-yL-awO"/>
                         <constraint firstItem="AAA-Kb-Lq4" firstAttribute="leading" secondItem="ls6-4H-SIr" secondAttribute="leading" constant="8" id="pOU-KD-Hm4"/>
                         <constraint firstAttribute="width" constant="240" id="vqn-ln-QdD"/>
-                        <constraint firstItem="Mgi-tc-cWa" firstAttribute="top" secondItem="AAA-Kb-Lq4" secondAttribute="bottom" constant="16" id="wWI-3p-zyX"/>
-                        <constraint firstItem="Mgi-tc-cWa" firstAttribute="leading" secondItem="ls6-4H-SIr" secondAttribute="leading" constant="108" id="x0D-gt-rqr"/>
                     </constraints>
                 </view>
             </subviews>
@@ -125,7 +129,7 @@
                 <constraint firstItem="YK5-ZV-jPe" firstAttribute="top" secondItem="Ygm-BQ-Xjn" secondAttribute="bottom" constant="15" id="xQF-qh-9lN"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="47.826086956521742" y="35.491071428571423"/>
+            <point key="canvasLocation" x="47.826086956521742" y="35.054347826086961"/>
         </view>
     </objects>
 </document>
