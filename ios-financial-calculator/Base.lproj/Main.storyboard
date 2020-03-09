@@ -61,7 +61,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lcV-TL-NoK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-700" y="759"/>
+            <point key="canvasLocation" x="-1191" y="819"/>
         </scene>
         <!--Help View Controller-->
         <scene sceneID="z9g-Qy-p2X">
@@ -87,7 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PnW-We-jZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="200.00000000000003" y="758.70535714285711"/>
+            <point key="canvasLocation" x="-135" y="819"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="VIF-ez-NKa">
@@ -116,7 +116,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LuC-m0-bKM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="788" y="-52"/>
+            <point key="canvasLocation" x="758" y="100"/>
         </scene>
         <!--Ledger-->
         <scene sceneID="MnV-ia-29O">
@@ -134,7 +134,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1zp-Rb-GL0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-217" y="-52"/>
+            <point key="canvasLocation" x="-410" y="100"/>
         </scene>
         <!--Calculate-->
         <scene sceneID="hjg-mI-4Cg">
@@ -352,6 +352,9 @@
                                     <constraint firstAttribute="width" constant="150" id="wNt-Z4-Gdk"/>
                                 </constraints>
                                 <state key="normal" image="compund-100"/>
+                                <connections>
+                                    <segue destination="aLN-e1-hb1" kind="show" id="RLt-6Y-d53"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compund Interest" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ves-ws-nPe">
                                 <rect key="frame" x="230" y="443" width="150" height="26"/>
@@ -438,14 +441,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Years" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ooa-PB-Wnq">
-                                <rect key="frame" x="20" y="257.5" width="135.5" height="21.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loan Terms (Years)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ooa-PB-Wnq">
+                                <rect key="frame" x="20" y="257.5" width="156" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TXp-aQ-LSp">
-                                <rect key="frame" x="20" y="287" width="374" height="30"/>
+                                <rect key="frame" x="20" y="287.5" width="374" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="EOs-L9-NBt"/>
                                     <constraint firstAttribute="height" constant="30" id="uW9-yk-gBU"/>
@@ -455,7 +458,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ikX-4Y-4ny">
-                                <rect key="frame" x="90" y="357" width="240" height="104"/>
+                                <rect key="frame" x="90" y="357.5" width="240" height="104"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ywc-Eq-IAK">
                                         <rect key="frame" x="8" y="16" width="224" height="30"/>
@@ -524,7 +527,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ay1-ZI-6QK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1657.9710144927537" y="-1035.2678571428571"/>
+            <point key="canvasLocation" x="2264" y="-1697"/>
         </scene>
         <!--Loans-->
         <scene sceneID="30N-Qv-RhZ">
@@ -669,6 +672,46 @@
             <point key="canvasLocation" x="1658" y="480"/>
         </scene>
         <!--Calculate-->
+        <scene sceneID="zRf-e9-CYZ">
+            <objects>
+                <viewController id="aLN-e1-hb1" customClass="CompundInterestViewController" customModule="ios_financial_calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r8K-Nd-1Ri">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pZg-d1-cvm">
+                                <rect key="frame" x="20" y="99" width="374" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Compund Interest"/>
+                                    <segment title="Present Value"/>
+                                    <segment title="Loan Terms"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentControl:" destination="aLN-e1-hb1" eventType="valueChanged" id="tYc-kJ-tGS"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bVP-YP-su6">
+                                <rect key="frame" x="0.0" y="135" width="414" height="678"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="uGu-au-w5h"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Calculate" id="3LV-xb-dFr">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="W5i-ox-DSw"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="segmentView" destination="bVP-YP-su6" id="ycf-BT-HlC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kkB-aQ-JE8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1414.4927536231885" y="-529.01785714285711"/>
+        </scene>
+        <!--Calculate-->
         <scene sceneID="Bt0-Bq-T9T">
             <objects>
                 <viewController id="XLl-rY-ETX" customClass="LoanViewController" customModule="ios_financial_calculator" customModuleProvider="target" sceneMemberID="viewController">
@@ -680,7 +723,7 @@
                                 <rect key="frame" x="20" y="101" width="374" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="Amount to be Paid"/>
+                                    <segment title="Payment"/>
                                     <segment title="Final Amount"/>
                                     <segment title="Interest"/>
                                 </segments>
@@ -706,7 +749,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tIa-f2-I73" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2418.840579710145" y="-189.50892857142856"/>
+            <point key="canvasLocation" x="2264" y="-996"/>
         </scene>
         <!--Savings-->
         <scene sceneID="Ruq-re-eld">
@@ -728,8 +771,8 @@
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Years" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7CF-uX-Etc">
-                                <rect key="frame" x="20" y="243" width="135.5" height="21.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loan Terms (Years)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7CF-uX-Etc">
+                                <rect key="frame" x="20" y="243" width="156" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -755,7 +798,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="876-BA-aj4">
-                                <rect key="frame" x="20" y="265.5" width="374" height="30"/>
+                                <rect key="frame" x="20" y="266" width="374" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="2Qa-BA-sBu"/>
                                     <constraint firstAttribute="height" constant="30" id="igY-y3-ZaA"/>
@@ -765,7 +808,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ytd-eK-KGR">
-                                <rect key="frame" x="90" y="335.5" width="240" height="104"/>
+                                <rect key="frame" x="90" y="336" width="240" height="104"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IUB-Uf-Gn2">
                                         <rect key="frame" x="8" y="16" width="224" height="30"/>
@@ -837,7 +880,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CrF-Ce-VlN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1657.9710144927537" y="-1721.6517857142856"/>
+            <point key="canvasLocation" x="1586" y="-2350"/>
         </scene>
         <!--II-->
         <scene sceneID="vvg-jx-CCc">

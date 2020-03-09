@@ -34,6 +34,7 @@ class SavingsViewController: UIViewController {
         
         var validation: Bool = true
         
+        // input field validation for empty fields and non Double values
         if let input = pmtFld.text {
             if input.isEmpty {
                 validation = false
@@ -110,7 +111,7 @@ class SavingsViewController: UIViewController {
         var savings: Double = 0.0
         
         let t = Double(numOfYears)
-        //        let formulae1: Double = ((loanAmount*n)+interestRate)/n
+
         let formulae1: Double = pow((1 + (interestRate / 12)),12 * t)
 
         savings = pmt * ((formulae1 - 1)/(interestRate/12))
