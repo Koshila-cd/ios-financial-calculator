@@ -16,7 +16,7 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="FutureValueUIView" customModule="ios_financial_calculator" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -83,6 +83,9 @@
                             <state key="normal" title="Calculate Future Value">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="calculateFutureValue:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="f5u-Sf-lUo"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYV-6w-FQI">
                             <rect key="frame" x="8" y="62" width="240" height="30"/>
@@ -130,6 +133,12 @@
                 <constraint firstItem="UKt-bw-u30" firstAttribute="top" secondItem="he8-Em-MDh" secondAttribute="bottom" constant="15" id="yEt-YP-aDn"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <connections>
+                <outlet property="amountFld" destination="he8-Em-MDh" id="5cb-tx-9lu"/>
+                <outlet property="futureValueLbl" destination="kYV-6w-FQI" id="3W8-JC-OYi"/>
+                <outlet property="interestRateFld" destination="ZqP-Tf-CyK" id="HdP-go-9M5"/>
+                <outlet property="numOfYearsFld" destination="zfr-B2-Nyp" id="0Ta-xm-ESh"/>
+            </connections>
             <point key="canvasLocation" x="47.826086956521742" y="35.491071428571423"/>
         </view>
     </objects>

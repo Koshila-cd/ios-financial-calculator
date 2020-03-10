@@ -44,6 +44,7 @@
 		458A18952416DFA100FDFC8C /* LoanTermsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 458A18932416DFA100FDFC8C /* LoanTermsViewController.xib */; };
 		458A18972416E43C00FDFC8C /* PresentValueCIUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A18962416E43C00FDFC8C /* PresentValueCIUIView.swift */; };
 		458A189A2416EA2A00FDFC8C /* LoanTermsUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A18992416EA2A00FDFC8C /* LoanTermsUIView.swift */; };
+		45DBC83F241732FC00651926 /* FutureValueUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DBC83E241732FC00651926 /* FutureValueUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		458A18932416DFA100FDFC8C /* LoanTermsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoanTermsViewController.xib; sourceTree = "<group>"; };
 		458A18962416E43C00FDFC8C /* PresentValueCIUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentValueCIUIView.swift; sourceTree = "<group>"; };
 		458A18992416EA2A00FDFC8C /* LoanTermsUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanTermsUIView.swift; sourceTree = "<group>"; };
+		45DBC83E241732FC00651926 /* FutureValueUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureValueUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +253,7 @@
 				458A188C2416D4DB00FDFC8C /* CompoundInterestUIView.swift */,
 				458A18962416E43C00FDFC8C /* PresentValueCIUIView.swift */,
 				458A18992416EA2A00FDFC8C /* LoanTermsUIView.swift */,
+				45DBC83E241732FC00651926 /* FutureValueUIView.swift */,
 			);
 			path = UIViews;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 				458A1873241625C000FDFC8C /* CalculateInterestViewController.swift in Sources */,
 				458A187F241665F400FDFC8C /* HelpViewController.swift in Sources */,
 				458A186724156C4400FDFC8C /* CalculateIconViewController.swift in Sources */,
+				45DBC83F241732FC00651926 /* FutureValueUIView.swift in Sources */,
 				458A1861241549B800FDFC8C /* CalculateIcons.swift in Sources */,
 				458A18772416261000FDFC8C /* FutureValueViewController.swift in Sources */,
 				458A18852416C21B00FDFC8C /* LoanPaymentUIView.swift in Sources */,
