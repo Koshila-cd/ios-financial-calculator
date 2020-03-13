@@ -413,9 +413,9 @@
                                 <rect key="frame" x="20" y="102" width="374" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="Payment"/>
-                                    <segment title="Interest Rate"/>
                                     <segment title="Mortgage Amount"/>
+                                    <segment title="Interest Rate"/>
+                                    <segment title="Payment"/>
                                 </segments>
                                 <connections>
                                     <action selector="calSegment:" destination="XLl-rY-ETX" eventType="valueChanged" id="U5r-bH-tNg"/>

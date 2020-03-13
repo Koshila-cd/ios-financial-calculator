@@ -1,5 +1,5 @@
 //
-//  MortgageIRViewController.swift
+//  MortgageAmountViewController.swift
 //  ios-financial-calculator
 //
 //  Created by Koshila Dissanayake on 3/14/20.
@@ -8,11 +8,13 @@
 
 import UIKit
 
-class MortgageIRViewController: UIViewController {
+class MortgageAmountViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.view.applyGradient(colours: [.black, .purple, .darkGray], locations: [0.0, 0.5, 1.0])
+        
     }
+
 }

@@ -25,8 +25,12 @@ class MortgageViewController: UIViewController {
         
         
         payment = MortgagePaymentViewController().view
+        interestRate = MortgageIRViewController().view
+        mortgageAmount = MortgageAmountViewController().view
         
         segmentView.addSubview(payment)
+        segmentView.addSubview(interestRate)
+        segmentView.addSubview(mortgageAmount)
         
     }
     
@@ -34,14 +38,14 @@ class MortgageViewController: UIViewController {
     @IBAction func segmentControl(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
+            segmentView.bringSubviewToFront(mortgageAmount)
+            break
+        case 1:
+            segmentView.bringSubviewToFront(interestRate)
+            break
+        case 2:
             segmentView.bringSubviewToFront(payment)
             break
-//        case 1:
-//            segmentView.bringSubviewToFront(futureValueView)
-//            break
-//        case 2:
-//            segmentView.bringSubviewToFront(interestView)
-//            break
         default:
             break
         }
