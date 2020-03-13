@@ -18,13 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ja-nd-wWm">
-                                <rect key="frame" x="95" y="336" width="224" height="225"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ja-nd-wWm">
+                                <rect key="frame" x="95" y="335.5" width="224" height="225"/>
                                 <state key="normal" image="app-logo"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1ja-nd-wWm" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="WSB-hC-ig4"/>
+                            <constraint firstItem="1ja-nd-wWm" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="yZL-6T-EJI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>

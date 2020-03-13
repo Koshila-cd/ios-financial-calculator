@@ -516,7 +516,13 @@
                         <viewLayoutGuide key="safeArea" id="pmi-Ih-3fs"/>
                     </view>
                     <navigationItem key="navigationItem" title="Mortgage" id="xnG-YT-aNT">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="6ZL-ZG-g94"/>
+                        <barButtonItem key="rightBarButtonItem" image="info" id="6ZL-ZG-g94">
+                            <connections>
+                                <segue destination="Xbl-TY-Mfb" kind="popoverPresentation" popoverAnchorBarButtonItem="6ZL-ZG-g94" id="bcC-br-FEf">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="interestFld" destination="vTk-t2-U02" id="h33-8G-7QR"/>
@@ -528,6 +534,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ay1-ZI-6QK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2264" y="-1697"/>
+        </scene>
+        <!--Mortgage Help View Controller-->
+        <scene sceneID="KWa-qF-yYj">
+            <objects>
+                <viewController id="Xbl-TY-Mfb" customClass="MortgageHelpViewController" customModule="ios_financial_calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="odL-l9-F4r">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="A8j-Y2-kzG">
+                                <rect key="frame" x="0.0" y="758" width="414" height="80"/>
+                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="6qV-Uy-suU"/>
+                                    <constraint firstAttribute="height" constant="80" id="F3C-hz-D23"/>
+                                </constraints>
+                            </pageControl>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6eU-aR-Q6D">
+                                <rect key="frame" x="0.0" y="40" width="414" height="48"/>
+                                <items>
+                                    <navigationItem title="Help" id="kBo-FN-UE5">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="close" id="DJE-7O-aaa">
+                                            <connections>
+                                                <action selector="close:" destination="Xbl-TY-Mfb" id="dv0-CB-olm"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iM1-41-0JC">
+                                <rect key="frame" x="0.0" y="82" width="414" height="678"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="A8j-Y2-kzG" firstAttribute="top" secondItem="6eU-aR-Q6D" secondAttribute="bottom" constant="670" id="5ZE-1x-slW"/>
+                            <constraint firstItem="A8j-Y2-kzG" firstAttribute="centerX" secondItem="odL-l9-F4r" secondAttribute="centerX" id="90u-mI-AgO"/>
+                            <constraint firstItem="6eU-aR-Q6D" firstAttribute="top" secondItem="odL-l9-F4r" secondAttribute="top" constant="40" id="hMf-Rk-5ZK"/>
+                            <constraint firstItem="A8j-Y2-kzG" firstAttribute="centerY" secondItem="odL-l9-F4r" secondAttribute="centerY" constant="350" id="rpV-xP-9oZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nFF-cP-JeY"/>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="A8j-Y2-kzG" id="pRA-Jx-UQ9"/>
+                        <outlet property="scrollView" destination="iM1-41-0JC" id="tIy-7J-YBu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pjm-ZY-zNO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3240.579710144928" y="-1893.0803571428571"/>
         </scene>
         <!--Loans-->
         <scene sceneID="30N-Qv-RhZ">
@@ -739,7 +796,7 @@
                         <viewLayoutGuide key="safeArea" id="Dt3-vh-6fn"/>
                     </view>
                     <navigationItem key="navigationItem" title="Calculate" id="ywE-tQ-hnc">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ywo-wZ-aia"/>
+                        <barButtonItem key="rightBarButtonItem" image="info" id="ywo-wZ-aia"/>
                     </navigationItem>
                     <connections>
                         <outlet property="segmentView" destination="P6k-j0-xSR" id="vFO-62-4Iz"/>
@@ -867,7 +924,13 @@
                         <viewLayoutGuide key="safeArea" id="dY3-By-lxf"/>
                     </view>
                     <navigationItem key="navigationItem" title="Savings" id="pnS-fD-odv">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Lx6-fR-V5C"/>
+                        <barButtonItem key="rightBarButtonItem" image="info" id="Lx6-fR-V5C">
+                            <connections>
+                                <segue destination="yxk-zl-y0e" kind="popoverPresentation" popoverAnchorBarButtonItem="Lx6-fR-V5C" id="Ahf-Sq-Xuh">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="interestRateFld" destination="f4A-D6-Np1" id="Ead-IV-Bdk"/>
@@ -879,6 +942,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CrF-Ce-VlN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1586" y="-2350"/>
+        </scene>
+        <!--Savings Help View Controller-->
+        <scene sceneID="DYC-Mx-2c8">
+            <objects>
+                <viewController id="yxk-zl-y0e" customClass="SavingsHelpViewController" customModule="ios_financial_calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kqj-Yh-EpG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lsq-Pv-UhR">
+                                <rect key="frame" x="0.0" y="75" width="414" height="683"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="7IN-G9-sf6">
+                                <rect key="frame" x="0.0" y="758" width="414" height="80"/>
+                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Uo9-82-bTy"/>
+                                    <constraint firstAttribute="width" constant="414" id="efc-IT-6IH"/>
+                                </constraints>
+                            </pageControl>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bxo-rK-571">
+                                <rect key="frame" x="0.0" y="40" width="414" height="48"/>
+                                <items>
+                                    <navigationItem title="Help" id="aQ6-0u-tEY">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="close" id="1Ph-4k-OZ2">
+                                            <connections>
+                                                <action selector="close:" destination="yxk-zl-y0e" id="Xlq-1X-bwF"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7IN-G9-sf6" firstAttribute="centerX" secondItem="Kqj-Yh-EpG" secondAttribute="centerX" id="8nt-v3-E9k"/>
+                            <constraint firstItem="Bxo-rK-571" firstAttribute="top" secondItem="Kqj-Yh-EpG" secondAttribute="top" constant="40" id="qRC-L1-fWX"/>
+                            <constraint firstItem="7IN-G9-sf6" firstAttribute="centerY" secondItem="Kqj-Yh-EpG" secondAttribute="centerY" constant="350" id="tGN-vb-d5y"/>
+                            <constraint firstItem="7IN-G9-sf6" firstAttribute="top" secondItem="Bxo-rK-571" secondAttribute="bottom" constant="670" id="zpD-AO-ygm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3Fr-X5-c1b"/>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="7IN-G9-sf6" id="dNo-pb-010"/>
+                        <outlet property="scrollView" destination="Lsq-Pv-UhR" id="poc-HB-PYu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cMR-d6-NJw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2386.9565217391305" y="-2661.1607142857142"/>
         </scene>
         <!--II-->
         <scene sceneID="vvg-jx-CCc">
@@ -898,8 +1012,10 @@
     </scenes>
     <resources>
         <image name="calculator" width="30" height="30"/>
+        <image name="close" width="18" height="18"/>
         <image name="compund-100" width="100" height="100"/>
         <image name="help" width="30" height="30"/>
+        <image name="info" width="18" height="18"/>
         <image name="ledger" width="30" height="30"/>
         <image name="money-bag-100" width="100" height="100"/>
         <image name="mortgage-100" width="100" height="100"/>
