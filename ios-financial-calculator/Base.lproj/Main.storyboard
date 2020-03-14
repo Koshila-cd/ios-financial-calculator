@@ -23,7 +23,7 @@
                     <connections>
                         <segue destination="UmG-3u-4Gk" kind="relationship" relationship="viewControllers" id="biB-ct-LGD"/>
                         <segue destination="kkS-Kp-d4V" kind="relationship" relationship="viewControllers" id="ZlY-Kx-lEf"/>
-                        <segue destination="Mzj-uZ-aJi" kind="relationship" relationship="viewControllers" id="2IN-Dc-tdZ"/>
+                        <segue destination="Mzj-uZ-aJi" kind="relationship" relationship="viewControllers" id="92R-bY-fDA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gB2-H8-ioP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -56,23 +56,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6zb-jS-hu4">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" directionalLockEnabled="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5ia-ED-144">
+                                <rect key="frame" x="0.0" y="88" width="414" height="692"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="0Cr-3B-Mbs">
+                                <rect key="frame" x="0.0" y="776" width="414" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Def-Pq-39c"/>
                     </view>
                     <navigationItem key="navigationItem" id="aCD-2S-kod"/>
                     <connections>
-                        <outlet property="helpView" destination="6zb-jS-hu4" id="ALh-ch-o25"/>
+                        <outlet property="pageControl" destination="0Cr-3B-Mbs" id="8it-0O-jab"/>
+                        <outlet property="scrollView" destination="5ia-ED-144" id="Ax6-SU-AfD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PnW-We-jZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-135" y="819"/>
+            <point key="canvasLocation" x="-136.23188405797103" y="818.97321428571422"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="VIF-ez-NKa">
@@ -450,7 +454,7 @@
         <scene sceneID="KWa-qF-yYj">
             <objects>
                 <viewController id="Xbl-TY-Mfb" customClass="MortgageHelpViewController" customModule="ios_financial_calculator" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="odL-l9-F4r">
+                    <view key="view" contentMode="scaleToFill" id="odL-l9-F4r">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -643,7 +647,7 @@
         <scene sceneID="zRf-e9-CYZ">
             <objects>
                 <viewController id="aLN-e1-hb1" customClass="CompundInterestViewController" customModule="ios_financial_calculator" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="r8K-Nd-1Ri">
+                    <view key="view" contentMode="scaleToFill" id="r8K-Nd-1Ri">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -702,7 +706,7 @@
         <scene sceneID="K7p-N1-9S7">
             <objects>
                 <viewController id="82M-G9-6nA" customClass="CompoundIHelpViewController" customModule="ios_financial_calculator" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="2fd-yH-nmI">
+                    <view key="view" contentMode="scaleToFill" id="2fd-yH-nmI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -753,7 +757,7 @@
         <scene sceneID="Bt0-Bq-T9T">
             <objects>
                 <viewController id="XLl-rY-ETX" customClass="LoanViewController" customModule="ios_financial_calculator" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="bHq-hE-Imw">
+                    <view key="view" contentMode="scaleToFill" id="bHq-hE-Imw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -812,7 +816,7 @@
         <scene sceneID="P31-qp-Fsh">
             <objects>
                 <viewController id="g4a-ME-1Rp" customClass="LoanHelpViewController" customModule="ios_financial_calculator" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="5SI-w5-3fM">
+                    <view key="view" contentMode="scaleToFill" id="5SI-w5-3fM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -863,7 +867,7 @@
         <scene sceneID="Ruq-re-eld">
             <objects>
                 <viewController id="LPZ-dA-Q2V" customClass="SavingsViewController" customModule="ios_financial_calculator" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="CoM-rc-gyf">
+                    <view key="view" contentMode="scaleToFill" id="CoM-rc-gyf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>

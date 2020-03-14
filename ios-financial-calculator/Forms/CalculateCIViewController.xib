@@ -69,7 +69,7 @@
                     <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
                 </textField>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VFY-Qp-3PP">
-                    <rect key="frame" x="64" y="309" width="240" height="104"/>
+                    <rect key="frame" x="80" y="309" width="240" height="104"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kBY-Ep-3HW">
                             <rect key="frame" x="8" y="16" width="224" height="30"/>
@@ -123,7 +123,7 @@
                 <constraint firstItem="AgN-tO-vZX" firstAttribute="top" secondItem="sRl-il-PCR" secondAttribute="bottom" constant="15" id="0aN-of-n4f"/>
                 <constraint firstItem="DbE-ZM-6Zn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="2qY-Es-arA"/>
                 <constraint firstItem="DbE-ZM-6Zn" firstAttribute="top" secondItem="5m1-Jk-LHz" secondAttribute="bottom" constant="3" id="3GU-lo-4ck"/>
-                <constraint firstItem="VFY-Qp-3PP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="64" id="8Y2-dh-nAc"/>
+                <constraint firstItem="VFY-Qp-3PP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="80" id="8Y2-dh-nAc"/>
                 <constraint firstItem="5m1-Jk-LHz" firstAttribute="top" secondItem="kCv-3I-WlV" secondAttribute="bottom" constant="15" id="Htj-E0-yRZ"/>
                 <constraint firstItem="sRl-il-PCR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Jog-Sh-LU7"/>
                 <constraint firstItem="5m1-Jk-LHz" firstAttribute="top" secondItem="kCv-3I-WlV" secondAttribute="bottom" constant="15" id="MYg-8T-oON"/>
