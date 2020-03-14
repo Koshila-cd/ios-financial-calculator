@@ -8,21 +8,25 @@
 
 import UIKit
 
+let MORTGAGE_INTEREST = "MORTGAGE_INTEREST"
 class MortgageIRUIView: UIView {
 
 
     @IBOutlet weak var loanAmountFld: UITextField!
     @IBOutlet weak var paymentFld: UITextField!
     @IBOutlet weak var loanTermsFld: UITextField!
+    @IBOutlet weak var saveBtn: UIButton!
     
     @IBOutlet weak var interestLbl: UILabel!
     
+    var loanAmount: Double = 0
+    var payment: Double = 0
+    var numOfYears: Int = 0
+    var interestRate: Double = 0
     
     @IBAction func calculateInterestRate(_ sender: UIButton) {
         
-        var loanAmount: Double = 0
-        var payment: Double = 0
-        var numOfYears: Int = 0
+        
         
         var validation: Bool = true
         
@@ -83,19 +87,12 @@ class MortgageIRUIView: UIView {
         
         // calculate mortgae if all the fields in the view are not empty and is valid
         if validation {
-            let interestRate = interestRateFormulae(loanAmount: loanAmount, payment: payment, numOfYears: numOfYears)
+            interestRate = interestRateFormulae(loanAmount: loanAmount, payment: payment, numOfYears: numOfYears)
             interestLbl.text = String(format:"%.2f", interestRate) + "%"
             
-            
-            //            let saveMortgage: String = "Loan Amount: \(loanAmount) , Interest Rate: \(interestRate) , Loan Terms: \(numOfYears), Payment Amount : \(mortgage)"
-            //            print(saveMortgage)
-            //            var arr = UserDefaults.standard.array(forKey: HISTORY_FORMULAR) as? [String] ?? []
-            //            arr.append(saveMortgage)
-            //            UserDefaults.standard.set(arr, forKey: HISTORY_FORMULAR)
-            //
-            //            let alert = UIAlertController(title: "Success", message: "The mortgage calculation was successully saved!", preferredStyle: UIAlertController.Style.alert)
-            //            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-            //            self.present(alert, animated: true, completion: nil)
+            saveBtn.isEnabled = true
+            saveBtn.backgroundColor = UIColor(red:1.00, green:0.83, blue:0.47, alpha:1.0)
+            saveBtn.layer.cornerRadius = 15
             
         }
         
@@ -121,6 +118,19 @@ class MortgageIRUIView: UIView {
         
         return interestRate
         
+    }
+    
+    
+    @IBAction func save(_ sender: UIButton) {
+        let save: String = "Loan Amount: \(loanAmount) , Payment: \(payment) , Loan Terms: \(numOfYears), Interest Rate : \(interestRate)"
+        print(save)
+        var arr = UserDefaults.standard.array(forKey: MORTGAGE_INTEREST) as? [String] ?? []
+        arr.append(save)
+        UserDefaults.standard.set(arr, forKey: MORTGAGE_INTEREST)
+        
+        let alert = UIAlertController(title: "Success", message: "The mortgage calculation was successully saved!", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        //                    self.present(alert, animated: true, completion: nil)
     }
     
 }

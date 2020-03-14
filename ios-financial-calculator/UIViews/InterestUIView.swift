@@ -8,6 +8,8 @@
 
 import UIKit
 
+let COMPUNT_INTEREST = "COMPUNT_INTEREST"
+
 class InterestUIView: UIView {
 
 
@@ -16,15 +18,15 @@ class InterestUIView: UIView {
     @IBOutlet weak var numOfYearsFld: UITextField!
     @IBOutlet weak var interestLbl: UILabel!
     
+    var loanAmount: Double = 0
+    var totalAmount: Double = 0
+    var numOfYears: Int = 0
+    var interest: Double = 0
     
     /**
      - Get values from textfields in the View and pass them into the interest rate calculation formulae
      */
     @IBAction func calculateInterest(_ sender: UIButton) {
-            
-            var loanAmount: Double = 0
-            var totalAmount: Double = 0
-            var numOfYears: Int = 0
             
             var validation: Bool = true
             
@@ -85,7 +87,7 @@ class InterestUIView: UIView {
             
             // calculate mortgae if all the fields in the view are not empty and is valid
             if validation {
-                let interest = interestFormulae(loanAmount: loanAmount, totalAmount: totalAmount, numOfYears: numOfYears)
+                interest = interestFormulae(loanAmount: loanAmount, totalAmount: totalAmount, numOfYears: numOfYears)
                 interestLbl.text = String(format:"%.2f", interest) + "%"
             }
     }
@@ -115,5 +117,19 @@ class InterestUIView: UIView {
         return interest
         
     }
+    
+    
+    @IBAction func save(_ sender: UIButton) {
+        print("saveee")
+        let save: String = "Loan Amount: \(loanAmount) , Total Amount: \(totalAmount) , Loan Terms: \(numOfYears), Interest Rate : \(interest)"
 
+        var arr = UserDefaults.standard.array(forKey: COMPUNT_INTEREST) as? [String] ?? []
+        arr.append(save)
+        UserDefaults.standard.set(arr, forKey: COMPUNT_INTEREST)
+        
+        let alert = UIAlertController(title: "Success", message: "The calculation was successully saved!", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        //                    self.present(alert, animated: true, completion: nil)
+    }
+    
 }

@@ -8,6 +8,7 @@
 
 import UIKit
 
+let COMPOUND_LOAN = "COMPOUND_LOAN"
 class LoanPaymentUIView: UIView {
 
     @IBOutlet weak var loanAmountFld: UITextField!
