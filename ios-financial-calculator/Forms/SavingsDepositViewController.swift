@@ -8,7 +8,7 @@
 
 import UIKit
 
-@objcMembers class SavingsDepositViewController: UIViewController {
+class SavingsDepositViewController: UIViewController {
 
     @IBOutlet weak var paymentFld: UITextField!
     
@@ -20,13 +20,4 @@ import UIKit
         self.view.addNegativeButtonOnKeyboard(field: paymentFld)
     }
     
-    
-    
 }
-
-//class NegativeButton {
-//    @objc func doneButtonAction(){
-//        print("donee buttooonnnn")
-//        //            paymentFld.text = "-"
-//    }
-//}

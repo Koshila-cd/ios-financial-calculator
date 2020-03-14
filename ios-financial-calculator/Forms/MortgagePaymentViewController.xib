@@ -141,7 +141,8 @@
                     </constraints>
                     <state key="normal" image="save-btn"/>
                     <connections>
-                        <action selector="save:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="dD7-JN-APa"/>
+                        <action selector="save:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="A0c-S0-JzQ"/>
+                        <action selector="saveAction:" destination="-1" eventType="touchUpInside" id="lTS-5K-qqG"/>
                     </connections>
                 </button>
             </subviews>

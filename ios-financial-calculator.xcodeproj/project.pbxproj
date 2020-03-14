@@ -45,6 +45,7 @@
 		458A18952416DFA100FDFC8C /* LoanTermsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 458A18932416DFA100FDFC8C /* LoanTermsViewController.xib */; };
 		458A18972416E43C00FDFC8C /* PresentValueCIUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A18962416E43C00FDFC8C /* PresentValueCIUIView.swift */; };
 		458A189A2416EA2A00FDFC8C /* LoanTermsUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A18992416EA2A00FDFC8C /* LoanTermsUIView.swift */; };
+		45A1F2D2241D72C3006064BA /* SaveSuccess.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45A1F2D1241D72C3006064BA /* SaveSuccess.xib */; };
 		45ABFCA7241CED9B0092DAAF /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ABFCA5241CED9B0092DAAF /* KeyboardViewController.swift */; };
 		45ABFCA8241CED9B0092DAAF /* KeyboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45ABFCA6241CED9B0092DAAF /* KeyboardViewController.xib */; };
 		45ABFCAA241D00BA0092DAAF /* LedgerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ABFCA9241D00BA0092DAAF /* LedgerViewController.swift */; };
@@ -135,6 +136,7 @@
 		458A18932416DFA100FDFC8C /* LoanTermsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoanTermsViewController.xib; sourceTree = "<group>"; };
 		458A18962416E43C00FDFC8C /* PresentValueCIUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentValueCIUIView.swift; sourceTree = "<group>"; };
 		458A18992416EA2A00FDFC8C /* LoanTermsUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanTermsUIView.swift; sourceTree = "<group>"; };
+		45A1F2D1241D72C3006064BA /* SaveSuccess.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SaveSuccess.xib; sourceTree = "<group>"; };
 		45ABFCA5241CED9B0092DAAF /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		45ABFCA6241CED9B0092DAAF /* KeyboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyboardViewController.xib; sourceTree = "<group>"; };
 		45ABFCA9241D00BA0092DAAF /* LedgerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LedgerViewController.swift; sourceTree = "<group>"; };
@@ -340,6 +342,7 @@
 				45FD4D29241C997200A4FDC0 /* SavingsFutureValueUIView.swift */,
 				45FD4D2F241C9E2500A4FDC0 /* SavingsIRUIView.swift */,
 				45FD4D35241CA1E800A4FDC0 /* SavingsDepositUIView.swift */,
+				45A1F2D1241D72C3006064BA /* SaveSuccess.xib */,
 			);
 			path = UIViews;
 			sourceTree = "<group>";
@@ -452,6 +455,7 @@
 				458A188B2416D26300FDFC8C /* CalculateCIViewController.xib in Resources */,
 				458A1837241540A700FDFC8C /* LaunchScreen.storyboard in Resources */,
 				458A18782416261000FDFC8C /* FutureValueViewController.xib in Resources */,
+				45A1F2D2241D72C3006064BA /* SaveSuccess.xib in Resources */,
 				458A18912416DF1300FDFC8C /* PresentValueCIViewController.xib in Resources */,
 				45FD4D16241C200900A4FDC0 /* MortgagePaymentViewController.xib in Resources */,
 				458A1834241540A700FDFC8C /* Assets.xcassets in Resources */,

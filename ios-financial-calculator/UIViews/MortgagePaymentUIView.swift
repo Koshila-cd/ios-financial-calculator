@@ -102,8 +102,6 @@ class MortgagePaymentUIView: UIView {
             saveBtn.layer.cornerRadius = 15
             
             
-            
-            
         }
         
         
@@ -144,10 +142,6 @@ class MortgagePaymentUIView: UIView {
         var arr = UserDefaults.standard.array(forKey: MORTGAGE_PAYMENT) as? [String] ?? []
         arr.append(saveMortgage)
         UserDefaults.standard.set(arr, forKey: MORTGAGE_PAYMENT)
-        
-        let alert = UIAlertController(title: "Success", message: "The mortgage calculation was successully saved!", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-//                    self.present(alert, animated: true, completion: nil)
         
     }
     

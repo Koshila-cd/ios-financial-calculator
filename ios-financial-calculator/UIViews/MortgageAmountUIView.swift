@@ -109,7 +109,10 @@ class MortgageAmountUIView: UIView {
         
                     let alert = UIAlertController(title: "Success", message: "The mortgage calculation was successully saved!", preferredStyle: UIAlertController.Style.alert)
                     alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-//                    self.present(alert, animated: true, completion: nil)
+        
+//        alert.show(MortgagePaymentViewController(), sender: UIAlertAction())
+                    MortgagePaymentViewController().present(alert, animated: true, completion: nil)
+
     }
     
     

@@ -428,7 +428,7 @@
         <scene sceneID="spz-Zp-ejS">
             <objects>
                 <viewController id="B8v-MX-WJu" customClass="MortgageViewController" customModule="ios_financial_calculator" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dEg-Sy-qpX">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="dEg-Sy-qpX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -467,15 +467,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pmi-Ih-3fs"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Mortgage" id="xnG-YT-aNT">
-                        <barButtonItem key="rightBarButtonItem" image="info" id="6ZL-ZG-g94">
-                            <connections>
-                                <segue destination="Xbl-TY-Mfb" kind="popoverPresentation" popoverAnchorBarButtonItem="6ZL-ZG-g94" id="bcC-br-FEf">
-                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                </segue>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Mortgage" id="xnG-YT-aNT"/>
                     <connections>
                         <outlet property="segmentView" destination="3iM-j6-EqY" id="f4P-S6-tcP"/>
                     </connections>
@@ -681,7 +673,7 @@
         <scene sceneID="zRf-e9-CYZ">
             <objects>
                 <viewController id="aLN-e1-hb1" customClass="CompundInterestViewController" customModule="ios_financial_calculator" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="r8K-Nd-1Ri">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="r8K-Nd-1Ri">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -719,15 +711,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uGu-au-w5h"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Calculate" id="3LV-xb-dFr">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="info" id="MI9-Oq-toh">
-                            <connections>
-                                <segue destination="82M-G9-6nA" kind="popoverPresentation" popoverAnchorBarButtonItem="MI9-Oq-toh" id="zgS-HC-KRx">
-                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                </segue>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Calculate" id="3LV-xb-dFr"/>
                     <connections>
                         <outlet property="segmentView" destination="bVP-YP-su6" id="ycf-BT-HlC"/>
                     </connections>
@@ -740,7 +724,7 @@
         <scene sceneID="K7p-N1-9S7">
             <objects>
                 <viewController id="82M-G9-6nA" customClass="CompoundIHelpViewController" customModule="ios_financial_calculator" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="2fd-yH-nmI">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="2fd-yH-nmI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -791,7 +775,7 @@
         <scene sceneID="Bt0-Bq-T9T">
             <objects>
                 <viewController id="XLl-rY-ETX" customClass="LoanViewController" customModule="ios_financial_calculator" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bHq-hE-Imw">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="bHq-hE-Imw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -829,15 +813,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Dt3-vh-6fn"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Calculate" id="ywE-tQ-hnc">
-                        <barButtonItem key="rightBarButtonItem" image="info" id="ywo-wZ-aia">
-                            <connections>
-                                <segue destination="g4a-ME-1Rp" kind="popoverPresentation" popoverAnchorBarButtonItem="ywo-wZ-aia" id="QZW-Wk-HzH">
-                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                </segue>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Calculate" id="ywE-tQ-hnc"/>
                     <connections>
                         <outlet property="segmentView" destination="P6k-j0-xSR" id="vFO-62-4Iz"/>
                     </connections>
@@ -850,7 +826,7 @@
         <scene sceneID="P31-qp-Fsh">
             <objects>
                 <viewController id="g4a-ME-1Rp" customClass="LoanHelpViewController" customModule="ios_financial_calculator" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5SI-w5-3fM">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="5SI-w5-3fM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -939,9 +915,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dY3-By-lxf"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Savings" id="pnS-fD-odv">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Lx6-fR-V5C"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Savings" id="pnS-fD-odv"/>
                     <connections>
                         <outlet property="segmentView" destination="3EJ-fc-n03" id="E5i-aR-BqC"/>
                     </connections>
@@ -1022,7 +996,6 @@
         <image name="close" width="18" height="18"/>
         <image name="compund-100" width="100" height="100"/>
         <image name="help" width="30" height="30"/>
-        <image name="info" width="18" height="18"/>
         <image name="ledger" width="30" height="30"/>
         <image name="money-bag-100" width="100" height="100"/>
         <image name="mortgage-100" width="100" height="100"/>
