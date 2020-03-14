@@ -10,7 +10,6 @@
 		45624A41241C039E00D54349 /* SavingsHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45624A40241C039E00D54349 /* SavingsHelpViewController.swift */; };
 		456FF3E4241C0D2300435669 /* MortgageHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456FF3E3241C0D2300435669 /* MortgageHelpViewController.swift */; };
 		458A182A241540A600FDFC8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A1829241540A600FDFC8C /* AppDelegate.swift */; };
-		458A182C241540A600FDFC8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458A182B241540A600FDFC8C /* ViewController.swift */; };
 		458A182F241540A600FDFC8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 458A182D241540A600FDFC8C /* Main.storyboard */; };
 		458A1832241540A600FDFC8C /* ios_financial_calculator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 458A1830241540A600FDFC8C /* ios_financial_calculator.xcdatamodeld */; };
 		458A1834241540A700FDFC8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 458A1833241540A700FDFC8C /* Assets.xcassets */; };
@@ -91,7 +90,6 @@
 		456FF3E3241C0D2300435669 /* MortgageHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageHelpViewController.swift; sourceTree = "<group>"; };
 		458A1826241540A600FDFC8C /* ios-financial-calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-financial-calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		458A1829241540A600FDFC8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		458A182B241540A600FDFC8C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		458A182E241540A600FDFC8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		458A1831241540A600FDFC8C /* ios_financial_calculator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ios_financial_calculator.xcdatamodel; sourceTree = "<group>"; };
 		458A1833241540A700FDFC8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -221,7 +219,6 @@
 				458A185F2415498700FDFC8C /* Entity */,
 				458A185A241540FE00FDFC8C /* Controller */,
 				458A1829241540A600FDFC8C /* AppDelegate.swift */,
-				458A182B241540A600FDFC8C /* ViewController.swift */,
 				458A182D241540A600FDFC8C /* Main.storyboard */,
 				458A1833241540A700FDFC8C /* Assets.xcassets */,
 				458A1835241540A700FDFC8C /* LaunchScreen.storyboard */,
@@ -475,7 +472,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				458A182C241540A600FDFC8C /* ViewController.swift in Sources */,
 				45FD4D33241C9FC200A4FDC0 /* SavingsDepositViewController.swift in Sources */,
 				458A188D2416D4DB00FDFC8C /* CompoundInterestUIView.swift in Sources */,
 				458A185C2415415100FDFC8C /* TabBarController.swift in Sources */,

@@ -10,21 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ios_financial_calculator" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3555" y="933"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Yjs-YH-lcA">
             <objects>
@@ -465,13 +450,16 @@
         <scene sceneID="KWa-qF-yYj">
             <objects>
                 <viewController id="Xbl-TY-Mfb" customClass="MortgageHelpViewController" customModule="ios_financial_calculator" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="odL-l9-F4r">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="odL-l9-F4r">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6eU-aR-Q6D">
-                                <rect key="frame" x="0.0" y="64" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6eU-aR-Q6D">
+                                <rect key="frame" x="0.0" y="54" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="3Sv-dH-Tti"/>
+                                    <constraint firstAttribute="width" constant="414" id="E17-TM-c1E"/>
+                                </constraints>
                                 <items>
                                     <navigationItem title="Help" id="kBo-FN-UE5">
                                         <barButtonItem key="rightBarButtonItem" title="Item" image="close" id="DJE-7O-aaa">
@@ -483,21 +471,26 @@
                                 </items>
                             </navigationBar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iM1-41-0JC">
-                                <rect key="frame" x="0.0" y="164" width="414" height="596"/>
+                                <rect key="frame" x="19" y="111" width="375" height="637"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="A8j-Y2-kzG">
-                                <rect key="frame" x="0.0" y="768" width="415" height="37"/>
+                                <rect key="frame" x="19.5" y="756" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6eU-aR-Q6D" firstAttribute="centerY" secondItem="odL-l9-F4r" secondAttribute="centerY" id="7A0-ks-uj8"/>
+                            <constraint firstItem="6eU-aR-Q6D" firstAttribute="top" secondItem="nFF-cP-JeY" secondAttribute="top" constant="10" id="NsX-Tl-Oi6"/>
+                            <constraint firstItem="6eU-aR-Q6D" firstAttribute="centerX" secondItem="odL-l9-F4r" secondAttribute="centerX" id="k3B-8f-f5a"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="nFF-cP-JeY"/>
                     </view>
                     <connections>
-                        <outlet property="pageControl" destination="A8j-Y2-kzG" id="pRA-Jx-UQ9"/>
-                        <outlet property="scrollView" destination="iM1-41-0JC" id="tIy-7J-YBu"/>
+                        <outlet property="pageControl" destination="A8j-Y2-kzG" id="Ec5-pE-pRU"/>
+                        <outlet property="scrollView" destination="iM1-41-0JC" id="Cn3-EL-eJD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pjm-ZY-zNO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -650,7 +643,7 @@
         <scene sceneID="zRf-e9-CYZ">
             <objects>
                 <viewController id="aLN-e1-hb1" customClass="CompundInterestViewController" customModule="ios_financial_calculator" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="r8K-Nd-1Ri">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="r8K-Nd-1Ri">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -670,24 +663,20 @@
                                 </connections>
                             </segmentedControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bVP-YP-su6">
-                                <rect key="frame" x="0.0" y="88" width="414" height="678"/>
+                                <rect key="frame" x="0.0" y="139" width="414" height="674"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="414" id="Wxb-V1-9Yz"/>
-                                    <constraint firstAttribute="width" constant="414" id="Xd5-OL-ZWq"/>
-                                    <constraint firstAttribute="height" constant="678" id="kkH-Gt-DGV"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="678" id="uxH-hp-g4G"/>
+                                    <constraint firstAttribute="width" constant="414" id="eml-rq-L65"/>
+                                    <constraint firstAttribute="height" constant="674" id="uV3-Ia-Tqd"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="bVP-YP-su6" firstAttribute="centerX" secondItem="r8K-Nd-1Ri" secondAttribute="centerX" id="2sQ-YI-GaK"/>
+                            <constraint firstItem="bVP-YP-su6" firstAttribute="centerY" secondItem="r8K-Nd-1Ri" secondAttribute="centerY" id="Pcg-c6-2dN"/>
                             <constraint firstItem="pZg-d1-cvm" firstAttribute="top" secondItem="uGu-au-w5h" secondAttribute="top" constant="15" id="QIA-ds-E7A"/>
-                            <constraint firstItem="bVP-YP-su6" firstAttribute="centerX" secondItem="r8K-Nd-1Ri" secondAttribute="centerX" id="co9-cB-pay"/>
-                            <constraint firstItem="bVP-YP-su6" firstAttribute="centerX" secondItem="r8K-Nd-1Ri" secondAttribute="centerX" id="fGz-Er-fuA"/>
-                            <constraint firstItem="bVP-YP-su6" firstAttribute="top" secondItem="uGu-au-w5h" secondAttribute="top" id="ljO-zC-FAZ"/>
-                            <constraint firstItem="bVP-YP-su6" firstAttribute="centerY" secondItem="r8K-Nd-1Ri" secondAttribute="centerY" id="rKn-ib-vj8"/>
-                            <constraint firstItem="bVP-YP-su6" firstAttribute="centerY" secondItem="r8K-Nd-1Ri" secondAttribute="centerY" id="uGV-sA-4xw"/>
+                            <constraint firstItem="bVP-YP-su6" firstAttribute="top" secondItem="pZg-d1-cvm" secondAttribute="bottom" constant="8" symbolic="YES" id="RS7-sI-LXj"/>
                             <constraint firstItem="pZg-d1-cvm" firstAttribute="leading" secondItem="uGu-au-w5h" secondAttribute="leading" constant="20" id="xdF-88-HgM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uGu-au-w5h"/>
@@ -713,13 +702,16 @@
         <scene sceneID="K7p-N1-9S7">
             <objects>
                 <viewController id="82M-G9-6nA" customClass="CompoundIHelpViewController" customModule="ios_financial_calculator" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="2fd-yH-nmI">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="2fd-yH-nmI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="luj-DH-ScP">
-                                <rect key="frame" x="0.0" y="67" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="luj-DH-ScP">
+                                <rect key="frame" x="0.0" y="54" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="CWB-kB-tno"/>
+                                    <constraint firstAttribute="height" constant="44" id="YlX-Ko-dEL"/>
+                                </constraints>
                                 <items>
                                     <navigationItem title="Help" id="Ib0-gm-j4p">
                                         <barButtonItem key="rightBarButtonItem" title="Item" image="close" id="qCZ-Xc-syU">
@@ -731,20 +723,25 @@
                                 </items>
                             </navigationBar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bnQ-Ar-2Eh">
-                                <rect key="frame" x="0.0" y="111" width="414" height="657"/>
+                                <rect key="frame" x="20" y="111" width="374" height="622"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </scrollView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="W17-bR-HlC">
-                                <rect key="frame" x="0.0" y="776" width="414" height="37"/>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="vmN-bL-Bdh">
+                                <rect key="frame" x="20" y="741" width="374" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="luj-DH-ScP" firstAttribute="centerY" secondItem="2fd-yH-nmI" secondAttribute="centerY" id="J3h-cZ-wxX"/>
+                            <constraint firstItem="luj-DH-ScP" firstAttribute="top" secondItem="pDW-9Q-p7d" secondAttribute="top" constant="10" id="U0o-Et-rC0"/>
+                            <constraint firstItem="luj-DH-ScP" firstAttribute="centerX" secondItem="2fd-yH-nmI" secondAttribute="centerX" id="qVe-P9-LDC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="pDW-9Q-p7d"/>
                     </view>
                     <connections>
-                        <outlet property="pageControl" destination="W17-bR-HlC" id="fns-fW-8TN"/>
+                        <outlet property="pageControl" destination="vmN-bL-Bdh" id="chT-d2-B8j"/>
                         <outlet property="scrollView" destination="bnQ-Ar-2Eh" id="Ar7-lg-r1h"/>
                     </connections>
                 </viewController>
@@ -815,13 +812,16 @@
         <scene sceneID="P31-qp-Fsh">
             <objects>
                 <viewController id="g4a-ME-1Rp" customClass="LoanHelpViewController" customModule="ios_financial_calculator" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5SI-w5-3fM">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="5SI-w5-3fM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eDx-uz-paH">
-                                <rect key="frame" x="0.0" y="64" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eDx-uz-paH">
+                                <rect key="frame" x="0.0" y="54" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="czt-Aj-rjL"/>
+                                    <constraint firstAttribute="width" constant="414" id="vC4-q3-yGs"/>
+                                </constraints>
                                 <items>
                                     <navigationItem title="Help" id="2zK-9M-gMr">
                                         <barButtonItem key="rightBarButtonItem" title="Item" image="close" id="KQd-Ky-apq">
@@ -833,16 +833,21 @@
                                 </items>
                             </navigationBar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t7s-02-LX5">
-                                <rect key="frame" x="0.0" y="121" width="414" height="645"/>
+                                <rect key="frame" x="20" y="121" width="374" height="629"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="0PA-Fq-P5z">
-                                <rect key="frame" x="0.0" y="758" width="414" height="80"/>
+                                <rect key="frame" x="20" y="758" width="374" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eDx-uz-paH" firstAttribute="centerX" secondItem="5SI-w5-3fM" secondAttribute="centerX" id="CmR-Cq-TQf"/>
+                            <constraint firstItem="eDx-uz-paH" firstAttribute="top" secondItem="t24-YI-ly7" secondAttribute="top" constant="10" id="XBe-vx-MeC"/>
+                            <constraint firstItem="eDx-uz-paH" firstAttribute="centerY" secondItem="5SI-w5-3fM" secondAttribute="centerY" id="f50-Id-stW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="t24-YI-ly7"/>
                     </view>
                     <connections>
@@ -917,25 +922,20 @@
         <scene sceneID="DYC-Mx-2c8">
             <objects>
                 <viewController id="yxk-zl-y0e" customClass="SavingsHelpViewController" customModule="ios_financial_calculator" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Kqj-Yh-EpG">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="Kqj-Yh-EpG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lsq-Pv-UhR">
-                                <rect key="frame" x="0.0" y="75" width="414" height="683"/>
+                                <rect key="frame" x="20" y="116" width="374" height="640"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </scrollView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="7IN-G9-sf6">
-                                <rect key="frame" x="0.0" y="758" width="414" height="80"/>
-                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bxo-rK-571">
+                                <rect key="frame" x="0.0" y="54" width="414" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="Uo9-82-bTy"/>
-                                    <constraint firstAttribute="width" constant="414" id="efc-IT-6IH"/>
+                                    <constraint firstAttribute="width" constant="414" id="oeq-77-p0v"/>
+                                    <constraint firstAttribute="height" constant="44" id="qWB-jX-ymg"/>
                                 </constraints>
-                            </pageControl>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bxo-rK-571">
-                                <rect key="frame" x="0.0" y="40" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Help" id="aQ6-0u-tEY">
                                         <barButtonItem key="rightBarButtonItem" title="Item" image="close" id="1Ph-4k-OZ2">
@@ -946,17 +946,23 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="7IN-G9-sf6">
+                                <rect key="frame" x="20" y="764" width="374" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="7IN-G9-sf6" firstAttribute="centerX" secondItem="Kqj-Yh-EpG" secondAttribute="centerX" id="8nt-v3-E9k"/>
-                            <constraint firstItem="7IN-G9-sf6" firstAttribute="centerY" secondItem="Kqj-Yh-EpG" secondAttribute="centerY" constant="350" id="tGN-vb-d5y"/>
+                            <constraint firstItem="Bxo-rK-571" firstAttribute="centerY" secondItem="Kqj-Yh-EpG" secondAttribute="centerY" id="GFV-pz-Blf"/>
+                            <constraint firstItem="Bxo-rK-571" firstAttribute="centerX" secondItem="Kqj-Yh-EpG" secondAttribute="centerX" id="OGn-nS-8xR"/>
+                            <constraint firstItem="Bxo-rK-571" firstAttribute="top" secondItem="3Fr-X5-c1b" secondAttribute="top" constant="10" id="x7J-Te-KeX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3Fr-X5-c1b"/>
                     </view>
                     <connections>
-                        <outlet property="pageControl" destination="7IN-G9-sf6" id="dNo-pb-010"/>
-                        <outlet property="scrollView" destination="Lsq-Pv-UhR" id="poc-HB-PYu"/>
+                        <outlet property="pageControl" destination="7IN-G9-sf6" id="ENd-sr-jY2"/>
+                        <outlet property="scrollView" destination="Lsq-Pv-UhR" id="sbf-2Z-2iF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cMR-d6-NJw" userLabel="First Responder" sceneMemberID="firstResponder"/>

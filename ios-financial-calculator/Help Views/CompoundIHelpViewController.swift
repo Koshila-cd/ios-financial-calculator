@@ -11,7 +11,6 @@ import UIKit
 class CompoundIHelpViewController: UIViewController, UIScrollViewDelegate {
     
     
-    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     

@@ -10,7 +10,7 @@ import UIKit
 
 class SavingsHelpViewController: UIViewController, UIScrollViewDelegate {
 
-    
+
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     
