@@ -134,7 +134,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3BI-nE-Goc">
-                    <rect key="frame" x="330" y="319" width="50" height="50"/>
+                    <rect key="frame" x="330" y="369" width="50" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="VrM-2C-tY1"/>
                         <constraint firstAttribute="width" constant="50" id="khp-Wf-mLy"/>
@@ -150,7 +150,7 @@
                 <constraint firstItem="uV3-0v-Uck" firstAttribute="top" secondItem="WgP-Lp-Pnr" secondAttribute="bottom" constant="8" id="0a9-3z-sTm"/>
                 <constraint firstItem="KEg-i4-0IF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="16n-85-0Tu"/>
                 <constraint firstItem="fYd-uB-PVL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="79M-J6-u4e"/>
-                <constraint firstItem="3BI-nE-Goc" firstAttribute="top" secondItem="fYd-uB-PVL" secondAttribute="bottom" constant="60" id="7QJ-wh-vWV"/>
+                <constraint firstItem="3BI-nE-Goc" firstAttribute="top" secondItem="fYd-uB-PVL" secondAttribute="bottom" constant="110" id="7QJ-wh-vWV"/>
                 <constraint firstItem="wMM-vg-gFL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Aqz-Ob-zRu"/>
                 <constraint firstItem="nyk-Fm-j3K" firstAttribute="top" secondItem="aek-4b-OuQ" secondAttribute="bottom" constant="3" id="F6Y-hM-1bf"/>
                 <constraint firstItem="aek-4b-OuQ" firstAttribute="top" secondItem="KEg-i4-0IF" secondAttribute="bottom" constant="15" id="Q5t-qD-aor"/>

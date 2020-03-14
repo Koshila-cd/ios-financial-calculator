@@ -90,6 +90,8 @@ class MortgageIRUIView: UIView {
             interestRate = interestRateFormulae(loanAmount: loanAmount, payment: payment, numOfYears: numOfYears)
             interestLbl.text = String(format:"%.2f", interestRate) + "%"
             
+            
+            // Save button is enabled and made visible with colours
             saveBtn.isEnabled = true
             saveBtn.backgroundColor = UIColor(red:1.00, green:0.83, blue:0.47, alpha:1.0)
             saveBtn.layer.cornerRadius = 15

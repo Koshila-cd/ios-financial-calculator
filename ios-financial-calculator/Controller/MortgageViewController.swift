@@ -21,18 +21,19 @@ class MortgageViewController: UIViewController {
 
         self.view.applyGradient(colours: [.black, .purple, .darkGray], locations: [0.0, 0.5, 1.0])
         
-        
+        // Initiate sub views for the segment
         payment = MortgagePaymentViewController().view
         interestRate = MortgageIRViewController().view
         mortgageAmount = MortgageAmountViewController().view
         
+        // add subviews to segments
         segmentView.addSubview(payment)
         segmentView.addSubview(interestRate)
         segmentView.addSubview(mortgageAmount)
         
     }
     
-    
+    // set subviews to the relevant segment
     @IBAction func segmentControl(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:

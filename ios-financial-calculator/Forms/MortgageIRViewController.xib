@@ -134,7 +134,7 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFF-jg-hIC">
-                    <rect key="frame" x="330" y="319" width="50" height="50"/>
+                    <rect key="frame" x="330" y="369" width="50" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="5U3-0f-jLT"/>
                         <constraint firstAttribute="width" constant="50" id="wvj-LD-Vuq"/>
@@ -166,7 +166,7 @@
                 <constraint firstItem="eJx-LH-Jmm" firstAttribute="top" secondItem="m5K-d6-WC4" secondAttribute="bottom" constant="3" id="r2E-bq-nLf"/>
                 <constraint firstItem="n5b-Il-JTS" firstAttribute="top" secondItem="ahz-GF-Ejb" secondAttribute="bottom" constant="3" id="rnc-A9-Tmw"/>
                 <constraint firstItem="pBe-Ya-9d3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="wFr-pL-aO4"/>
-                <constraint firstItem="kFF-jg-hIC" firstAttribute="top" secondItem="pBe-Ya-9d3" secondAttribute="bottom" constant="60" id="yEl-vF-Z48"/>
+                <constraint firstItem="kFF-jg-hIC" firstAttribute="top" secondItem="pBe-Ya-9d3" secondAttribute="bottom" constant="110" id="yEl-vF-Z48"/>
                 <constraint firstItem="pzz-bS-mm3" firstAttribute="top" secondItem="pBe-Ya-9d3" secondAttribute="bottom" constant="50" id="zq3-8u-YqJ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

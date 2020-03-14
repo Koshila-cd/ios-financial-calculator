@@ -8,13 +8,25 @@
 
 import UIKit
 
-class SavingsDepositViewController: UIViewController {
+@objcMembers class SavingsDepositViewController: UIViewController {
 
+    @IBOutlet weak var paymentFld: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.view.applyGradient(colours: [.black, .purple, .darkGray], locations: [0.0, 0.5, 1.0])
+        
+        self.view.addNegativeButtonOnKeyboard(field: paymentFld)
     }
     
-
+    
+    
 }
+
+//class NegativeButton {
+//    @objc func doneButtonAction(){
+//        print("donee buttooonnnn")
+//        //            paymentFld.text = "-"
+//    }
+//}

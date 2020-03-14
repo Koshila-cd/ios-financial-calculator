@@ -134,7 +134,7 @@
                     <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9oz-Gy-pKt">
-                    <rect key="frame" x="330" y="319" width="50" height="50"/>
+                    <rect key="frame" x="330" y="369" width="50" height="50"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="Qpi-8Z-cbU"/>
                         <constraint firstAttribute="height" constant="50" id="cKz-ca-nuj"/>
@@ -159,7 +159,7 @@
                 <constraint firstItem="pyZ-W2-OsI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="UMd-jZ-WJh"/>
                 <constraint firstItem="VS9-Al-EV9" firstAttribute="top" secondItem="LvP-w6-Ibc" secondAttribute="bottom" constant="15" id="WHY-vg-So1"/>
                 <constraint firstItem="VS9-Al-EV9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Xa1-Xh-8oN"/>
-                <constraint firstItem="9oz-Gy-pKt" firstAttribute="top" secondItem="pyZ-W2-OsI" secondAttribute="bottom" constant="60" id="ZSJ-ca-XyA"/>
+                <constraint firstItem="9oz-Gy-pKt" firstAttribute="top" secondItem="pyZ-W2-OsI" secondAttribute="bottom" constant="110" id="ZSJ-ca-XyA"/>
                 <constraint firstItem="tIB-Uk-ZtS" firstAttribute="top" secondItem="VS9-Al-EV9" secondAttribute="bottom" constant="3" id="e4a-pf-PS2"/>
                 <constraint firstItem="LvP-w6-Ibc" firstAttribute="top" secondItem="6Aa-bR-Kcy" secondAttribute="bottom" constant="3" id="gMo-cH-8gB"/>
                 <constraint firstItem="VS9-Al-EV9" firstAttribute="top" secondItem="LvP-w6-Ibc" secondAttribute="bottom" constant="15" id="hJy-YV-wik"/>

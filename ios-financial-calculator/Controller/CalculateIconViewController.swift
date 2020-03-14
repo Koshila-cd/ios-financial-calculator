@@ -23,6 +23,25 @@ extension UIView {
         self.layer.insertSublayer(gradient, at: 0)
         return gradient
     }
+    
+    func addNegativeButtonOnKeyboard(field: UITextField){
+        let doneToolbar: UIToolbar = UIToolbar(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
+        doneToolbar.barStyle = .black
+        
+        let done: UIBarButtonItem = UIBarButtonItem(title: "Negative(-)", style: .plain , target: self, action: #selector(negativeButtonAction))
+        
+        let items = [done]
+        doneToolbar.items = items
+        doneToolbar.sizeToFit()
+        done.tintColor = UIColor.white
+        
+        field.inputAccessoryView = doneToolbar
+        
+    }
+    
+    @objc func negativeButtonAction(){
+
+    }
 }
 
 class CalculateIconViewController: UIViewController {

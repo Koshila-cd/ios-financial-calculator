@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SavingsDepositViewController" customModule="ios_financial_calculator" customModuleProvider="target">
             <connections>
+                <outlet property="paymentFld" destination="YHi-oT-yFL" id="4lG-Sa-6DU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -96,7 +97,7 @@
                     </constraints>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" keyboardAppearance="alert"/>
+                    <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
                 </textField>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P6w-hC-mK6">
                     <rect key="frame" x="80" y="309" width="240" height="104"/>
