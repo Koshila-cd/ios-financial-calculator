@@ -410,7 +410,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eXF-nd-iWQ">
-                                <rect key="frame" x="20" y="88" width="374" height="29"/>
+                                <rect key="frame" x="20" y="103" width="374" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="CWe-qS-GdS"/>
                                     <constraint firstAttribute="height" constant="28" id="Re6-su-ohY"/>
@@ -426,7 +426,7 @@
                                 </connections>
                             </segmentedControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3iM-j6-EqY">
-                                <rect key="frame" x="0.0" y="136" width="414" height="675"/>
+                                <rect key="frame" x="0.0" y="151" width="414" height="675"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="MMP-jJ-2zx"/>
@@ -437,7 +437,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="3iM-j6-EqY" firstAttribute="centerX" secondItem="dEg-Sy-qpX" secondAttribute="centerX" id="1bX-KZ-1lo"/>
-                            <constraint firstItem="eXF-nd-iWQ" firstAttribute="top" secondItem="pmi-Ih-3fs" secondAttribute="top" id="FMM-8b-K5O"/>
+                            <constraint firstItem="eXF-nd-iWQ" firstAttribute="top" secondItem="pmi-Ih-3fs" secondAttribute="top" constant="15" id="FMM-8b-K5O"/>
                             <constraint firstItem="eXF-nd-iWQ" firstAttribute="leading" secondItem="pmi-Ih-3fs" secondAttribute="leading" constant="20" id="i8I-D6-KcI"/>
                             <constraint firstItem="3iM-j6-EqY" firstAttribute="top" secondItem="eXF-nd-iWQ" secondAttribute="bottom" constant="20" id="nIA-MD-5Dk"/>
                             <constraint firstItem="3iM-j6-EqY" firstAttribute="centerY" secondItem="dEg-Sy-qpX" secondAttribute="centerY" id="rKm-gx-e8K"/>
@@ -654,8 +654,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pZg-d1-cvm">
-                                <rect key="frame" x="20" y="61" width="374" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pZg-d1-cvm">
+                                <rect key="frame" x="20" y="103" width="374" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="I93-Bv-vtf"/>
+                                    <constraint firstAttribute="height" constant="28" id="loz-U7-g1M"/>
+                                </constraints>
                                 <segments>
                                     <segment title="Loan Terms"/>
                                     <segment title="Principle Amount"/>
@@ -666,19 +670,25 @@
                                 </connections>
                             </segmentedControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bVP-YP-su6">
-                                <rect key="frame" x="0.0" y="109" width="414" height="678"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="678"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="414" id="Wxb-V1-9Yz"/>
                                     <constraint firstAttribute="width" constant="414" id="Xd5-OL-ZWq"/>
                                     <constraint firstAttribute="height" constant="678" id="kkH-Gt-DGV"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="678" id="uxH-hp-g4G"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="pZg-d1-cvm" firstAttribute="top" secondItem="uGu-au-w5h" secondAttribute="top" constant="15" id="QIA-ds-E7A"/>
                             <constraint firstItem="bVP-YP-su6" firstAttribute="centerX" secondItem="r8K-Nd-1Ri" secondAttribute="centerX" id="co9-cB-pay"/>
-                            <constraint firstItem="bVP-YP-su6" firstAttribute="top" secondItem="pZg-d1-cvm" secondAttribute="bottom" constant="20" id="iDd-2Q-BMO"/>
+                            <constraint firstItem="bVP-YP-su6" firstAttribute="centerX" secondItem="r8K-Nd-1Ri" secondAttribute="centerX" id="fGz-Er-fuA"/>
+                            <constraint firstItem="bVP-YP-su6" firstAttribute="top" secondItem="uGu-au-w5h" secondAttribute="top" id="ljO-zC-FAZ"/>
                             <constraint firstItem="bVP-YP-su6" firstAttribute="centerY" secondItem="r8K-Nd-1Ri" secondAttribute="centerY" id="rKn-ib-vj8"/>
+                            <constraint firstItem="bVP-YP-su6" firstAttribute="centerY" secondItem="r8K-Nd-1Ri" secondAttribute="centerY" id="uGV-sA-4xw"/>
+                            <constraint firstItem="pZg-d1-cvm" firstAttribute="leading" secondItem="uGu-au-w5h" secondAttribute="leading" constant="20" id="xdF-88-HgM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uGu-au-w5h"/>
                     </view>
@@ -746,12 +756,24 @@
         <scene sceneID="Bt0-Bq-T9T">
             <objects>
                 <viewController id="XLl-rY-ETX" customClass="LoanViewController" customModule="ios_financial_calculator" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bHq-hE-Imw">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="bHq-hE-Imw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xTa-D7-cvy">
-                                <rect key="frame" x="20" y="62" width="374" height="29"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P6k-j0-xSR">
+                                <rect key="frame" x="0.0" y="139" width="414" height="674"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="674" id="dhJ-GJ-4kY"/>
+                                    <constraint firstAttribute="width" constant="414" id="kVO-cS-zQH"/>
+                                </constraints>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xTa-D7-cvy">
+                                <rect key="frame" x="20" y="103" width="374" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="Uqj-VD-dDJ"/>
+                                    <constraint firstAttribute="width" constant="374" id="mDv-9r-3oW"/>
+                                </constraints>
                                 <segments>
                                     <segment title="Payment"/>
                                     <segment title="Final Amount"/>
@@ -761,20 +783,14 @@
                                     <action selector="calSegment:" destination="XLl-rY-ETX" eventType="valueChanged" id="kTf-yD-LOx"/>
                                 </connections>
                             </segmentedControl>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P6k-j0-xSR">
-                                <rect key="frame" x="0.0" y="110" width="414" height="676"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="676" id="DzT-At-9tM"/>
-                                    <constraint firstAttribute="width" constant="414" id="c7g-S3-hFm"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="P6k-j0-xSR" firstAttribute="centerY" secondItem="bHq-hE-Imw" secondAttribute="centerY" id="V0r-XW-AuC"/>
-                            <constraint firstItem="P6k-j0-xSR" firstAttribute="centerX" secondItem="bHq-hE-Imw" secondAttribute="centerX" id="m3H-hq-O1V"/>
-                            <constraint firstItem="P6k-j0-xSR" firstAttribute="top" secondItem="xTa-D7-cvy" secondAttribute="bottom" constant="20" id="vhb-yV-Ni8"/>
+                            <constraint firstItem="P6k-j0-xSR" firstAttribute="top" secondItem="xTa-D7-cvy" secondAttribute="bottom" constant="8" symbolic="YES" id="XQ9-Co-XGU"/>
+                            <constraint firstItem="xTa-D7-cvy" firstAttribute="top" secondItem="Dt3-vh-6fn" secondAttribute="top" constant="15" id="ZaD-ES-kwa"/>
+                            <constraint firstItem="P6k-j0-xSR" firstAttribute="centerY" secondItem="bHq-hE-Imw" secondAttribute="centerY" id="mhm-Ft-gnR"/>
+                            <constraint firstItem="P6k-j0-xSR" firstAttribute="centerX" secondItem="bHq-hE-Imw" secondAttribute="centerX" id="tbf-mc-Xcl"/>
+                            <constraint firstItem="xTa-D7-cvy" firstAttribute="leading" secondItem="Dt3-vh-6fn" secondAttribute="leading" constant="20" id="znX-BO-0gQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Dt3-vh-6fn"/>
                     </view>
@@ -793,7 +809,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tIa-f2-I73" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2264" y="-996"/>
+            <point key="canvasLocation" x="2263.768115942029" y="-996.42857142857133"/>
         </scene>
         <!--Loan Help View Controller-->
         <scene sceneID="P31-qp-Fsh">
@@ -847,19 +863,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3ev-Mt-3r7">
-                                <rect key="frame" x="20" y="88" width="367" height="28"/>
+                                <rect key="frame" x="20" y="103" width="367" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="WLa-Z4-HhI"/>
                                     <constraint firstAttribute="width" constant="367" id="jiT-8R-4Qj"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="Future Value"/>
+                                    <segment title="Deposit"/>
                                     <segment title="Interest Rate"/>
-                                    <segment title="Payment"/>
+                                    <segment title="Future Value"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentControl:" destination="LPZ-dA-Q2V" eventType="valueChanged" id="Xw0-wB-Pwl"/>
+                                </connections>
                             </segmentedControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3EJ-fc-n03">
-                                <rect key="frame" x="0.0" y="135" width="414" height="690"/>
+                                <rect key="frame" x="0.0" y="150" width="414" height="690"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="690" id="ZTr-Jg-n17"/>
@@ -871,7 +890,7 @@
                         <constraints>
                             <constraint firstItem="3EJ-fc-n03" firstAttribute="top" secondItem="3ev-Mt-3r7" secondAttribute="bottom" constant="20" id="24i-de-CRg"/>
                             <constraint firstItem="3ev-Mt-3r7" firstAttribute="leading" secondItem="dY3-By-lxf" secondAttribute="leading" constant="20" id="PzB-kj-41h"/>
-                            <constraint firstItem="3ev-Mt-3r7" firstAttribute="top" secondItem="dY3-By-lxf" secondAttribute="top" id="ea0-Cx-K68"/>
+                            <constraint firstItem="3ev-Mt-3r7" firstAttribute="top" secondItem="dY3-By-lxf" secondAttribute="top" constant="15" id="ea0-Cx-K68"/>
                             <constraint firstItem="3EJ-fc-n03" firstAttribute="centerX" secondItem="CoM-rc-gyf" secondAttribute="centerX" id="jK5-8h-LO8"/>
                             <constraint firstItem="3EJ-fc-n03" firstAttribute="centerY" secondItem="CoM-rc-gyf" secondAttribute="centerY" id="wKa-Ka-omU"/>
                         </constraints>
