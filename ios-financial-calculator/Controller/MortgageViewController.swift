@@ -8,8 +8,6 @@
 
 import UIKit
 
-let HISTORY_FORMULAR = "MORTGAGE"
-
 class MortgageViewController: UIViewController {
     
     var payment: UIView!
