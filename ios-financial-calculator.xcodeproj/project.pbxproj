@@ -58,6 +58,8 @@
 		45FD4D20241C2A1100A4FDC0 /* MortgageAmountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45FD4D1E241C2A1100A4FDC0 /* MortgageAmountViewController.xib */; };
 		45FD4D22241C2BC400A4FDC0 /* MortgageIRUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FD4D21241C2BC400A4FDC0 /* MortgageIRUIView.swift */; };
 		45FD4D24241C2BE400A4FDC0 /* MortgageAmountUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FD4D23241C2BE400A4FDC0 /* MortgageAmountUIView.swift */; };
+		45FD4D27241C991800A4FDC0 /* SavingsFutureValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FD4D25241C991800A4FDC0 /* SavingsFutureValueViewController.swift */; };
+		45FD4D28241C991800A4FDC0 /* SavingsFutureValueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45FD4D26241C991800A4FDC0 /* SavingsFutureValueViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +137,8 @@
 		45FD4D1E241C2A1100A4FDC0 /* MortgageAmountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MortgageAmountViewController.xib; sourceTree = "<group>"; };
 		45FD4D21241C2BC400A4FDC0 /* MortgageIRUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageIRUIView.swift; sourceTree = "<group>"; };
 		45FD4D23241C2BE400A4FDC0 /* MortgageAmountUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageAmountUIView.swift; sourceTree = "<group>"; };
+		45FD4D25241C991800A4FDC0 /* SavingsFutureValueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsFutureValueViewController.swift; sourceTree = "<group>"; };
+		45FD4D26241C991800A4FDC0 /* SavingsFutureValueViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SavingsFutureValueViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,6 +289,8 @@
 				45FD4D1A241C26F600A4FDC0 /* MortgageIRViewController.xib */,
 				45FD4D1D241C2A1100A4FDC0 /* MortgageAmountViewController.swift */,
 				45FD4D1E241C2A1100A4FDC0 /* MortgageAmountViewController.xib */,
+				45FD4D25241C991800A4FDC0 /* SavingsFutureValueViewController.swift */,
+				45FD4D26241C991800A4FDC0 /* SavingsFutureValueViewController.xib */,
 			);
 			path = Forms;
 			sourceTree = "<group>";
@@ -416,6 +422,7 @@
 				458A18912416DF1300FDFC8C /* PresentValueCIViewController.xib in Resources */,
 				45FD4D16241C200900A4FDC0 /* MortgagePaymentViewController.xib in Resources */,
 				458A1834241540A700FDFC8C /* Assets.xcassets in Resources */,
+				45FD4D28241C991800A4FDC0 /* SavingsFutureValueViewController.xib in Resources */,
 				458A182F241540A600FDFC8C /* Main.storyboard in Resources */,
 				45FD4D20241C2A1100A4FDC0 /* MortgageAmountViewController.xib in Resources */,
 				45FD4D1C241C26F600A4FDC0 /* MortgageIRViewController.xib in Resources */,
@@ -482,6 +489,7 @@
 				458A18772416261000FDFC8C /* FutureValueViewController.swift in Sources */,
 				458A18852416C21B00FDFC8C /* LoanPaymentUIView.swift in Sources */,
 				458A187C24162AA100FDFC8C /* PresentValueViewController.swift in Sources */,
+				45FD4D27241C991800A4FDC0 /* SavingsFutureValueViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

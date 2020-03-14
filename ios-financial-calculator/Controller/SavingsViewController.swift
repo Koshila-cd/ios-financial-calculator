@@ -10,11 +10,12 @@ import UIKit
 
 class SavingsViewController: UIViewController {
 
+    var futureValue: UIView!
+    var interestRate: UIView!
+    var payment: UIView!
     
-    @IBOutlet weak var pmtFld: UITextField!
-    @IBOutlet weak var interestRateFld: UITextField!
-    @IBOutlet weak var numOfYearsFld: UITextField!
-    @IBOutlet weak var savingLbl: UILabel!
+    @IBOutlet weak var segmentView: UIView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
