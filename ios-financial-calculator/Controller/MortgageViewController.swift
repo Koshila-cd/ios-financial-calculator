@@ -13,6 +13,7 @@ class MortgageViewController: UIViewController {
     var payment: UIView!
     var interestRate: UIView!
     var mortgageAmount: UIView!
+    var loanTerms: UIView!
 
     @IBOutlet weak var segmentView: UIView!
     
@@ -25,11 +26,13 @@ class MortgageViewController: UIViewController {
         payment = MortgagePaymentViewController().view
         interestRate = MortgageIRViewController().view
         mortgageAmount = MortgageAmountViewController().view
+//        loanTerms = MortgageLoanTermsViewController().view
         
         // add subviews to segments
         segmentView.addSubview(payment)
         segmentView.addSubview(interestRate)
         segmentView.addSubview(mortgageAmount)
+//        segmentView.addSubview(loanTerms)
         
     }
     
@@ -45,6 +48,9 @@ class MortgageViewController: UIViewController {
         case 2:
             segmentView.bringSubviewToFront(payment)
             break
+//        case 3:
+//            segmentView.bringSubviewToFront(loanTerms)
+//            break
         default:
             break
         }

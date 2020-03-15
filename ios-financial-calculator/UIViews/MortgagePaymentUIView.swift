@@ -100,8 +100,7 @@ class MortgagePaymentUIView: UIView {
             saveBtn.isEnabled = true
             saveBtn.backgroundColor = UIColor(red:1.00, green:0.83, blue:0.47, alpha:1.0)
             saveBtn.layer.cornerRadius = 15
-            
-            
+    
         }
         
         
@@ -137,11 +136,15 @@ class MortgagePaymentUIView: UIView {
     
     @IBAction func save(_ sender: UIButton) {
         
+        
         let saveMortgage: String = "Loan Amount: \(loanAmount) , Interest Rate: \(interestRate) , Loan Terms: \(numOfYears), Payment Amount : \(mortgage)"
         print(saveMortgage)
         var arr = UserDefaults.standard.array(forKey: MORTGAGE_PAYMENT) as? [String] ?? []
         arr.append(saveMortgage)
         UserDefaults.standard.set(arr, forKey: MORTGAGE_PAYMENT)
+        
+        saveBtn.isEnabled = false
+        SaveSuccess.instance.showAlert()
         
     }
     

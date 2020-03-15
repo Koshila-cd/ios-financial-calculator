@@ -102,16 +102,12 @@ class LoanPaymentUIView: UIView {
     {
         
         var payment: Double = 0.0
+
+        let n = 12 * Double(numOfYears)
+        let interest = interestRate * (1 / 100)
+        let formulae1 = pow((1 + interest), -n)
         
-        // number of months calculated from the given number of years
-        let n = Double(12 * numOfYears)
-        let t = Double(numOfYears)
-        
-        let formulae1: Double = loanAmount*(interestRate/n)
-        
-        let formulae2: Double = pow((1+(interestRate/n)),n*t)
-        
-        payment = (formulae1 * formulae2)/(formulae2 - 1)
+        payment = (interest * loanAmount) / (1 - formulae1)
         print(payment)
         
         return payment

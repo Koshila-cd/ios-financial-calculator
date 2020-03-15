@@ -63,7 +63,7 @@
                     <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
                 </textField>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a7T-R9-09N">
-                    <rect key="frame" x="64" y="309" width="240" height="104"/>
+                    <rect key="frame" x="80" y="309" width="240" height="104"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hip-m7-XPK">
                             <rect key="frame" x="8" y="16" width="224" height="30"/>
@@ -72,7 +72,7 @@
                                 <constraint firstAttribute="width" constant="224" id="ARv-S0-FVn"/>
                                 <constraint firstAttribute="height" constant="30" id="bpT-KH-1Q1"/>
                             </constraints>
-                            <state key="normal" title="Calculate Loan Terms (Years)">
+                            <state key="normal" title="Calculate Loan Terms">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <connections>
@@ -111,7 +111,7 @@
             <constraints>
                 <constraint firstItem="iPF-mo-ioR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="ALf-A6-It8"/>
                 <constraint firstItem="rWA-9p-scN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="D2e-Uz-cI1"/>
-                <constraint firstItem="a7T-R9-09N" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="64" id="Ha3-Ex-8He"/>
+                <constraint firstItem="a7T-R9-09N" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="80" id="Ha3-Ex-8He"/>
                 <constraint firstItem="cv4-NI-NO0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Ita-PG-Z7e"/>
                 <constraint firstItem="cv4-NI-NO0" firstAttribute="top" secondItem="VUJ-xz-ObR" secondAttribute="bottom" constant="3" id="Peh-j9-9nD"/>
                 <constraint firstItem="VUJ-xz-ObR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="QhT-6n-lnU"/>

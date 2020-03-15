@@ -25,7 +25,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
 extension UIView{
     func showErr(){
         self.layer.borderColor = UIColor.red.cgColor
-        self.layer.borderWidth = 2
+        self.layer.borderWidth = 3
     }
     
     func success() {

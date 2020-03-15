@@ -296,7 +296,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SxN-BH-A8H">
-                                <rect key="frame" x="30" y="147" width="150" height="150"/>
+                                <rect key="frame" x="30" y="148" width="150" height="150"/>
                                 <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="cA8-2f-8pf"/>
@@ -311,7 +311,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.94999999999999996" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ny-lu-lCl">
-                                <rect key="frame" x="230" y="138" width="150" height="150"/>
+                                <rect key="frame" x="230" y="148" width="150" height="150"/>
                                 <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="BJK-iE-A6u"/>
@@ -323,7 +323,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Savings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UKe-0k-IKn">
-                                <rect key="frame" x="30" y="243" width="150" height="25"/>
+                                <rect key="frame" x="30" y="263" width="150" height="25"/>
                                 <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="VdB-gx-WRt"/>
@@ -334,7 +334,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mortgage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cm3-ye-jJl">
-                                <rect key="frame" x="230" y="243" width="150" height="25"/>
+                                <rect key="frame" x="230" y="263" width="150" height="25"/>
                                 <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="3yW-AI-J54"/>
@@ -345,7 +345,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWb-e5-7ew">
-                                <rect key="frame" x="30" y="347" width="150" height="150"/>
+                                <rect key="frame" x="30" y="348" width="150" height="150"/>
                                 <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="WuH-md-Ms9"/>
@@ -357,7 +357,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loans" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="me9-71-1eS">
-                                <rect key="frame" x="30" y="462" width="150" height="26"/>
+                                <rect key="frame" x="30" y="463" width="150" height="26"/>
                                 <color key="backgroundColor" white="1" alpha="0.49547838184931509" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="8QM-0S-ESI"/>
@@ -368,7 +368,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gzl-tr-YKq">
-                                <rect key="frame" x="230" y="338" width="150" height="150"/>
+                                <rect key="frame" x="230" y="348" width="150" height="150"/>
                                 <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="6qV-Ln-XvS"/>
@@ -380,7 +380,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compund Interest" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ves-ws-nPe">
-                                <rect key="frame" x="230" y="453" width="150" height="26"/>
+                                <rect key="frame" x="230" y="463" width="150" height="26"/>
                                 <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="5Fr-gv-J3j"/>
@@ -394,12 +394,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="xWb-e5-7ew" firstAttribute="top" secondItem="SxN-BH-A8H" secondAttribute="bottom" constant="50" id="08B-rt-AqE"/>
-                            <constraint firstItem="SxN-BH-A8H" firstAttribute="top" secondItem="PBt-IZ-6Bc" secondAttribute="top" constant="59" id="3V9-nK-k33"/>
+                            <constraint firstItem="SxN-BH-A8H" firstAttribute="top" secondItem="PBt-IZ-6Bc" secondAttribute="top" constant="60" id="3V9-nK-k33"/>
                             <constraint firstItem="2ny-lu-lCl" firstAttribute="leading" secondItem="SxN-BH-A8H" secondAttribute="trailing" constant="50" id="3xT-Cn-zM5"/>
                             <constraint firstItem="ves-ws-nPe" firstAttribute="leading" secondItem="xWb-e5-7ew" secondAttribute="trailing" constant="50" id="4l6-Y6-I2X"/>
-                            <constraint firstItem="2ny-lu-lCl" firstAttribute="top" secondItem="PBt-IZ-6Bc" secondAttribute="top" constant="50" id="BhY-vj-zCb"/>
+                            <constraint firstItem="2ny-lu-lCl" firstAttribute="top" secondItem="PBt-IZ-6Bc" secondAttribute="top" constant="60" id="BhY-vj-zCb"/>
                             <constraint firstItem="Cm3-ye-jJl" firstAttribute="leading" secondItem="SxN-BH-A8H" secondAttribute="trailing" constant="50" id="Fw4-NC-5Ah"/>
-                            <constraint firstItem="UKe-0k-IKn" firstAttribute="top" secondItem="PBt-IZ-6Bc" secondAttribute="top" constant="155" id="HTJ-Kb-BHv"/>
+                            <constraint firstItem="UKe-0k-IKn" firstAttribute="top" secondItem="PBt-IZ-6Bc" secondAttribute="top" constant="175" id="HTJ-Kb-BHv"/>
                             <constraint firstItem="Gzl-tr-YKq" firstAttribute="leading" secondItem="xWb-e5-7ew" secondAttribute="trailing" constant="50" id="IeK-ep-qSR"/>
                             <constraint firstItem="UKe-0k-IKn" firstAttribute="leading" secondItem="PBt-IZ-6Bc" secondAttribute="leading" constant="30" id="MCN-nL-WF0"/>
                             <constraint firstItem="xWb-e5-7ew" firstAttribute="leading" secondItem="PBt-IZ-6Bc" secondAttribute="leading" constant="30" id="Mf2-cc-L9s"/>
@@ -407,7 +407,7 @@
                             <constraint firstItem="me9-71-1eS" firstAttribute="top" secondItem="SxN-BH-A8H" secondAttribute="bottom" constant="165" id="Ser-mM-SHC"/>
                             <constraint firstItem="me9-71-1eS" firstAttribute="leading" secondItem="PBt-IZ-6Bc" secondAttribute="leading" constant="30" id="UHz-Rj-7T2"/>
                             <constraint firstItem="SxN-BH-A8H" firstAttribute="leading" secondItem="PBt-IZ-6Bc" secondAttribute="leading" constant="30" id="fC5-Wy-2JG"/>
-                            <constraint firstItem="Cm3-ye-jJl" firstAttribute="top" secondItem="PBt-IZ-6Bc" secondAttribute="top" constant="155" id="jV6-Hh-HjV"/>
+                            <constraint firstItem="Cm3-ye-jJl" firstAttribute="top" secondItem="PBt-IZ-6Bc" secondAttribute="top" constant="175" id="jV6-Hh-HjV"/>
                             <constraint firstItem="Gzl-tr-YKq" firstAttribute="top" secondItem="2ny-lu-lCl" secondAttribute="bottom" constant="50" id="skn-6Q-NBR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PBt-IZ-6Bc"/>
@@ -480,7 +480,7 @@
         <scene sceneID="KWa-qF-yYj">
             <objects>
                 <viewController id="Xbl-TY-Mfb" customClass="MortgageHelpViewController" customModule="ios_financial_calculator" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="odL-l9-F4r">
+                    <view key="view" contentMode="scaleToFill" id="odL-l9-F4r">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -685,7 +685,7 @@
                                 </constraints>
                                 <segments>
                                     <segment title="Loan Terms"/>
-                                    <segment title="Principle Amount"/>
+                                    <segment title="Present Value"/>
                                     <segment title="Compound Interest"/>
                                 </segments>
                                 <connections>
@@ -724,7 +724,7 @@
         <scene sceneID="K7p-N1-9S7">
             <objects>
                 <viewController id="82M-G9-6nA" customClass="CompoundIHelpViewController" customModule="ios_financial_calculator" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="2fd-yH-nmI">
+                    <view key="view" contentMode="scaleToFill" id="2fd-yH-nmI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -794,9 +794,10 @@
                                     <constraint firstAttribute="width" constant="374" id="mDv-9r-3oW"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="Payment"/>
-                                    <segment title="Final Amount"/>
+                                    <segment title="Present Value"/>
+                                    <segment title="Future Value"/>
                                     <segment title="Interest"/>
+                                    <segment title="Payment"/>
                                 </segments>
                                 <connections>
                                     <action selector="calSegment:" destination="XLl-rY-ETX" eventType="valueChanged" id="kTf-yD-LOx"/>

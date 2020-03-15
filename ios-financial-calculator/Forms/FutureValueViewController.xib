@@ -36,14 +36,14 @@
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
                 </textField>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interest (%)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UKt-bw-u30">
-                    <rect key="frame" x="20" y="134" width="94" height="21.5"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interest Rate (%)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UKt-bw-u30">
+                    <rect key="frame" x="20" y="134" width="135" height="22"/>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZqP-Tf-CyK">
-                    <rect key="frame" x="20" y="158.5" width="374" height="30"/>
+                    <rect key="frame" x="20" y="159" width="374" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="OoO-Kx-K9l"/>
                         <constraint firstAttribute="width" constant="374" id="lAv-Di-W5H"/>
@@ -53,13 +53,13 @@
                     <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loan Term(Years)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vim-Uz-0YJ">
-                    <rect key="frame" x="20" y="203.5" width="142.5" height="22"/>
+                    <rect key="frame" x="20" y="204" width="142.5" height="22"/>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zfr-B2-Nyp">
-                    <rect key="frame" x="20" y="228.5" width="374" height="30"/>
+                    <rect key="frame" x="20" y="229" width="374" height="30"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="374" id="dtN-Nt-HVT"/>
                         <constraint firstAttribute="height" constant="30" id="kmH-2a-UKB"/>
@@ -69,7 +69,7 @@
                     <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
                 </textField>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ekw-2P-oHb">
-                    <rect key="frame" x="80" y="308.5" width="240" height="104"/>
+                    <rect key="frame" x="80" y="309" width="240" height="104"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCX-Yk-MBp">
                             <rect key="frame" x="8" y="16" width="224" height="30"/>
@@ -134,7 +134,7 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <connections>
-                <outlet property="amountFld" destination="he8-Em-MDh" id="5cb-tx-9lu"/>
+                <outlet property="amountFld" destination="he8-Em-MDh" id="Rfp-aq-TMJ"/>
                 <outlet property="futureValueLbl" destination="kYV-6w-FQI" id="3W8-JC-OYi"/>
                 <outlet property="interestRateFld" destination="ZqP-Tf-CyK" id="HdP-go-9M5"/>
                 <outlet property="numOfYearsFld" destination="zfr-B2-Nyp" id="0Ta-xm-ESh"/>

@@ -25,8 +25,6 @@ class MortgageAmountUIView: UIView {
     
     @IBAction func calculateAmount(_ sender: UIButton) {
         
-        
-        
         var validation: Bool = true
         
         
@@ -100,19 +98,14 @@ class MortgageAmountUIView: UIView {
     
     
     @IBAction func save(_ sender: UIButton) {
-        print("saveee")
                     let save: String = "Payment: \(payment) , Interest Rate: \(interest) , Loan Terms: \(numOfYears), Payment Amount : \(amount)"
                     print(save)
                     var arr = UserDefaults.standard.array(forKey: MORTGAGE_AMOUNT) as? [String] ?? []
                     arr.append(save)
                     UserDefaults.standard.set(arr, forKey: MORTGAGE_AMOUNT)
         
-                    let alert = UIAlertController(title: "Success", message: "The mortgage calculation was successully saved!", preferredStyle: UIAlertController.Style.alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-        
-//        alert.show(MortgagePaymentViewController(), sender: UIAlertAction())
-                    MortgagePaymentViewController().present(alert, animated: true, completion: nil)
-
+                    saveBtn.isEnabled = false
+                    SaveSuccess.instance.showAlert()
     }
     
     

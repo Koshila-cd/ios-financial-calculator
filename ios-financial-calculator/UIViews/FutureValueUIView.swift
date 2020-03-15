@@ -82,11 +82,35 @@ class FutureValueUIView: UIView {
             
         }
         
-        // calculate mortgae if all the fields in the view are not empty and is valid
-//        if validation {
-//            let loanTerms = loanTermsFormulae(futureValue: futureValue, interestRate: interestRate, principleAmount: principleAmount)
-//            loanTermsLbl.text =  String(loanTerms) + "Years"
-//        }
+        // calculate payment if all the fields in the view are not empty and is valid
+        if validation {
+            let futureValue = futureValueFormulae(loanAmount: amount, interestRate: interestRate, numOfYears: numOfYears)
+            futureValueLbl.text = "£" + String(format:"%.2f", futureValue)
+        }
+        
+        
+    }
+    
+    
+    /**
+     - Calculate future value in given interest rate, loan amount and the number of months it is been payed by passing them to the payment formulae
+     - parameters:
+     - loanAmount: The amount loaned
+     - interestRate: The interest rate
+     - numOfYears: The number of years when the payment is complete
+     */
+    func futureValueFormulae(loanAmount: Double, interestRate: Double, numOfYears: Int)-> Double
+    {
+        
+        var value: Double = 0.0
+        
+        let n = 12 * Double(numOfYears)
+        let interest = interestRate * (1 / 100)
+        
+        value = loanAmount * pow((1 + interest),n)
+        print(value)
+        
+        return value
         
     }
     

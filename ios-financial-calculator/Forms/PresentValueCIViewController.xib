@@ -63,7 +63,7 @@
                     <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
                 </textField>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hva-5S-cyk">
-                    <rect key="frame" x="64" y="309" width="240" height="104"/>
+                    <rect key="frame" x="80" y="309" width="240" height="104"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IxJ-hC-waP">
                             <rect key="frame" x="8" y="16" width="224" height="30"/>
@@ -72,7 +72,7 @@
                                 <constraint firstAttribute="height" constant="30" id="Vnd-O8-6jg"/>
                                 <constraint firstAttribute="width" constant="224" id="pnc-Ml-W68"/>
                             </constraints>
-                            <state key="normal" title="Calculate Principle Amount">
+                            <state key="normal" title="Calculate Present value">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <connections>
@@ -122,7 +122,7 @@
                 <constraint firstItem="agX-MV-PNb" firstAttribute="top" secondItem="9Ya-2j-5hj" secondAttribute="bottom" constant="15" id="gdU-iK-SkZ"/>
                 <constraint firstItem="T8k-Zc-jTI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="jEr-ch-gKW"/>
                 <constraint firstItem="Ulp-27-ySe" firstAttribute="top" secondItem="5ea-bs-LoX" secondAttribute="bottom" constant="15" id="jbO-6B-DMP"/>
-                <constraint firstItem="Hva-5S-cyk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="64" id="jgZ-l5-L99"/>
+                <constraint firstItem="Hva-5S-cyk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="80" id="jgZ-l5-L99"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <connections>

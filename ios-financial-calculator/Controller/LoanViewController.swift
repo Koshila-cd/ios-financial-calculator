@@ -12,6 +12,7 @@ class LoanViewController: UIViewController {
 
     @IBOutlet weak var segmentView: UIView!
     
+    var paymentView: UIView!
     var interestView: UIView!
     var futureValueView: UIView!
     var presentValueView: UIView!
@@ -20,10 +21,12 @@ class LoanViewController: UIViewController {
         super.viewDidLoad()
         
         self.view.applyGradient(colours: [.black, .purple, .darkGray], locations: [0.0, 0.5, 1.0])
+        paymentView = PresentValueViewController().view
         interestView = CalculateInterestViewController().view
         futureValueView = FutureValueViewController().view
-        presentValueView = PresentValueViewController().view
+        presentValueView = LoanPresentValueViewController().view
         
+        segmentView.addSubview(paymentView)
         segmentView.addSubview(interestView)
         segmentView.addSubview(futureValueView)
         segmentView.addSubview(presentValueView)
@@ -41,6 +44,9 @@ class LoanViewController: UIViewController {
             break
         case 2:
             segmentView.bringSubviewToFront(interestView)
+            break
+        case 3:
+            segmentView.bringSubviewToFront(paymentView)
             break
         default:
             break

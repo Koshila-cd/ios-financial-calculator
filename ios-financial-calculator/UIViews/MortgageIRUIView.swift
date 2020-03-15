@@ -130,9 +130,8 @@ class MortgageIRUIView: UIView {
         arr.append(save)
         UserDefaults.standard.set(arr, forKey: MORTGAGE_INTEREST)
         
-        let alert = UIAlertController(title: "Success", message: "The mortgage calculation was successully saved!", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-        //                    self.present(alert, animated: true, completion: nil)
+        saveBtn.isEnabled = false
+        SaveSuccess.instance.showAlert()
     }
     
 }

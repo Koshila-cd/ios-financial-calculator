@@ -19,7 +19,7 @@ class InterestUIView: UIView {
     @IBOutlet weak var interestLbl: UILabel!
     
     var loanAmount: Double = 0
-    var totalAmount: Double = 0
+    var payment: Double = 0
     var numOfYears: Int = 0
     var interest: Double = 0
     
@@ -54,7 +54,7 @@ class InterestUIView: UIView {
                     totalAmountFld.showErr()
                 } else {
                     if let value = Double(input as String) {
-                        totalAmount = value
+                        payment = value
                         totalAmountFld.success()
                     }else{
                         validation = false
@@ -87,7 +87,7 @@ class InterestUIView: UIView {
             
             // calculate mortgae if all the fields in the view are not empty and is valid
             if validation {
-                interest = interestFormulae(loanAmount: loanAmount, totalAmount: totalAmount, numOfYears: numOfYears)
+                interest = interestFormulae(loanAmount: loanAmount, payment: payment, numOfYears: numOfYears)
                 interestLbl.text = String(format:"%.2f", interest) + "%"
             }
     }
@@ -100,18 +100,15 @@ class InterestUIView: UIView {
      - totalAmount: Total loan amount
      - numOfYears: The number of years when the payment is complete
      */
-    func interestFormulae(loanAmount: Double, totalAmount: Double, numOfYears: Int)-> Double
+    func interestFormulae(loanAmount: Double, payment: Double, numOfYears: Int)-> Double
     {
         
         var interest: Double = 0.0
         
         // number of months calculated from the given number of years
-        let n = Double(12 * numOfYears)
-        let t = Double(numOfYears)
+        let n = 12 * Double(numOfYears)
         
-        let formulae1: Double = pow((totalAmount/loanAmount),(1/(12*t)))
-        
-        interest = n*(formulae1 - 1)
+        interest = (payment / (loanAmount * n)) * 100
         print(interest)
         
         return interest
@@ -120,8 +117,7 @@ class InterestUIView: UIView {
     
     
     @IBAction func save(_ sender: UIButton) {
-        print("saveee")
-        let save: String = "Loan Amount: \(loanAmount) , Total Amount: \(totalAmount) , Loan Terms: \(numOfYears), Interest Rate : \(interest)"
+        let save: String = "Loan Amount: \(loanAmount) , Monthly Payment: \(payment) , Loan Terms: \(numOfYears), Interest Rate : \(interest)"
 
         var arr = UserDefaults.standard.array(forKey: COMPUNT_INTEREST) as? [String] ?? []
         arr.append(save)
