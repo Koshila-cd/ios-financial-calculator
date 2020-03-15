@@ -12,15 +12,14 @@ let LOAN_PRESENT_VALUE = "LOAN_PRESENT_VALUE"
 
 class LoanPresentValue: UIView {
     
-    
+    // UI mapped with the code
     @IBOutlet weak var futureValueFld: UITextField!
     @IBOutlet weak var interestRateFld: UITextField!
     @IBOutlet weak var numOfYearsFld: UITextField!
-    
     @IBOutlet weak var presentValueFld: UILabel!
-    
     @IBOutlet weak var saveBtn: UIButton!
     
+    // value initilaization
     var futureValue: Double = 0
     var interestRate: Double = 0
     var numOfYears: Int = 0
@@ -28,10 +27,10 @@ class LoanPresentValue: UIView {
     
     @IBAction func calculateValue(_ sender: UIButton) {
         
-        
-        
+        // validation is true when text fields are not empty and is string values are not added
         var validation: Bool = true
         
+        // future value validation
         if let input = futureValueFld.text {
             if input.isEmpty {
                 validation = false
@@ -50,6 +49,7 @@ class LoanPresentValue: UIView {
             futureValueFld.showErr()
         }
         
+        // interest rate validation
         if let input = interestRateFld.text {
             if input.isEmpty {
                 validation = false
@@ -68,6 +68,7 @@ class LoanPresentValue: UIView {
             interestRateFld.showErr()
         }
         
+        // loan terms validation
         if let input = numOfYearsFld.text {
             if input.isEmpty {
                 validation = false
@@ -125,6 +126,12 @@ class LoanPresentValue: UIView {
         
     }
     
+    /**
+     - Save button, saving the calculated amount and the fileds into userdefaults
+     - A success message alert will appear one the saving is completed
+     - parameters:
+     -  sender: The navigation button item.
+     */
     @IBAction func save(_ sender: UIButton) {
         let save: String = "Loan#Future Value: \(futureValue) , Interest Rate: \(interestRate) , Loan Terms: \(numOfYears), Interest Rate : \(interestRate)"
         

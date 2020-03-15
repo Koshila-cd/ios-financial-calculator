@@ -34,7 +34,7 @@ class InterestUIView: UIView {
         // validation is true when text fields are not empty and is string values are not added
         var validation: Bool = true
         
-        // loan amount f
+        // loan amount field validation
         if let input = loanAmountFld.text {
             if input.isEmpty {
                 validation = false
@@ -53,6 +53,7 @@ class InterestUIView: UIView {
             loanAmountFld.showErr()
         }
         
+        //total amount field validation
         if let input = totalAmountFld.text {
             if input.isEmpty {
                 validation = false
@@ -71,6 +72,7 @@ class InterestUIView: UIView {
             totalAmountFld.showErr()
         }
         
+        // loan terms field validation
         if let input = numOfYearsFld.text {
             if input.isEmpty {
                 validation = false
@@ -95,6 +97,7 @@ class InterestUIView: UIView {
             interest = interestFormulae(loanAmount: loanAmount, payment: payment, numOfYears: numOfYears)
             interestLbl.text = String(format:"%.2f", interest) + "%"
             
+            // Save button enabling and add colour
             saveBtn.isEnabled = true
             saveBtn.backgroundColor = UIColor(red:1.00, green:0.83, blue:0.47, alpha:1.0)
             saveBtn.layer.cornerRadius = 15
@@ -124,7 +127,12 @@ class InterestUIView: UIView {
         
     }
     
-    
+    /**
+     - Save button, saving the calculated amount and the fileds into userdefaults
+     - A success message alert will appear one the saving is completed
+     - parameters:
+     -  sender: The navigation button item.
+     */
     @IBAction func save(_ sender: UIButton) {
         let save: String = "Loan#Loan Amount: \(loanAmount) , Monthly Payment: \(payment) , Loan Terms: \(numOfYears), Interest Rate : \(interest)"
         

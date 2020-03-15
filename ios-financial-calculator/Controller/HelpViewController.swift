@@ -9,16 +9,16 @@
 import UIKit
 
 class HelpViewController: UIViewController, UIScrollViewDelegate {
-
+    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     
-    var helpScreens: [String] = ["help-1","help-2","help-3"]
+    var helpScreens: [String] = ["help-1","help-2","help-3","help-4"]
     var frame = CGRect.zero
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.view.applyGradient(colours: [.black, .purple, .darkGray], locations: [0.0, 0.5, 1.0])
         
         pageControl.numberOfPages = helpScreens.count
@@ -51,7 +51,7 @@ class HelpViewController: UIViewController, UIScrollViewDelegate {
         let pageNumber = scrollView.contentOffset.x / scrollView.frame.size.width
         pageControl.currentPage = Int(pageNumber)
     }
-
     
-
+    
+    
 }

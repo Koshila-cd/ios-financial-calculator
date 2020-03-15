@@ -9,7 +9,7 @@
 import UIKit
 
 class SavingsViewController: UIViewController {
-
+    
     var futureValue: UIView!
     var interestRate: UIView!
     var payment: UIView!

@@ -9,7 +9,7 @@
 import UIKit
 
 class LoanViewController: UIViewController {
-
+    
     @IBOutlet weak var segmentView: UIView!
     
     var paymentView: UIView!
@@ -33,7 +33,7 @@ class LoanViewController: UIViewController {
         
         
     }
-
+    
     @IBAction func calSegment(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:

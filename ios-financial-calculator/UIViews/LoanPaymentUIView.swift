@@ -11,6 +11,7 @@ import UIKit
 let LOAN_PAYMENT = "LOAN_PAYMENT"
 class LoanPaymentUIView: UIView {
     
+    // UI initilaization
     @IBOutlet weak var loanAmountFld: UITextField!
     @IBOutlet weak var interestRateFld: UITextField!
     @IBOutlet weak var numOfYearsFld: UITextField!
@@ -18,7 +19,7 @@ class LoanPaymentUIView: UIView {
     
     @IBOutlet weak var saveBtn: UIButton!
     
-    
+    // Value initialization
     var loanAmount: Double = 0
     var interestRate: Double = 0
     var numOfYears: Int = 0
@@ -29,9 +30,10 @@ class LoanPaymentUIView: UIView {
      */
     @IBAction func calculatePayment(_ sender: UIButton) {
         
-        
+        / validation is true when text fields are not empty and is string values are not added
         var validation: Bool = true
         
+        // loan amount field validation
         if let input = loanAmountFld.text {
             if input.isEmpty {
                 validation = false
@@ -50,6 +52,7 @@ class LoanPaymentUIView: UIView {
             loanAmountFld.showErr()
         }
         
+        // interest rate filed validation
         if let input = interestRateFld.text {
             if input.isEmpty {
                 validation = false
@@ -68,6 +71,7 @@ class LoanPaymentUIView: UIView {
             interestRateFld.showErr()
         }
         
+        // loan terms field validation
         if let input = numOfYearsFld.text {
             if input.isEmpty {
                 validation = false
@@ -125,6 +129,12 @@ class LoanPaymentUIView: UIView {
         
     }
     
+    /**
+     - Save button, saving the calculated amount and the fileds into userdefaults
+     - A success message alert will appear one the saving is completed
+     - parameters:
+     -  sender: The navigation button item.
+     */
     @IBAction func save(_ sender: UIButton) {
         let save: String = "Loan#Loan Amount: \(loanAmount) , Interest Rate: \(interestRate) , Loan Terms: \(numOfYears), Payment : \(payment)"
         

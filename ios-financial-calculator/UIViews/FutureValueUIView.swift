@@ -12,14 +12,14 @@ let LOAN_FUTURE_VALUE = "LOAN_FUTURE_VALUE"
 
 class FutureValueUIView: UIView {
     
+    // mapping UI to code
     @IBOutlet weak var amountFld: UITextField!
     @IBOutlet weak var interestRateFld: UITextField!
     @IBOutlet weak var numOfYearsFld: UITextField!
-    
     @IBOutlet weak var futureValueLbl: UILabel!
-    
     @IBOutlet weak var saveBtn: UIButton!
     
+    // value initialization
     var amount: Double = 0
     var interestRate: Double = 0
     var numOfYears: Int = 0
@@ -30,8 +30,10 @@ class FutureValueUIView: UIView {
      */
     @IBAction func calculateFutureValue(_ sender: UIButton) {
         
+        // validation is true when text fields are not empty and is string values are not added
         var validation: Bool = true
         
+        // amount field validation
         if let input = amountFld.text {
             if input.isEmpty {
                 validation = false
@@ -50,6 +52,7 @@ class FutureValueUIView: UIView {
             amountFld.showErr()
         }
         
+        // interest field validation
         if let input = interestRateFld.text {
             if input.isEmpty {
                 validation = false
@@ -68,6 +71,7 @@ class FutureValueUIView: UIView {
             interestRateFld.showErr()
         }
         
+        // loan terms validation
         if let input = numOfYearsFld.text {
             if input.isEmpty {
                 validation = false
@@ -97,7 +101,6 @@ class FutureValueUIView: UIView {
             saveBtn.layer.cornerRadius = 15
         }
         
-        
     }
     
     
@@ -113,16 +116,22 @@ class FutureValueUIView: UIView {
         
         var value: Double = 0.0
         
+        // n is to convert years to months
         let n = 12 * Double(numOfYears)
         let interest = interestRate * (1 / 100)
         
         value = loanAmount * pow((1 + interest),n)
-        print(value)
         
         return value
         
     }
     
+    /**
+     - Save button, saving the calculated amount and the fileds into userdefaults
+     - A success message alert will appear one the saving is completed
+     - parameters:
+     -  sender: The navigation button item.
+     */
     @IBAction func save(_ sender: UIButton) {
         let save: String = "Loan#Loan Amount: \(amount) , Interest Rate: \(interestRate) , Loan Terms: \(numOfYears), Future Value : \(futureValue)"
         

@@ -20,7 +20,7 @@ class LedgerViewController: UIViewController ,UITableViewDataSource,UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        createLedger()
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorColor = UIColor.clear
@@ -30,8 +30,12 @@ class LedgerViewController: UIViewController ,UITableViewDataSource,UITableViewD
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        createLedger()
+    }
+    
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.contentView.layer.borderWidth = 5.0
+        cell.contentView.layer.borderWidth = 3.0
         cell.contentView.layer.borderColor = UIColor.black.cgColor
         cell.backgroundColor = UIColor.purple
     }

@@ -39,7 +39,7 @@ class CompundInterestViewController: UIViewController {
             segmentView.bringSubviewToFront(presentValueView)
             break
         case 2:
-             segmentView.bringSubviewToFront(compundInterestView)
+            segmentView.bringSubviewToFront(compundInterestView)
             break
         default:
             break
@@ -48,5 +48,5 @@ class CompundInterestViewController: UIViewController {
     }
     
     
-
+    
 }

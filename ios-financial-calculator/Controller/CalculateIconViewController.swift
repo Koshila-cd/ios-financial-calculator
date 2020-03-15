@@ -45,11 +45,10 @@ extension UIView {
 }
 
 class CalculateIconViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        self.savingsBtn.applyGradient(colours: [.yellow, .blue])
+        
         self.savingsBtn.layer.cornerRadius = 15
         self.mortgageBtn.layer.cornerRadius = 15
         self.loansBtn.layer.cornerRadius = 15
@@ -57,12 +56,12 @@ class CalculateIconViewController: UIViewController {
         self.view.applyGradient(colours: [.black, .purple, .darkGray], locations: [0.0, 0.5, 1.0])
     }
     
-
+    
     @IBOutlet weak var savingsBtn: UIButton!
     @IBOutlet weak var mortgageBtn: UIButton!
     @IBOutlet weak var loansBtn: UIButton!
     @IBOutlet weak var comInterestBtn: UIButton!
     
-
+    
     
 }

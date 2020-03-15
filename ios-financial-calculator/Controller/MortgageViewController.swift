@@ -14,25 +14,23 @@ class MortgageViewController: UIViewController {
     var interestRate: UIView!
     var mortgageAmount: UIView!
     var loanTerms: UIView!
-
+    
     @IBOutlet weak var segmentView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.view.applyGradient(colours: [.black, .purple, .darkGray], locations: [0.0, 0.5, 1.0])
         
         // Initiate sub views for the segment
         payment = MortgagePaymentViewController().view
         interestRate = MortgageIRViewController().view
         mortgageAmount = MortgageAmountViewController().view
-//        loanTerms = MortgageLoanTermsViewController().view
         
         // add subviews to segments
         segmentView.addSubview(payment)
         segmentView.addSubview(interestRate)
         segmentView.addSubview(mortgageAmount)
-//        segmentView.addSubview(loanTerms)
         
     }
     
@@ -48,9 +46,6 @@ class MortgageViewController: UIViewController {
         case 2:
             segmentView.bringSubviewToFront(payment)
             break
-//        case 3:
-//            segmentView.bringSubviewToFront(loanTerms)
-//            break
         default:
             break
         }

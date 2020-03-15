@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "BeFunky-project1.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "description-page.jpg",
       "scale" : "2x"
     },
     {
