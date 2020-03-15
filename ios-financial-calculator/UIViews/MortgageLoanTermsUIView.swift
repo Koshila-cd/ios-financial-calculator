@@ -9,8 +9,8 @@
 import UIKit
 
 class MortgageLoanTermsUIView: UIView {
-
-
+    
+    
     @IBOutlet weak var paymentFld: UITextField!
     @IBOutlet weak var interestRateFld: UITextField!
     @IBOutlet weak var loanAmountFld: UITextField!

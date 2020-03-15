@@ -9,7 +9,7 @@
 import UIKit
 
 class CalculateInterestViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -17,5 +17,5 @@ class CalculateInterestViewController: UIViewController {
         
     }
     
-
+    
 }

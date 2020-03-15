@@ -11,14 +11,16 @@ import UIKit
 let LOAN_INTEREST = "LOAN_INTEREST"
 
 class InterestUIView: UIView {
-
-
+    
+    
+    // UI Content initialization
     @IBOutlet weak var loanAmountFld: UITextField!
     @IBOutlet weak var totalAmountFld: UITextField!
     @IBOutlet weak var numOfYearsFld: UITextField!
     @IBOutlet weak var interestLbl: UILabel!
     @IBOutlet weak var saveBtn: UIButton!
     
+    // Value initialization
     var loanAmount: Double = 0
     var payment: Double = 0
     var numOfYears: Int = 0
@@ -28,73 +30,75 @@ class InterestUIView: UIView {
      - Get values from textfields in the View and pass them into the interest rate calculation formulae
      */
     @IBAction func calculateInterest(_ sender: UIButton) {
-            
-            var validation: Bool = true
-            
-            if let input = loanAmountFld.text {
-                if input.isEmpty {
-                    validation = false
-                    loanAmountFld.showErr()
-                } else {
-                    if let value = Double(input as String) {
-                        loanAmount = value
-                        loanAmountFld.success()
-                    }else{
-                        validation = false
-                        loanAmountFld.showErr()
-                    }
-                }
-            }else{
+        
+        // validation is true when text fields are not empty and is string values are not added
+        var validation: Bool = true
+        
+        // loan amount f
+        if let input = loanAmountFld.text {
+            if input.isEmpty {
                 validation = false
                 loanAmountFld.showErr()
-            }
-            
-            if let input = totalAmountFld.text {
-                if input.isEmpty {
+            } else {
+                if let value = Double(input as String) {
+                    loanAmount = value
+                    loanAmountFld.success()
+                }else{
                     validation = false
-                    totalAmountFld.showErr()
-                } else {
-                    if let value = Double(input as String) {
-                        payment = value
-                        totalAmountFld.success()
-                    }else{
-                        validation = false
-                        totalAmountFld.showErr()
-                    }
+                    loanAmountFld.showErr()
                 }
-            }else{
+            }
+        }else{
+            validation = false
+            loanAmountFld.showErr()
+        }
+        
+        if let input = totalAmountFld.text {
+            if input.isEmpty {
                 validation = false
                 totalAmountFld.showErr()
-            }
-            
-            if let input = numOfYearsFld.text {
-                if input.isEmpty {
+            } else {
+                if let value = Double(input as String) {
+                    payment = value
+                    totalAmountFld.success()
+                }else{
                     validation = false
-                    numOfYearsFld.showErr()
-                } else {
-                    if let value = Int(input as String) {
-                        numOfYears = value
-                        numOfYearsFld.success()
-                    }else{
-                        validation = false
-                        numOfYearsFld.showErr()
-                    }
+                    totalAmountFld.showErr()
                 }
-            }else{
+            }
+        }else{
+            validation = false
+            totalAmountFld.showErr()
+        }
+        
+        if let input = numOfYearsFld.text {
+            if input.isEmpty {
                 validation = false
                 numOfYearsFld.showErr()
-                
+            } else {
+                if let value = Int(input as String) {
+                    numOfYears = value
+                    numOfYearsFld.success()
+                }else{
+                    validation = false
+                    numOfYearsFld.showErr()
+                }
             }
+        }else{
+            validation = false
+            numOfYearsFld.showErr()
             
-            // calculate mortgae if all the fields in the view are not empty and is valid
-            if validation {
-                interest = interestFormulae(loanAmount: loanAmount, payment: payment, numOfYears: numOfYears)
-                interestLbl.text = String(format:"%.2f", interest) + "%"
-                
-                saveBtn.isEnabled = true
-                saveBtn.backgroundColor = UIColor(red:1.00, green:0.83, blue:0.47, alpha:1.0)
-                saveBtn.layer.cornerRadius = 15
-            }
+        }
+        
+        // calculate mortgae if all the fields in the view are not empty and is valid
+        if validation {
+            interest = interestFormulae(loanAmount: loanAmount, payment: payment, numOfYears: numOfYears)
+            interestLbl.text = String(format:"%.2f", interest) + "%"
+            
+            saveBtn.isEnabled = true
+            saveBtn.backgroundColor = UIColor(red:1.00, green:0.83, blue:0.47, alpha:1.0)
+            saveBtn.layer.cornerRadius = 15
+        }
     }
     
     /**
@@ -123,7 +127,7 @@ class InterestUIView: UIView {
     
     @IBAction func save(_ sender: UIButton) {
         let save: String = "Loan#Loan Amount: \(loanAmount) , Monthly Payment: \(payment) , Loan Terms: \(numOfYears), Interest Rate : \(interest)"
-
+        
         var arr = UserDefaults.standard.array(forKey: LOAN_INTEREST) as? [String] ?? []
         arr.append(save)
         UserDefaults.standard.set(arr, forKey: LOAN_INTEREST)

@@ -9,10 +9,8 @@
 import UIKit
 
 class InterestViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
-
 }

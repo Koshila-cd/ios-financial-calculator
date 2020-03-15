@@ -11,7 +11,7 @@ import UIKit
 let COMPOUND_PRESENT_VALUE = "COMPOUND_PRESENT_VALUE"
 
 class PresentValueCIUIView: UIView {
-
+    
     @IBOutlet weak var totalAmountFld: UITextField!
     @IBOutlet weak var interestRateFld: UITextField!
     @IBOutlet weak var numOfYearsFld: UITextField!

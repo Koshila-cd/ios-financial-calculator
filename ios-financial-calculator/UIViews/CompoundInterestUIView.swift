@@ -11,7 +11,7 @@ import UIKit
 let COMPOUND_INTEREST = "COMPOUND_INTEREST"
 
 class CompoundInterestUIView: UIView {
-
+    
     @IBOutlet weak var totalAmountFld: UITextField!
     @IBOutlet weak var interestRateFld: UITextField!
     @IBOutlet weak var numOfYearsFld: UITextField!
@@ -117,7 +117,7 @@ class CompoundInterestUIView: UIView {
         // number of months calculated from the given number of years
         let n = Double(12 * numOfYears)
         let t = Double(numOfYears)
-
+        
         
         compoundInterest = totalAmount*pow((1+(interestRate/n)),n*t)
         print(compoundInterest)
@@ -137,5 +137,5 @@ class CompoundInterestUIView: UIView {
         SaveSuccess.instance.showAlert(text: "The calculation is Successfully saved!")
     }
     
-        
+    
 }

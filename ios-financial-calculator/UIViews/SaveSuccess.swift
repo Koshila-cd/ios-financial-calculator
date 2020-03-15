@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class SaveSuccess: UIView {
-
+    
     static let instance = SaveSuccess()
     
     @IBOutlet weak var parentView: UIView!

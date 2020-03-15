@@ -11,7 +11,7 @@ import UIKit
 let SAVINGS_INTEREST = "SAVINGS_INTEREST"
 
 class SavingsIRUIView: UIView {
-
+    
     @IBOutlet weak var paymentFld: UITextField!
     @IBOutlet weak var futureValueFld: UITextField!
     @IBOutlet weak var loanTermsFld: UITextField!

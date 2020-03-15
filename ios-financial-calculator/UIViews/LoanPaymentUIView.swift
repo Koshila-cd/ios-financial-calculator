@@ -10,7 +10,7 @@ import UIKit
 
 let LOAN_PAYMENT = "LOAN_PAYMENT"
 class LoanPaymentUIView: UIView {
-
+    
     @IBOutlet weak var loanAmountFld: UITextField!
     @IBOutlet weak var interestRateFld: UITextField!
     @IBOutlet weak var numOfYearsFld: UITextField!
@@ -91,11 +91,11 @@ class LoanPaymentUIView: UIView {
         if validation {
             payment = paymentFormulae(loanAmount: loanAmount, interestRate: interestRate, numOfYears: numOfYears)
             paymentLbl.text = "£" + String(format:"%.2f", payment)
-        
+            
             saveBtn.isEnabled = true
             saveBtn.backgroundColor = UIColor(red:1.00, green:0.83, blue:0.47, alpha:1.0)
             saveBtn.layer.cornerRadius = 15
-        
+            
         }
         
         
@@ -113,7 +113,7 @@ class LoanPaymentUIView: UIView {
     {
         
         var payment: Double = 0.0
-
+        
         let n = 12 * Double(numOfYears)
         let interest = interestRate * (1 / 100)
         let formulae1 = pow((1 + interest), -n)

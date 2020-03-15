@@ -9,12 +9,12 @@
 import UIKit
 
 class MortgageLoanTermsViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.applyGradient(colours: [.black, .purple, .darkGray], locations: [0.0, 0.5, 1.0])
         
     }
-
+    
 }

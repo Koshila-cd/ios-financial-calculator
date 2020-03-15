@@ -11,7 +11,7 @@ import UIKit
 let COMPOUND_LOAN_TERMS = "COMPOUND_PRESENT_VALUE"
 
 class LoanTermsUIView: UIView {
-
+    
     @IBOutlet weak var futureValueFld: UITextField!
     @IBOutlet weak var interestRateFld: UITextField!
     @IBOutlet weak var principleAmountFld: UITextField!
@@ -115,9 +115,9 @@ class LoanTermsUIView: UIView {
         var loanTerms: Double = 0.0
         
         
-//        compoundInterest =
-//        print(loanTerms)
-//
+        //        compoundInterest =
+        //        print(loanTerms)
+        //
         return loanTerms
         
     }

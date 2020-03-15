@@ -11,7 +11,7 @@ import UIKit
 class LedgerViewController: UIViewController ,UITableViewDataSource,UITableViewDelegate {
     
     var ledger = [Ledger]()
-
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var deleteBarButton: UIBarButtonItem!
     
@@ -29,9 +29,8 @@ class LedgerViewController: UIViewController ,UITableViewDataSource,UITableViewD
         deleteBarButton.isEnabled = true
         
     }
-   
+    
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-//        cell.contentView.applyGradient(colours: [.black, .purple, .darkGray], locations: [0.0, 0.5, 1.0])
         cell.contentView.layer.borderWidth = 5.0
         cell.contentView.layer.borderColor = UIColor.black.cgColor
         cell.backgroundColor = UIColor.purple
@@ -56,7 +55,7 @@ class LedgerViewController: UIViewController ,UITableViewDataSource,UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Ledger") as! LedgerTableViewCell
-
+        
         let value : String = ledger[indexPath.row].getCalculation()
         let parts =   value.split(separator: "#")
         
@@ -65,12 +64,8 @@ class LedgerViewController: UIViewController ,UITableViewDataSource,UITableViewD
             cell.ledgerType.text = String(parts[0])
         }
         
-        // Card(cell) styles
         cell.isUserInteractionEnabled = false
-//        cell.contentView.applyGradient(colours: [.black, .purple, .darkGray], locations: [0.0, 0.5, 1.0])
-//        cell.contentView.backgroundColor = UIColor(red: 30/255, green: 30/255, blue: 30/255, alpha: 1.00)
         cell.contentView.layer.cornerRadius = 10.0
-        
         cell.contentView.layer.borderColor = UIColor(red: 0.25, green: 0.25, blue: 0.25, alpha: 1.00).cgColor
         cell.contentView.layer.masksToBounds = false
         
@@ -104,10 +99,8 @@ class LedgerViewController: UIViewController ,UITableViewDataSource,UITableViewD
             // refetch hitory and reload table
             createLedger()
             DispatchQueue.main.async{ self.tableView.reloadData() }
-
+            
         }
         
     }
-    
-
 }

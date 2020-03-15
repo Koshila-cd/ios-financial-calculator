@@ -11,8 +11,8 @@ import UIKit
 let LOAN_PRESENT_VALUE = "LOAN_PRESENT_VALUE"
 
 class LoanPresentValue: UIView {
-
-
+    
+    
     @IBOutlet weak var futureValueFld: UITextField!
     @IBOutlet weak var interestRateFld: UITextField!
     @IBOutlet weak var numOfYearsFld: UITextField!

@@ -11,7 +11,7 @@ import UIKit
 let MORTGAGE_PAYMENT = "MORTGAGE_PAYMENT"
 
 class MortgagePaymentUIView: UIView {
-
+    
     @IBOutlet weak var loanAmountFld: UITextField!
     @IBOutlet weak var interestFld: UITextField!
     @IBOutlet weak var noOfYearsFld: UITextField!
@@ -95,7 +95,7 @@ class MortgagePaymentUIView: UIView {
             saveBtn.isEnabled = true
             saveBtn.backgroundColor = UIColor(red:1.00, green:0.83, blue:0.47, alpha:1.0)
             saveBtn.layer.cornerRadius = 15
-    
+            
         }
         
     }
@@ -142,6 +142,4 @@ class MortgagePaymentUIView: UIView {
         
     }
     
-    
-
 }

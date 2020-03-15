@@ -10,8 +10,8 @@ import UIKit
 
 let MORTGAGE_INTEREST = "MORTGAGE_INTEREST"
 class MortgageIRUIView: UIView {
-
-
+    
+    
     @IBOutlet weak var loanAmountFld: UITextField!
     @IBOutlet weak var paymentFld: UITextField!
     @IBOutlet weak var loanTermsFld: UITextField!
@@ -114,7 +114,7 @@ class MortgageIRUIView: UIView {
     {
         
         var interestRate: Double = 0.0
-
+        
         interestRate = ((payment * 12) / loanAmount) * 100
         print(interestRate)
         

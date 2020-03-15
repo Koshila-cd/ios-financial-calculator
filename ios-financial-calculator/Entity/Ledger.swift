@@ -10,17 +10,11 @@ import Foundation
 
 class Ledger {
     
-//    let type: String
     let calculation: String
     
     init(calculation: String) {
-//        self.type = type
         self.calculation = calculation
     }
-    
-//    func getType() -> String {
-//        return type
-//    }
     
     func getCalculation() -> String {
         return calculation
