@@ -8,7 +8,7 @@
 
 import UIKit
 
-let COMPOUND_LOAN = "COMPOUND_LOAN"
+let LOAN_PAYMENT = "LOAN_PAYMENT"
 class LoanPaymentUIView: UIView {
 
     @IBOutlet weak var loanAmountFld: UITextField!
@@ -16,13 +16,19 @@ class LoanPaymentUIView: UIView {
     @IBOutlet weak var numOfYearsFld: UITextField!
     @IBOutlet weak var paymentLbl: UILabel!
     
+    @IBOutlet weak var saveBtn: UIButton!
+    
+    
+    var loanAmount: Double = 0
+    var interestRate: Double = 0
+    var numOfYears: Int = 0
+    var payment: Double = 0
+    
     /**
      - Get values from textfields in the View and pass them into the payment formulae for calculation
      */
     @IBAction func calculatePayment(_ sender: UIButton) {
-        var loanAmount: Double = 0
-        var interestRate: Double = 0
-        var numOfYears: Int = 0
+        
         
         var validation: Bool = true
         
@@ -83,8 +89,13 @@ class LoanPaymentUIView: UIView {
         
         // calculate payment if all the fields in the view are not empty and is valid
         if validation {
-            let payment = paymentFormulae(loanAmount: loanAmount, interestRate: interestRate, numOfYears: numOfYears)
+            payment = paymentFormulae(loanAmount: loanAmount, interestRate: interestRate, numOfYears: numOfYears)
             paymentLbl.text = "£" + String(format:"%.2f", payment)
+        
+            saveBtn.isEnabled = true
+            saveBtn.backgroundColor = UIColor(red:1.00, green:0.83, blue:0.47, alpha:1.0)
+            saveBtn.layer.cornerRadius = 15
+        
         }
         
         
@@ -112,5 +123,16 @@ class LoanPaymentUIView: UIView {
         
         return payment
         
-}
+    }
+    
+    @IBAction func save(_ sender: UIButton) {
+        let save: String = "Loan Amount: \(loanAmount) , Interest Rate: \(interestRate) , Loan Terms: \(numOfYears), Payment : \(payment)"
+        
+        var arr = UserDefaults.standard.array(forKey: LOAN_PAYMENT) as? [String] ?? []
+        arr.append(save)
+        UserDefaults.standard.set(arr, forKey: LOAN_PAYMENT)
+        
+        saveBtn.isEnabled = false
+        SaveSuccess.instance.showAlert()
+    }
 }

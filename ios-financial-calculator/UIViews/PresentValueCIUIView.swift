@@ -8,6 +8,8 @@
 
 import UIKit
 
+let COMPOUND_PRESENT_VALUE = "COMPOUND_PRESENT_VALUE"
+
 class PresentValueCIUIView: UIView {
 
     @IBOutlet weak var totalAmountFld: UITextField!
@@ -15,15 +17,18 @@ class PresentValueCIUIView: UIView {
     @IBOutlet weak var numOfYearsFld: UITextField!
     @IBOutlet weak var amountLbl: UILabel!
     
+    @IBOutlet weak var saveBtn: UIButton!
+    
+    var totalAmount: Double = 0
+    var interestRate: Double = 0
+    var numOfYears: Int = 0
+    
+    var amount: Double = 0
     
     /**
      - Get values from textfields in the View and pass them into the formulae for calculating the principle amount
      */
     @IBAction func calculateAmount(_ sender: UIButton) {
-        
-        var totalAmount: Double = 0
-        var interestRate: Double = 0
-        var numOfYears: Int = 0
         
         var validation: Bool = true
         
@@ -84,8 +89,12 @@ class PresentValueCIUIView: UIView {
         
         // calculate mortgae if all the fields in the view are not empty and is valid
         if validation {
-            let amount = principleAmountFormulae(totalAmount: totalAmount, interestRate: interestRate, numOfYears: numOfYears)
+            amount = principleAmountFormulae(totalAmount: totalAmount, interestRate: interestRate, numOfYears: numOfYears)
             amountLbl.text = "£" + String(format:"%.2f", amount)
+            
+            saveBtn.isEnabled = true
+            saveBtn.backgroundColor = UIColor(red:1.00, green:0.83, blue:0.47, alpha:1.0)
+            saveBtn.layer.cornerRadius = 15
         }
         
     }
@@ -114,6 +123,17 @@ class PresentValueCIUIView: UIView {
         
         return amount
         
+    }
+    
+    @IBAction func save(_ sender: UIButton) {
+        let save: String = "Future Value: \(totalAmount) , Interest Rate: \(interestRate) , Loan Terms: \(numOfYears), Interest Rate : \(interestRate)"
+        
+        var arr = UserDefaults.standard.array(forKey: COMPOUND_PRESENT_VALUE) as? [String] ?? []
+        arr.append(save)
+        UserDefaults.standard.set(arr, forKey: COMPOUND_PRESENT_VALUE)
+        
+        saveBtn.isEnabled = false
+        SaveSuccess.instance.showAlert()
     }
     
 }

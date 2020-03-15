@@ -90,6 +90,9 @@
                             <state key="normal" title="Calculate Future Value">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="calculateFutureValue:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="Bju-g7-uT4"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZR-ZH-fcZ">
                             <rect key="frame" x="8" y="62" width="240" height="30"/>
@@ -147,6 +150,17 @@
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
                 </textField>
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ear-gH-Qu9">
+                    <rect key="frame" x="330" y="369" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="Avm-7d-1nQ"/>
+                        <constraint firstAttribute="height" constant="50" id="oYQ-sC-7Gh"/>
+                    </constraints>
+                    <state key="normal" image="save-btn"/>
+                    <connections>
+                        <action selector="save:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="6Ia-R8-Jic"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -158,6 +172,8 @@
                 <constraint firstItem="Ihv-p5-bUh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="T1A-BU-Vmw"/>
                 <constraint firstItem="eN1-aN-ews" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="cep-cU-uQ8"/>
                 <constraint firstItem="wh2-vA-YxB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="e08-nQ-ELs"/>
+                <constraint firstItem="ear-gH-Qu9" firstAttribute="top" secondItem="eN1-aN-ews" secondAttribute="bottom" constant="110" id="fcL-Kr-Gv4"/>
+                <constraint firstItem="ear-gH-Qu9" firstAttribute="leading" secondItem="dJM-Ov-b62" secondAttribute="trailing" constant="10" id="gBY-49-sMx"/>
                 <constraint firstItem="Jeq-TT-bfa" firstAttribute="top" secondItem="Ihv-p5-bUh" secondAttribute="bottom" constant="3" id="pae-ZV-6bY"/>
                 <constraint firstItem="Ldg-fg-Gob" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="q6s-R1-UHw"/>
                 <constraint firstItem="Ihv-p5-bUh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="vFe-2y-gci"/>
@@ -171,7 +187,11 @@
                 <outlet property="interestRateFld" destination="Ldg-fg-Gob" id="xDW-6z-1Ns"/>
                 <outlet property="loanTermsFld" destination="eN1-aN-ews" id="772-BI-kiN"/>
                 <outlet property="paymentFld" destination="Jeq-TT-bfa" id="x5t-9V-u4D"/>
+                <outlet property="saveBtn" destination="ear-gH-Qu9" id="0ci-gC-oeN"/>
             </connections>
         </view>
     </objects>
+    <resources>
+        <image name="save-btn" width="36" height="36"/>
+    </resources>
 </document>

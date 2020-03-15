@@ -8,7 +8,7 @@
 
 import UIKit
 
-let COMPUNT_INTEREST = "COMPUNT_INTEREST"
+let COMPUND_INTEREST = "COMPUND_INTEREST"
 
 class InterestUIView: UIView {
 
@@ -17,6 +17,7 @@ class InterestUIView: UIView {
     @IBOutlet weak var totalAmountFld: UITextField!
     @IBOutlet weak var numOfYearsFld: UITextField!
     @IBOutlet weak var interestLbl: UILabel!
+    @IBOutlet weak var saveBtn: UIButton!
     
     var loanAmount: Double = 0
     var payment: Double = 0
@@ -89,6 +90,10 @@ class InterestUIView: UIView {
             if validation {
                 interest = interestFormulae(loanAmount: loanAmount, payment: payment, numOfYears: numOfYears)
                 interestLbl.text = String(format:"%.2f", interest) + "%"
+                
+                saveBtn.isEnabled = true
+                saveBtn.backgroundColor = UIColor(red:1.00, green:0.83, blue:0.47, alpha:1.0)
+                saveBtn.layer.cornerRadius = 15
             }
     }
     
@@ -119,13 +124,12 @@ class InterestUIView: UIView {
     @IBAction func save(_ sender: UIButton) {
         let save: String = "Loan Amount: \(loanAmount) , Monthly Payment: \(payment) , Loan Terms: \(numOfYears), Interest Rate : \(interest)"
 
-        var arr = UserDefaults.standard.array(forKey: COMPUNT_INTEREST) as? [String] ?? []
+        var arr = UserDefaults.standard.array(forKey: COMPUND_INTEREST) as? [String] ?? []
         arr.append(save)
-        UserDefaults.standard.set(arr, forKey: COMPUNT_INTEREST)
+        UserDefaults.standard.set(arr, forKey: COMPUND_INTEREST)
         
-        let alert = UIAlertController(title: "Success", message: "The calculation was successully saved!", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-        //                    self.present(alert, animated: true, completion: nil)
+        saveBtn.isEnabled = false
+        SaveSuccess.instance.showAlert()
     }
     
 }

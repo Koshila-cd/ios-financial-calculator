@@ -1,53 +1,53 @@
 //
-//  CompoundInterestUIView.swift
+//  LoanPresentValue.swift
 //  ios-financial-calculator
 //
-//  Created by Koshila Dissanayake on 3/10/20.
+//  Created by Koshila Dissanayake on 3/15/20.
 //  Copyright © 2020 IIT. All rights reserved.
 //
 
 import UIKit
 
-let COMPOUND_INTEREST = "COMPOUND_INTEREST"
+let LOAN_PRESENT_VALUE = "LOAN_PRESENT_VALUE"
 
-class CompoundInterestUIView: UIView {
+class LoanPresentValue: UIView {
 
-    @IBOutlet weak var totalAmountFld: UITextField!
+
+    @IBOutlet weak var futureValueFld: UITextField!
     @IBOutlet weak var interestRateFld: UITextField!
     @IBOutlet weak var numOfYearsFld: UITextField!
-    @IBOutlet weak var compoundInterestLbl: UILabel!
+    
+    @IBOutlet weak var presentValueFld: UILabel!
     
     @IBOutlet weak var saveBtn: UIButton!
     
-    
-    var totalAmount: Double = 0
+    var futureValue: Double = 0
     var interestRate: Double = 0
     var numOfYears: Int = 0
+    var value: Double = 0
     
-    var compoundInterest: Double = 0
-    /**
-     - Get values from textfields in the View and pass them into the compound interest formulae for calculation
-     */
-    @IBAction func calculateCompoundinterest(_ sender: UIButton) {
+    @IBAction func calculateValue(_ sender: UIButton) {
+        
+        
         
         var validation: Bool = true
         
-        if let input = totalAmountFld.text {
+        if let input = futureValueFld.text {
             if input.isEmpty {
                 validation = false
-                totalAmountFld.showErr()
+                futureValueFld.showErr()
             } else {
                 if let value = Double(input as String) {
-                    totalAmount = value
-                    totalAmountFld.success()
+                    futureValue = value
+                    futureValueFld.success()
                 }else{
                     validation = false
-                    totalAmountFld.showErr()
+                    futureValueFld.showErr()
                 }
             }
         }else{
             validation = false
-            totalAmountFld.showErr()
+            futureValueFld.showErr()
         }
         
         if let input = interestRateFld.text {
@@ -87,10 +87,10 @@ class CompoundInterestUIView: UIView {
             
         }
         
-        // calculate mortgae if all the fields in the view are not empty and is valid
+        // calculate payment if all the fields in the view are not empty and is valid
         if validation {
-            compoundInterest = compoundInterestFormulae(totalAmount: totalAmount, interestRate: interestRate, numOfYears: numOfYears)
-            compoundInterestLbl.text =  String(format:"%.2f", compoundInterest) + "%"
+            value = paymentFormulae(futureValue: futureValue, interestRate: interestRate, numOfYears: numOfYears)
+            presentValueFld.text = "£" + String(format:"%.2f", value)
             
             saveBtn.isEnabled = true
             saveBtn.backgroundColor = UIColor(red:1.00, green:0.83, blue:0.47, alpha:1.0)
@@ -102,40 +102,38 @@ class CompoundInterestUIView: UIView {
     
     
     /**
-     - Calculate amount payable in given interest rate, loan amount and the number of months
-     - it is been payed by passing them to the mortgage formulae
+     - Calculate amount payable in given interest rate, loan amount and the number of months it is been payed by passing them to the payment formulae
      - parameters:
      - loanAmount: The amount loaned
      - interestRate: The interest rate
      - numOfYears: The number of years when the payment is complete
      */
-    func compoundInterestFormulae(totalAmount: Double, interestRate: Double, numOfYears: Int)-> Double
+    func paymentFormulae(futureValue: Double, interestRate: Double, numOfYears: Int)-> Double
     {
         
-        var compoundInterest: Double = 0.0
+        var value: Double = 0.0
         
-        // number of months calculated from the given number of years
-        let n = Double(12 * numOfYears)
-        let t = Double(numOfYears)
-
+        let n = 12 * Double(numOfYears)
+        let interest = interestRate * (1 / 100)
         
-        compoundInterest = totalAmount*pow((1+(interestRate/n)),n*t)
-        print(compoundInterest)
+        let formulae1 = pow((1 + interest), n)
         
-        return compoundInterest
+        value = futureValue / formulae1
+        print(value)
+        
+        return value
         
     }
     
     @IBAction func save(_ sender: UIButton) {
-        let save: String = "Future Value: \(totalAmount) , Interest Rate: \(interestRate) , Loan Terms: \(numOfYears), Interest Rate : \(interestRate)"
+        let save: String = "Future Value: \(futureValue) , Interest Rate: \(interestRate) , Loan Terms: \(numOfYears), Interest Rate : \(interestRate)"
         
-        var arr = UserDefaults.standard.array(forKey: COMPOUND_INTEREST) as? [String] ?? []
+        var arr = UserDefaults.standard.array(forKey: LOAN_PRESENT_VALUE) as? [String] ?? []
         arr.append(save)
-        UserDefaults.standard.set(arr, forKey: COMPOUND_INTEREST)
+        UserDefaults.standard.set(arr, forKey: LOAN_PRESENT_VALUE)
         
         saveBtn.isEnabled = false
         SaveSuccess.instance.showAlert()
     }
     
-        
 }

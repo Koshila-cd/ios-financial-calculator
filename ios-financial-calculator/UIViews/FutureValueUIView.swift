@@ -8,6 +8,8 @@
 
 import UIKit
 
+let LOAN_FUTURE_VALUE = "LOAN_FUTURE_VALUE"
+
 class FutureValueUIView: UIView {
 
     @IBOutlet weak var amountFld: UITextField!
@@ -16,14 +18,17 @@ class FutureValueUIView: UIView {
     
     @IBOutlet weak var futureValueLbl: UILabel!
     
+    @IBOutlet weak var saveBtn: UIButton!
+    
+    var amount: Double = 0
+    var interestRate: Double = 0
+    var numOfYears: Int = 0
+    var futureValue: Double = 0
+    
     /**
      - Get values from textfields in the View and pass them into the formulae for future value calculation
      */
     @IBAction func calculateFutureValue(_ sender: UIButton) {
-        
-        var amount: Double = 0
-        var interestRate: Double = 0
-        var numOfYears: Int = 0
         
         var validation: Bool = true
         
@@ -84,8 +89,12 @@ class FutureValueUIView: UIView {
         
         // calculate payment if all the fields in the view are not empty and is valid
         if validation {
-            let futureValue = futureValueFormulae(loanAmount: amount, interestRate: interestRate, numOfYears: numOfYears)
+            futureValue = futureValueFormulae(loanAmount: amount, interestRate: interestRate, numOfYears: numOfYears)
             futureValueLbl.text = "£" + String(format:"%.2f", futureValue)
+            
+            saveBtn.isEnabled = true
+            saveBtn.backgroundColor = UIColor(red:1.00, green:0.83, blue:0.47, alpha:1.0)
+            saveBtn.layer.cornerRadius = 15
         }
         
         
@@ -112,6 +121,17 @@ class FutureValueUIView: UIView {
         
         return value
         
+    }
+    
+    @IBAction func save(_ sender: UIButton) {
+        let save: String = "Loan Amount: \(amount) , Interest Rate: \(interestRate) , Loan Terms: \(numOfYears), Future Value : \(futureValue)"
+        
+        var arr = UserDefaults.standard.array(forKey: LOAN_FUTURE_VALUE) as? [String] ?? []
+        arr.append(save)
+        UserDefaults.standard.set(arr, forKey: LOAN_FUTURE_VALUE)
+        
+        saveBtn.isEnabled = false
+        SaveSuccess.instance.showAlert()
     }
     
 }

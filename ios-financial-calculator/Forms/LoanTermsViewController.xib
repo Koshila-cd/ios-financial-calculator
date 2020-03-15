@@ -106,6 +106,17 @@
                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hk9-SG-4UU">
+                    <rect key="frame" x="330" y="369" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="FVz-Uf-lpe"/>
+                        <constraint firstAttribute="width" constant="50" id="af7-ER-YH2"/>
+                    </constraints>
+                    <state key="normal" image="save-btn"/>
+                    <connections>
+                        <action selector="save:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="Bgm-PC-w1o"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -118,9 +129,11 @@
                 <constraint firstItem="iPF-mo-ioR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="VYa-Qk-WuD"/>
                 <constraint firstItem="VUJ-xz-ObR" firstAttribute="top" secondItem="YGL-8d-6WT" secondAttribute="bottom" constant="15" id="ZZa-vU-xsU"/>
                 <constraint firstItem="YGL-8d-6WT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="c5B-7V-eJd"/>
+                <constraint firstItem="Hk9-SG-4UU" firstAttribute="top" secondItem="cv4-NI-NO0" secondAttribute="bottom" constant="110" id="dc1-qY-b11"/>
                 <constraint firstItem="0D0-fn-sH3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="fSf-pR-ank"/>
                 <constraint firstItem="a7T-R9-09N" firstAttribute="top" secondItem="cv4-NI-NO0" secondAttribute="bottom" constant="50" id="jIq-fa-4da"/>
                 <constraint firstItem="YGL-8d-6WT" firstAttribute="top" secondItem="rWA-9p-scN" secondAttribute="bottom" constant="3" id="l2p-F2-Lrj"/>
+                <constraint firstItem="Hk9-SG-4UU" firstAttribute="leading" secondItem="a7T-R9-09N" secondAttribute="trailing" constant="10" id="rJi-FV-udy"/>
                 <constraint firstItem="0D0-fn-sH3" firstAttribute="top" secondItem="iPF-mo-ioR" secondAttribute="bottom" constant="3" id="sf8-0u-4Ib"/>
                 <constraint firstItem="rWA-9p-scN" firstAttribute="top" secondItem="0D0-fn-sH3" secondAttribute="bottom" constant="15" id="uGO-Le-n0E"/>
             </constraints>
@@ -130,7 +143,11 @@
                 <outlet property="interestRateFld" destination="YGL-8d-6WT" id="leF-B5-vGQ"/>
                 <outlet property="loanTermsLbl" destination="kCF-0w-rWD" id="3hj-VA-u6X"/>
                 <outlet property="principleAmountFld" destination="cv4-NI-NO0" id="uqT-2R-ahs"/>
+                <outlet property="saveBtn" destination="Hk9-SG-4UU" id="dEc-g7-3OI"/>
             </connections>
         </view>
     </objects>
+    <resources>
+        <image name="save-btn" width="36" height="36"/>
+    </resources>
 </document>

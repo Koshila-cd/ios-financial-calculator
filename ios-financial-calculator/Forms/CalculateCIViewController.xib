@@ -117,6 +117,17 @@
                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEK-pi-cgr">
+                    <rect key="frame" x="330" y="369" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="HvT-bx-i5k"/>
+                        <constraint firstAttribute="width" constant="50" id="jiw-Aa-qw5"/>
+                    </constraints>
+                    <state key="normal" image="save-btn"/>
+                    <connections>
+                        <action selector="save:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="Y7z-DJ-djZ"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -126,6 +137,8 @@
                 <constraint firstItem="VFY-Qp-3PP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="80" id="8Y2-dh-nAc"/>
                 <constraint firstItem="5m1-Jk-LHz" firstAttribute="top" secondItem="kCv-3I-WlV" secondAttribute="bottom" constant="15" id="Htj-E0-yRZ"/>
                 <constraint firstItem="sRl-il-PCR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Jog-Sh-LU7"/>
+                <constraint firstItem="CEK-pi-cgr" firstAttribute="top" secondItem="DbE-ZM-6Zn" secondAttribute="bottom" constant="110" id="LA9-Sc-m4D"/>
+                <constraint firstItem="CEK-pi-cgr" firstAttribute="leading" secondItem="VFY-Qp-3PP" secondAttribute="trailing" constant="10" id="M11-3m-hZQ"/>
                 <constraint firstItem="5m1-Jk-LHz" firstAttribute="top" secondItem="kCv-3I-WlV" secondAttribute="bottom" constant="15" id="MYg-8T-oON"/>
                 <constraint firstItem="5m1-Jk-LHz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Mit-vF-jMO"/>
                 <constraint firstItem="AgN-tO-vZX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="OwJ-aY-vu7"/>
@@ -144,9 +157,13 @@
                 <outlet property="compoundInterestLbl" destination="hsL-EK-OvH" id="5WP-Eb-7Kp"/>
                 <outlet property="interestRateFld" destination="kCv-3I-WlV" id="4be-bP-d8X"/>
                 <outlet property="numOfYearsFld" destination="DbE-ZM-6Zn" id="bac-wM-C3v"/>
+                <outlet property="saveBtn" destination="CEK-pi-cgr" id="hMF-0G-MQU"/>
                 <outlet property="totalAmountFld" destination="sRl-il-PCR" id="a33-2x-XNY"/>
             </connections>
             <point key="canvasLocation" x="128.98550724637681" y="35.491071428571423"/>
         </view>
     </objects>
+    <resources>
+        <image name="save-btn" width="36" height="36"/>
+    </resources>
 </document>

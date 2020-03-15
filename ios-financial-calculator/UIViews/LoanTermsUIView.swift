@@ -8,6 +8,8 @@
 
 import UIKit
 
+let COMPOUND_LOAN_TERMS = "COMPOUND_PRESENT_VALUE"
+
 class LoanTermsUIView: UIView {
 
     @IBOutlet weak var futureValueFld: UITextField!
@@ -15,14 +17,20 @@ class LoanTermsUIView: UIView {
     @IBOutlet weak var principleAmountFld: UITextField!
     @IBOutlet weak var loanTermsLbl: UILabel!
     
+    @IBOutlet weak var saveBtn: UIButton!
+    
+    var futureValue: Double = 0
+    var interestRate: Double = 0
+    var principleAmount: Double = 0
+    
+    var loanTerms: Double = 0
+    
     /**
      - Get values from textfields in the View and pass them into the formulae for loan terms calculation
      */
     @IBAction func calculateLoanterms(_ sender: UIButton) {
         
-        var futureValue: Double = 0
-        var interestRate: Double = 0
-        var principleAmount: Double = 0
+        
         
         var validation: Bool = true
         
@@ -83,8 +91,12 @@ class LoanTermsUIView: UIView {
         
         // calculate mortgae if all the fields in the view are not empty and is valid
         if validation {
-            let loanTerms = loanTermsFormulae(futureValue: futureValue, interestRate: interestRate, principleAmount: principleAmount)
+            loanTerms = loanTermsFormulae(futureValue: futureValue, interestRate: interestRate, principleAmount: principleAmount)
             loanTermsLbl.text =  String(loanTerms) + "Years"
+            
+            saveBtn.isEnabled = true
+            saveBtn.backgroundColor = UIColor(red:1.00, green:0.83, blue:0.47, alpha:1.0)
+            saveBtn.layer.cornerRadius = 15
         }
         
     }
@@ -104,10 +116,21 @@ class LoanTermsUIView: UIView {
         
         
 //        compoundInterest =
-        print(loanTerms)
-        
+//        print(loanTerms)
+//
         return loanTerms
         
+    }
+    
+    @IBAction func save(_ sender: UIButton) {
+        let save: String = "Future Value: \(futureValue) , Interest Rate: \(interestRate) , Principle Amount: \(principleAmount), Loan Terms : \(loanTerms)"
+        
+        var arr = UserDefaults.standard.array(forKey: COMPOUND_PRESENT_VALUE) as? [String] ?? []
+        arr.append(save)
+        UserDefaults.standard.set(arr, forKey: COMPOUND_PRESENT_VALUE)
+        
+        saveBtn.isEnabled = false
+        SaveSuccess.instance.showAlert()
     }
     
     

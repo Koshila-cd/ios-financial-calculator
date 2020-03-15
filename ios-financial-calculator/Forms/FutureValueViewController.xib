@@ -112,6 +112,17 @@
                         <constraint firstItem="jCX-Yk-MBp" firstAttribute="leading" secondItem="ekw-2P-oHb" secondAttribute="leading" constant="8" id="qkJ-f0-fbb"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wU6-Uj-uuM">
+                    <rect key="frame" x="330" y="369" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="U07-JL-AOE"/>
+                        <constraint firstAttribute="width" constant="50" id="gSj-34-kaa"/>
+                    </constraints>
+                    <state key="normal" image="save-btn"/>
+                    <connections>
+                        <action selector="save:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="Eun-t9-MOI"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -120,12 +131,14 @@
                 <constraint firstItem="ZqP-Tf-CyK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="DeB-aB-gf7"/>
                 <constraint firstItem="ekw-2P-oHb" firstAttribute="top" secondItem="zfr-B2-Nyp" secondAttribute="bottom" constant="50" id="EDL-6S-7y1"/>
                 <constraint firstItem="zfr-B2-Nyp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="ENI-sg-8o0"/>
+                <constraint firstItem="wU6-Uj-uuM" firstAttribute="leading" secondItem="ekw-2P-oHb" secondAttribute="trailing" constant="10" id="LWt-3h-a1k"/>
                 <constraint firstItem="ekw-2P-oHb" firstAttribute="top" secondItem="zfr-B2-Nyp" secondAttribute="bottom" constant="50" id="OPP-4x-qEf"/>
                 <constraint firstItem="UKt-bw-u30" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Sze-bq-f6I"/>
                 <constraint firstItem="ekw-2P-oHb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="80" id="TBW-OG-dit"/>
                 <constraint firstItem="he8-Em-MDh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="WVC-3a-L0k"/>
                 <constraint firstItem="vim-Uz-0YJ" firstAttribute="top" secondItem="ZqP-Tf-CyK" secondAttribute="bottom" constant="15" id="ffD-tc-XzP"/>
                 <constraint firstItem="Iz3-9B-ozQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="fqc-JP-wHy"/>
+                <constraint firstItem="wU6-Uj-uuM" firstAttribute="top" secondItem="zfr-B2-Nyp" secondAttribute="bottom" constant="110" id="lYW-WD-bqg"/>
                 <constraint firstItem="ZqP-Tf-CyK" firstAttribute="top" secondItem="UKt-bw-u30" secondAttribute="bottom" constant="3" id="mp6-4A-E5C"/>
                 <constraint firstItem="vim-Uz-0YJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="oMD-9L-fvX"/>
                 <constraint firstItem="ekw-2P-oHb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="80" id="oZ0-jq-tHb"/>
@@ -138,8 +151,12 @@
                 <outlet property="futureValueLbl" destination="kYV-6w-FQI" id="3W8-JC-OYi"/>
                 <outlet property="interestRateFld" destination="ZqP-Tf-CyK" id="HdP-go-9M5"/>
                 <outlet property="numOfYearsFld" destination="zfr-B2-Nyp" id="0Ta-xm-ESh"/>
+                <outlet property="saveBtn" destination="wU6-Uj-uuM" id="v2S-Sl-4bF"/>
             </connections>
             <point key="canvasLocation" x="47.826086956521742" y="35.491071428571423"/>
         </view>
     </objects>
+    <resources>
+        <image name="save-btn" width="36" height="36"/>
+    </resources>
 </document>
