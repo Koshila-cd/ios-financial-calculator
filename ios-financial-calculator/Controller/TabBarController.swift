@@ -17,6 +17,10 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     
 }
 
+/**
+ - Error and success validations in fields
+ - Errors show red boarders in fields
+ */
 extension UIView{
     func showErr(){
         self.layer.borderColor = UIColor.red.cgColor
