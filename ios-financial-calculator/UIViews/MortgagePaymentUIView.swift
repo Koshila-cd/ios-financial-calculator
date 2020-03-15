@@ -128,8 +128,13 @@ class MortgagePaymentUIView: UIView {
         
     }
     
+    /**
+     - Save button, saving the calculated amount and the fileds into userdefaults
+     - A success message alert will appear one the saving is completed
+     - parameters:
+     -  sender: The navigation button item.
+     */
     @IBAction func save(_ sender: UIButton) {
-        
         
         let saveMortgage: String = "Mortgage#Loan Amount: \(loanAmount) , Interest Rate: \(interestRate) , Loan Terms: \(numOfYears), Payment Amount : \(mortgage)"
         print(saveMortgage)
