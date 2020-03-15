@@ -46,7 +46,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lcV-TL-NoK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1191" y="819"/>
+            <point key="canvasLocation" x="-1191" y="929"/>
         </scene>
         <!--Help View Controller-->
         <scene sceneID="z9g-Qy-p2X">
@@ -83,7 +83,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PnW-We-jZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-136.23188405797103" y="818.97321428571422"/>
+            <point key="canvasLocation" x="-135" y="929"/>
         </scene>
         <!--Ledger-->
         <scene sceneID="MnV-ia-29O">
@@ -101,7 +101,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1zp-Rb-GL0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-410" y="100"/>
+            <point key="canvasLocation" x="-410" y="185"/>
         </scene>
         <!--Ledger View Controller-->
         <scene sceneID="pI7-QO-CrV">
@@ -164,7 +164,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N8P-qq-6oJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="608.69565217391312" y="99.776785714285708"/>
+            <point key="canvasLocation" x="594" y="185"/>
         </scene>
         <!--Calculate-->
         <scene sceneID="hjg-mI-4Cg">
@@ -182,117 +182,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wa9-KV-fHS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-409" y="-1096"/>
-        </scene>
-        <!--CalculateIcons-->
-        <scene sceneID="wPk-dm-cIW">
-            <objects>
-                <viewController title="CalculateIcons" id="8Fd-BS-Kr4" customClass="CalculateViewController" customModule="ios_financial_calculator" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="GHr-eM-B77">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ICT-Jf-QdB">
-                                <rect key="frame" x="0.0" y="85.5" width="414" height="725"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hpc-1m-CHV">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rgM-SJ-rWh">
-                                            <size key="itemSize" width="196" height="198"/>
-                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        </collectionViewFlowLayout>
-                                        <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="pod-hY-IL2" customClass="CalculateIconViewCell" customModule="ios_financial_calculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="196" height="198"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="196" height="198"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OAP-DK-tiF">
-                                                            <rect key="frame" x="5" y="0.0" width="191" height="198"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y4B-iZ-903">
-                                                                    <rect key="frame" x="11" y="8" width="165" height="117"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="sdsad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eh2-JK-qLy">
-                                                                    <rect key="frame" x="70" y="154" width="47" height="21"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </view>
-                                                    </subviews>
-                                                </view>
-                                                <connections>
-                                                    <outlet property="calculateIcon" destination="y4B-iZ-903" id="REz-E6-IAP"/>
-                                                    <outlet property="calculateName" destination="Eh2-JK-qLy" id="pMp-TR-g6k"/>
-                                                </connections>
-                                            </collectionViewCell>
-                                        </cells>
-                                    </collectionView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xZ-fU-iBG">
-                                        <rect key="frame" x="59" y="211" width="148" height="148"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                        <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <inset key="titleEdgeInsets" minX="40" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" image="savings-100">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="WTz-26-kCC" kind="show" id="jmD-E8-xkh"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGK-mn-gtd">
-                                        <rect key="frame" x="229" y="210" width="124" height="150"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                        <state key="normal" title="Mortgage">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="PXs-M4-GO7"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Calculations" id="val-3U-aeu"/>
-                    <connections>
-                        <segue destination="i0G-pj-wOA" kind="show" identifier="goToInterestCalculation" id="YsD-f1-m6y"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="71S-JA-18x" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3278" y="-147"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="2Uy-Me-jnC">
-            <objects>
-                <viewController id="WTz-26-kCC" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Q0A-zT-avv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="4U0-aT-Upq"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GiF-Uc-uwu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4135" y="234"/>
+            <point key="canvasLocation" x="-410" y="-970"/>
         </scene>
         <!--Calculations-->
         <scene sceneID="0a3-Sb-pk8">
@@ -429,7 +319,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rwS-Ja-US7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="500.00000000000006" y="-1096.2053571428571"/>
+            <point key="canvasLocation" x="468" y="-970"/>
         </scene>
         <!--Mortgage-->
         <scene sceneID="spz-Zp-ejS">
@@ -481,58 +371,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ay1-ZI-6QK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2263.768115942029" y="-1697.5446428571429"/>
-        </scene>
-        <!--Mortgage Help View Controller-->
-        <scene sceneID="KWa-qF-yYj">
-            <objects>
-                <viewController id="Xbl-TY-Mfb" customClass="MortgageHelpViewController" customModule="ios_financial_calculator" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="odL-l9-F4r">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6eU-aR-Q6D">
-                                <rect key="frame" x="0.0" y="54" width="414" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="3Sv-dH-Tti"/>
-                                    <constraint firstAttribute="width" constant="414" id="E17-TM-c1E"/>
-                                </constraints>
-                                <items>
-                                    <navigationItem title="Help" id="kBo-FN-UE5">
-                                        <barButtonItem key="rightBarButtonItem" title="Item" image="close" id="DJE-7O-aaa">
-                                            <connections>
-                                                <action selector="close:" destination="Xbl-TY-Mfb" id="dv0-CB-olm"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iM1-41-0JC">
-                                <rect key="frame" x="19" y="111" width="375" height="637"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </scrollView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="A8j-Y2-kzG">
-                                <rect key="frame" x="19.5" y="756" width="375" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </pageControl>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="6eU-aR-Q6D" firstAttribute="centerY" secondItem="odL-l9-F4r" secondAttribute="centerY" id="7A0-ks-uj8"/>
-                            <constraint firstItem="6eU-aR-Q6D" firstAttribute="top" secondItem="nFF-cP-JeY" secondAttribute="top" constant="10" id="NsX-Tl-Oi6"/>
-                            <constraint firstItem="6eU-aR-Q6D" firstAttribute="centerX" secondItem="odL-l9-F4r" secondAttribute="centerX" id="k3B-8f-f5a"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="nFF-cP-JeY"/>
-                    </view>
-                    <connections>
-                        <outlet property="pageControl" destination="A8j-Y2-kzG" id="Ec5-pE-pRU"/>
-                        <outlet property="scrollView" destination="iM1-41-0JC" id="Cn3-EL-eJD"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pjm-ZY-zNO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3240.579710144928" y="-1893.0803571428571"/>
+            <point key="canvasLocation" x="2642" y="-1587"/>
         </scene>
         <!--Loans-->
         <scene sceneID="30N-Qv-RhZ">
@@ -674,7 +513,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="05z-pK-6Ya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1658" y="480"/>
+            <point key="canvasLocation" x="5719" y="560"/>
         </scene>
         <!--Calculate-->
         <scene sceneID="zRf-e9-CYZ">
@@ -725,7 +564,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kkB-aQ-JE8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1414.4927536231885" y="-529.01785714285711"/>
+            <point key="canvasLocation" x="1586" y="-407"/>
         </scene>
         <!--CompoundI Help View Controller-->
         <scene sceneID="K7p-N1-9S7">
@@ -776,7 +615,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zVJ-UV-PF9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2263.768115942029" y="-275.22321428571428"/>
+            <point key="canvasLocation" x="4990" y="560"/>
         </scene>
         <!--Calculate-->
         <scene sceneID="Bt0-Bq-T9T">
@@ -828,58 +667,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tIa-f2-I73" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2263.768115942029" y="-996.42857142857133"/>
-        </scene>
-        <!--Loan Help View Controller-->
-        <scene sceneID="P31-qp-Fsh">
-            <objects>
-                <viewController id="g4a-ME-1Rp" customClass="LoanHelpViewController" customModule="ios_financial_calculator" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5SI-w5-3fM">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eDx-uz-paH">
-                                <rect key="frame" x="0.0" y="54" width="414" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="czt-Aj-rjL"/>
-                                    <constraint firstAttribute="width" constant="414" id="vC4-q3-yGs"/>
-                                </constraints>
-                                <items>
-                                    <navigationItem title="Help" id="2zK-9M-gMr">
-                                        <barButtonItem key="rightBarButtonItem" title="Item" image="close" id="KQd-Ky-apq">
-                                            <connections>
-                                                <action selector="close:" destination="g4a-ME-1Rp" id="yPI-mt-VE6"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t7s-02-LX5">
-                                <rect key="frame" x="20" y="121" width="374" height="629"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </scrollView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="0PA-Fq-P5z">
-                                <rect key="frame" x="20" y="758" width="374" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </pageControl>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="eDx-uz-paH" firstAttribute="centerX" secondItem="5SI-w5-3fM" secondAttribute="centerX" id="CmR-Cq-TQf"/>
-                            <constraint firstItem="eDx-uz-paH" firstAttribute="top" secondItem="t24-YI-ly7" secondAttribute="top" constant="10" id="XBe-vx-MeC"/>
-                            <constraint firstItem="eDx-uz-paH" firstAttribute="centerY" secondItem="5SI-w5-3fM" secondAttribute="centerY" id="f50-Id-stW"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="t24-YI-ly7"/>
-                    </view>
-                    <connections>
-                        <outlet property="pageControl" destination="0PA-Fq-P5z" id="mh4-hB-4j3"/>
-                        <outlet property="scrollView" destination="t7s-02-LX5" id="ewv-bI-FPQ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Goi-lB-qb2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3157.971014492754" y="-1183.2589285714284"/>
+            <point key="canvasLocation" x="2642" y="-766"/>
         </scene>
         <!--Savings-->
         <scene sceneID="Ruq-re-eld">
@@ -930,73 +718,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CrF-Ce-VlN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1585.5072463768117" y="-2350.4464285714284"/>
-        </scene>
-        <!--Savings Help View Controller-->
-        <scene sceneID="DYC-Mx-2c8">
-            <objects>
-                <viewController id="yxk-zl-y0e" customClass="SavingsHelpViewController" customModule="ios_financial_calculator" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Kqj-Yh-EpG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lsq-Pv-UhR">
-                                <rect key="frame" x="20" y="116" width="374" height="640"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </scrollView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bxo-rK-571">
-                                <rect key="frame" x="0.0" y="54" width="414" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="414" id="oeq-77-p0v"/>
-                                    <constraint firstAttribute="height" constant="44" id="qWB-jX-ymg"/>
-                                </constraints>
-                                <items>
-                                    <navigationItem title="Help" id="aQ6-0u-tEY">
-                                        <barButtonItem key="rightBarButtonItem" title="Item" image="close" id="1Ph-4k-OZ2">
-                                            <connections>
-                                                <action selector="close:" destination="yxk-zl-y0e" id="Xlq-1X-bwF"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="7IN-G9-sf6">
-                                <rect key="frame" x="20" y="764" width="374" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </pageControl>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Bxo-rK-571" firstAttribute="centerY" secondItem="Kqj-Yh-EpG" secondAttribute="centerY" id="GFV-pz-Blf"/>
-                            <constraint firstItem="Bxo-rK-571" firstAttribute="centerX" secondItem="Kqj-Yh-EpG" secondAttribute="centerX" id="OGn-nS-8xR"/>
-                            <constraint firstItem="Bxo-rK-571" firstAttribute="top" secondItem="3Fr-X5-c1b" secondAttribute="top" constant="10" id="x7J-Te-KeX"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="3Fr-X5-c1b"/>
-                    </view>
-                    <connections>
-                        <outlet property="pageControl" destination="7IN-G9-sf6" id="ENd-sr-jY2"/>
-                        <outlet property="scrollView" destination="Lsq-Pv-UhR" id="sbf-2Z-2iF"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cMR-d6-NJw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2386.9565217391305" y="-2661.1607142857142"/>
-        </scene>
-        <!--II-->
-        <scene sceneID="vvg-jx-CCc">
-            <objects>
-                <viewController title="II" id="i0G-pj-wOA" customClass="InterestViewController" customModule="ios_financial_calculator" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="O3d-Wj-f87">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="pPo-cv-uga"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ksm-EV-Idf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4135" y="-500"/>
+            <point key="canvasLocation" x="1586" y="-2066"/>
         </scene>
     </scenes>
     <resources>
