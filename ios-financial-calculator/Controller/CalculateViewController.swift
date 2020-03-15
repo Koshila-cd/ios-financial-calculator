@@ -20,11 +20,6 @@ class CalculateViewController: UIViewController, UICollectionViewDataSource, UIC
     
     func generateCalculateIcons() {
         let interest = CalculateIcons(name: "Interest", icon: UIImage(named: "savings-icon")!, segueID: "goToInterestCalculation", cellColour: UIColor(red: 30/255, green: 30/255, blue: 30/255, alpha: 1.00))
-//        let savings = CalculateIcons(name: "Tempertaure", icon: UIImage(named: "ic_temperature")!, segueID: "goToTemperatureConversion", cellColour: UIColor(red: 30/255, green: 30/255, blue: 30/255, alpha: 1.00))
-//        let loans = CalculateIcons(name: "Volume", icon: UIImage(named: "ic_volume")!, segueID: "goToVolumeConversion", cellColour: UIColor(red: 30/255, green: 30/255, blue: 30/255, alpha: 1.00))
-//        let mortgage = CalculateIcons(name: "Distance", icon: UIImage(named: "ic_distance")!, segueID: "goToDistanceConversion", cellColour: UIColor(red: 30/255, green: 30/255, blue: 30/255, alpha: 1.00))
-        
-//        calculateIcons += [interest, savings, loans, mortgage]
         calculateIcons += [interest]
     }
     
@@ -44,10 +39,6 @@ class CalculateViewController: UIViewController, UICollectionViewDataSource, UIC
         cell.contentView.layer.borderWidth = 1.0
         cell.contentView.layer.borderColor = UIColor(red: 0.25, green: 0.25, blue: 0.25, alpha: 1.00).cgColor
         cell.contentView.layer.masksToBounds = true
-        
-//        cell.c.layoutIfNeeded()
-//        cell.imageCell.layer.masksToBounds = true
-//        cell.imageCell.layer.cornerRadius = cell.imageCell.frame.height / 2
         
         return cell
     }

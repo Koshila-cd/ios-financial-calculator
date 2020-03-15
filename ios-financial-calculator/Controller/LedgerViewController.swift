@@ -23,13 +23,19 @@ class LedgerViewController: UIViewController ,UITableViewDataSource,UITableViewD
         createLedger()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorColor = UIColor.clear
         DispatchQueue.main.async { self.tableView.reloadData() }
         
         deleteBarButton.isEnabled = true
-//        tableView.applyGradient(colours: [.black, .purple, .darkGray], locations: [0.0, 0.5, 1.0])
         
     }
    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//        cell.contentView.applyGradient(colours: [.black, .purple, .darkGray], locations: [0.0, 0.5, 1.0])
+        cell.contentView.layer.borderWidth = 5.0
+        cell.contentView.layer.borderColor = UIColor.black.cgColor
+        cell.backgroundColor = UIColor.purple
+    }
     
     func createLedger() {
         ledger = []
@@ -43,6 +49,7 @@ class LedgerViewController: UIViewController ,UITableViewDataSource,UITableViewD
                 }
             }
         }
+        tableView.reloadData()
     }
     
     
@@ -63,7 +70,7 @@ class LedgerViewController: UIViewController ,UITableViewDataSource,UITableViewD
 //        cell.contentView.applyGradient(colours: [.black, .purple, .darkGray], locations: [0.0, 0.5, 1.0])
 //        cell.contentView.backgroundColor = UIColor(red: 30/255, green: 30/255, blue: 30/255, alpha: 1.00)
         cell.contentView.layer.cornerRadius = 10.0
-        cell.contentView.layer.borderWidth = 1.0
+        
         cell.contentView.layer.borderColor = UIColor(red: 0.25, green: 0.25, blue: 0.25, alpha: 1.00).cgColor
         cell.contentView.layer.masksToBounds = false
         
@@ -71,6 +78,11 @@ class LedgerViewController: UIViewController ,UITableViewDataSource,UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if ledger.count == 0 {
+            self.tableView.setEmptyMessage("No saved calculations found", UIColor.black)
+        } else {
+            self.tableView.restore()
+        }
         return ledger.count
     }
     
