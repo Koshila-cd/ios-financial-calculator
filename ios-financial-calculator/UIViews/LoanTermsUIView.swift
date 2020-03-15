@@ -23,7 +23,7 @@ class LoanTermsUIView: UIView {
     var interestRate: Double = 0
     var principleAmount: Double = 0
     
-    var loanTerms: Double = 0
+    var value: Double = 0
     
     /**
      - Get values from textfields in the View and pass them into the formulae for loan terms calculation
@@ -31,7 +31,7 @@ class LoanTermsUIView: UIView {
     @IBAction func calculateLoanterms(_ sender: UIButton) {
         
         
-        
+        // validation is true when text fields are not empty and is string values are not added
         var validation: Bool = true
         
         if let input = futureValueFld.text {
@@ -52,6 +52,7 @@ class LoanTermsUIView: UIView {
             futureValueFld.showErr()
         }
         
+        // interest field validation
         if let input = interestRateFld.text {
             if input.isEmpty {
                 validation = false
@@ -70,6 +71,7 @@ class LoanTermsUIView: UIView {
             interestRateFld.showErr()
         }
         
+        // principle amount validation
         if let input = principleAmountFld.text {
             if input.isEmpty {
                 validation = false
@@ -91,9 +93,10 @@ class LoanTermsUIView: UIView {
         
         // calculate mortgae if all the fields in the view are not empty and is valid
         if validation {
-            loanTerms = loanTermsFormulae(futureValue: futureValue, interestRate: interestRate, principleAmount: principleAmount)
-            loanTermsLbl.text =  String(loanTerms) + "Years"
+            value = loanTermsFormulae(futureValue: futureValue, interestRate: interestRate, principleAmount: principleAmount)
+            loanTermsLbl.text =  String(value) + "Years"
             
+            // add changes to save button when the calculation is done
             saveBtn.isEnabled = true
             saveBtn.backgroundColor = UIColor(red:1.00, green:0.83, blue:0.47, alpha:1.0)
             saveBtn.layer.cornerRadius = 15
@@ -112,18 +115,24 @@ class LoanTermsUIView: UIView {
     func loanTermsFormulae(futureValue: Double, interestRate: Double, principleAmount: Double)-> Double
     {
         
-        var loanTerms: Double = 0.0
+        var value1: Double = 0.0
         
         
         //        compoundInterest =
         //        print(loanTerms)
         //
-        return loanTerms
+        return value1
         
     }
     
+    /**
+     - Save button, saving the calculated amount and the fileds into userdefaults
+     - A success message alert will appear one the saving is completed
+     - parameters:
+     -  sender: The navigation button item.
+     */
     @IBAction func save(_ sender: UIButton) {
-        let save: String = "Compund Interest#Future Value: \(futureValue) , Interest Rate: \(interestRate) , Principle Amount: \(principleAmount), Loan Terms : \(loanTerms)"
+        let save: String = "Compund Interest#Future Value: \(futureValue) , Interest Rate: \(interestRate) , Principle Amount: \(principleAmount), Compund Interest: \(value)"
         
         var arr = UserDefaults.standard.array(forKey: COMPOUND_PRESENT_VALUE) as? [String] ?? []
         arr.append(save)

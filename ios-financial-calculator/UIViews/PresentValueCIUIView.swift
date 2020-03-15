@@ -30,6 +30,7 @@ class PresentValueCIUIView: UIView {
      */
     @IBAction func calculateAmount(_ sender: UIButton) {
         
+        // validation is true when text fields are not empty and is string values are not added
         var validation: Bool = true
         
         if let input = totalAmountFld.text {
@@ -116,7 +117,6 @@ class PresentValueCIUIView: UIView {
         let n = Double(12 * numOfYears)
         let t = Double(numOfYears)
         
-        
         amount = totalAmount/pow((1 + (interestRate/n)),n*t)
         
         print(amount)
@@ -125,6 +125,12 @@ class PresentValueCIUIView: UIView {
         
     }
     
+    /**
+     - Save button, saving the calculated amount and the fileds into userdefaults
+     - A success message alert will appear one the saving is completed
+     - parameters:
+     -  sender: The navigation button item.
+     */
     @IBAction func save(_ sender: UIButton) {
         let save: String = "Compund Interest#Future Value: \(totalAmount) , Interest Rate: \(interestRate) , Loan Terms: \(numOfYears), Interest Rate : \(interestRate)"
         

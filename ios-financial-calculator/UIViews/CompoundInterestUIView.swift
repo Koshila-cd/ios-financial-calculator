@@ -12,14 +12,14 @@ let COMPOUND_INTEREST = "COMPOUND_INTEREST"
 
 class CompoundInterestUIView: UIView {
     
+    // mapping UI to code
     @IBOutlet weak var totalAmountFld: UITextField!
     @IBOutlet weak var interestRateFld: UITextField!
     @IBOutlet weak var numOfYearsFld: UITextField!
     @IBOutlet weak var compoundInterestLbl: UILabel!
-    
     @IBOutlet weak var saveBtn: UIButton!
     
-    
+    // value Initialization
     var totalAmount: Double = 0
     var interestRate: Double = 0
     var numOfYears: Int = 0
@@ -30,6 +30,7 @@ class CompoundInterestUIView: UIView {
      */
     @IBAction func calculateCompoundinterest(_ sender: UIButton) {
         
+        // validation is true when text fields are not empty and is string values are not added
         var validation: Bool = true
         
         if let input = totalAmountFld.text {
@@ -50,6 +51,7 @@ class CompoundInterestUIView: UIView {
             totalAmountFld.showErr()
         }
         
+        // interest field validation
         if let input = interestRateFld.text {
             if input.isEmpty {
                 validation = false
@@ -68,6 +70,7 @@ class CompoundInterestUIView: UIView {
             interestRateFld.showErr()
         }
         
+        // loan terms validation
         if let input = numOfYearsFld.text {
             if input.isEmpty {
                 validation = false
@@ -92,6 +95,7 @@ class CompoundInterestUIView: UIView {
             compoundInterest = compoundInterestFormulae(totalAmount: totalAmount, interestRate: interestRate, numOfYears: numOfYears)
             compoundInterestLbl.text =  String(format:"%.2f", compoundInterest) + "%"
             
+            // add changes to save button one the calcuation is done
             saveBtn.isEnabled = true
             saveBtn.backgroundColor = UIColor(red:1.00, green:0.83, blue:0.47, alpha:1.0)
             saveBtn.layer.cornerRadius = 15
@@ -118,7 +122,6 @@ class CompoundInterestUIView: UIView {
         let n = Double(12 * numOfYears)
         let t = Double(numOfYears)
         
-        
         compoundInterest = totalAmount*pow((1+(interestRate/n)),n*t)
         print(compoundInterest)
         
@@ -126,6 +129,12 @@ class CompoundInterestUIView: UIView {
         
     }
     
+    /**
+     - Save button, saving the calculated amount and the fileds into userdefaults
+     - A success message alert will appear one the saving is completed
+     - parameters:
+     -  sender: The navigation button item.
+     */
     @IBAction func save(_ sender: UIButton) {
         let save: String = "Compund Interest#Future Value: \(totalAmount) , Interest Rate: \(interestRate) , Loan Terms: \(numOfYears), Interest Rate : \(interestRate)"
         
