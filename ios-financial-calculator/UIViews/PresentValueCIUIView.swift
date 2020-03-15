@@ -126,14 +126,14 @@ class PresentValueCIUIView: UIView {
     }
     
     @IBAction func save(_ sender: UIButton) {
-        let save: String = "Future Value: \(totalAmount) , Interest Rate: \(interestRate) , Loan Terms: \(numOfYears), Interest Rate : \(interestRate)"
+        let save: String = "Compund Interest#Future Value: \(totalAmount) , Interest Rate: \(interestRate) , Loan Terms: \(numOfYears), Interest Rate : \(interestRate)"
         
         var arr = UserDefaults.standard.array(forKey: COMPOUND_PRESENT_VALUE) as? [String] ?? []
         arr.append(save)
         UserDefaults.standard.set(arr, forKey: COMPOUND_PRESENT_VALUE)
         
         saveBtn.isEnabled = false
-        SaveSuccess.instance.showAlert()
+        SaveSuccess.instance.showAlert(text: "The calculation is Successfully saved!")
     }
     
 }

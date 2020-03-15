@@ -102,14 +102,14 @@ class SavingsFutureValueUIView: UIView {
     
     
     @IBAction func save(_ sender: UIButton) {
-        let save: String = "Payment: \(payment) , Interest Rate: \(interestRate) , Loan Terms: \(numOfYears), Future Value : \(futureValue)"
+        let save: String = "Savings#Payment: \(payment) , Interest Rate: \(interestRate) , Loan Terms: \(numOfYears), Future Value : \(futureValue)"
         print(save)
         var arr = UserDefaults.standard.array(forKey: SAVINGS_FUTURE_VALUE) as? [String] ?? []
         arr.append(save)
         UserDefaults.standard.set(arr, forKey: SAVINGS_FUTURE_VALUE)
         
         saveBtn.isEnabled = false
-        SaveSuccess.instance.showAlert()
+        SaveSuccess.instance.showAlert(text: "The calculation is Successfully saved!")
     }
     
     

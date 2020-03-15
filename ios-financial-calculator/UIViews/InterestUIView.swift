@@ -8,7 +8,7 @@
 
 import UIKit
 
-let COMPUND_INTEREST = "COMPUND_INTEREST"
+let LOAN_INTEREST = "LOAN_INTEREST"
 
 class InterestUIView: UIView {
 
@@ -122,14 +122,14 @@ class InterestUIView: UIView {
     
     
     @IBAction func save(_ sender: UIButton) {
-        let save: String = "Loan Amount: \(loanAmount) , Monthly Payment: \(payment) , Loan Terms: \(numOfYears), Interest Rate : \(interest)"
+        let save: String = "Loan#Loan Amount: \(loanAmount) , Monthly Payment: \(payment) , Loan Terms: \(numOfYears), Interest Rate : \(interest)"
 
-        var arr = UserDefaults.standard.array(forKey: COMPUND_INTEREST) as? [String] ?? []
+        var arr = UserDefaults.standard.array(forKey: LOAN_INTEREST) as? [String] ?? []
         arr.append(save)
-        UserDefaults.standard.set(arr, forKey: COMPUND_INTEREST)
+        UserDefaults.standard.set(arr, forKey: LOAN_INTEREST)
         
         saveBtn.isEnabled = false
-        SaveSuccess.instance.showAlert()
+        SaveSuccess.instance.showAlert(text: "The calculation is Successfully saved!")
     }
     
 }

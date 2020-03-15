@@ -11,8 +11,11 @@ import UIKit
 class LedgerViewController: UIViewController ,UITableViewDataSource,UITableViewDelegate {
     
     var ledger = [Ledger]()
-//    var calculationType = MORTGAGE_AMOUNT
+
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var deleteBarButton: UIBarButtonItem!
+    
+    let keys = ["MORTGAGE_PAYMENT", "MORTGAGE_AMOUNT", "MORTGAGE_INTEREST", "LOAN_INTEREST", "LOAN_PAYMENT", "LOAN_PRESENT_VALUE", "LOAN_FUTURE_VALUE", "COMPOUND_INTEREST", "COMPOUND_PRESENT_VALUE", "COMPOUND_PRESENT_VALUE", "SAVINGS_FUTURE_VALUE", "SAVINGS_INTEREST", "SAVINGS_DEPOSIT"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,43 +25,23 @@ class LedgerViewController: UIViewController ,UITableViewDataSource,UITableViewD
         tableView.dataSource = self
         DispatchQueue.main.async { self.tableView.reloadData() }
         
+        deleteBarButton.isEnabled = true
 //        tableView.applyGradient(colours: [.black, .purple, .darkGray], locations: [0.0, 0.5, 1.0])
-        
-        print("cccc")
         
     }
    
     
-    
     func createLedger() {
         ledger = []
-
-        var ledgerList = UserDefaults.standard.value(forKey: MORTGAGE_PAYMENT) as? [String]
-        
-        if ledgerList?.count ?? 0 > 0 {
-            for calculation in ledgerList! {
-                let ledger1 = Ledger(calculation: calculation)
-                ledger += [ledger1]
+        for key in keys {
+            print(key)
+            let ledgerList = UserDefaults.standard.value(forKey: key) as? [String]
+            if ledgerList?.count ?? 0 > 0 {
+                for calculation in ledgerList! {
+                    let ledger1 = Ledger(calculation: calculation)
+                    ledger += [ledger1]
+                }
             }
-            
-        }
-        
-        ledgerList = UserDefaults.standard.value(forKey: MORTGAGE_AMOUNT) as? [String]
-        if ledgerList?.count ?? 0 > 0 {
-            for calculation in ledgerList! {
-                let ledger1 = Ledger(calculation: calculation)
-                ledger += [ledger1]
-            }
-            
-        }
-        
-        ledgerList = UserDefaults.standard.value(forKey: MORTGAGE_INTEREST) as? [String]
-        if ledgerList?.count ?? 0 > 0 {
-            for calculation in ledgerList! {
-                let ledger1 = Ledger(calculation: calculation)
-                ledger += [ledger1]
-            }
-            
         }
     }
     
@@ -67,14 +50,17 @@ class LedgerViewController: UIViewController ,UITableViewDataSource,UITableViewD
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Ledger") as! LedgerTableViewCell
 
+        let value : String = ledger[indexPath.row].getCalculation()
+        let parts =   value.split(separator: "#")
         
-        cell.ledgerText.text = ledger[indexPath.row].getCalculation()
-        cell.ledgerType.text = "Mortgage"
-
+        if parts.count > 0 {
+            cell.ledgerText.text = String(parts[1])
+            cell.ledgerType.text = String(parts[0])
+        }
         
         // Card(cell) styles
         cell.isUserInteractionEnabled = false
-        cell.contentView.applyGradient(colours: [.black, .purple, .darkGray], locations: [0.0, 0.5, 1.0])
+//        cell.contentView.applyGradient(colours: [.black, .purple, .darkGray], locations: [0.0, 0.5, 1.0])
 //        cell.contentView.backgroundColor = UIColor(red: 30/255, green: 30/255, blue: 30/255, alpha: 1.00)
         cell.contentView.layer.cornerRadius = 10.0
         cell.contentView.layer.borderWidth = 1.0
@@ -84,14 +70,31 @@ class LedgerViewController: UIViewController ,UITableViewDataSource,UITableViewD
         return cell
     }
     
-    
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ledger.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 130
+    }
+    
+    
+    @IBAction func deleteLedger(_ sender: UIBarButtonItem) {
+        if ledger.count > 0 {
+            
+            for key in keys {
+                UserDefaults.standard.set([], forKey: key)
+            }
+            
+            SaveSuccess.instance.showAlert(text: "The ledger is Successfully Deleted!")
+            deleteBarButton.isEnabled = false
+            
+            // refetch hitory and reload table
+            createLedger()
+            DispatchQueue.main.async{ self.tableView.reloadData() }
+
+        }
+        
     }
     
 

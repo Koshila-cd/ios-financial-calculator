@@ -35,7 +35,8 @@ class SaveSuccess: UIView {
         
     }
     
-    func showAlert() {
+    func showAlert(text: String) {
+        label.text = text
         parentView.isHidden = false
         UIApplication.shared.keyWindow?.addSubview(parentView)
     }

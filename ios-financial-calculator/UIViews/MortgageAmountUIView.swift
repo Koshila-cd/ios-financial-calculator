@@ -98,14 +98,14 @@ class MortgageAmountUIView: UIView {
     
     
     @IBAction func save(_ sender: UIButton) {
-                    let save: String = "Payment: \(payment) , Interest Rate: \(interest) , Loan Terms: \(numOfYears), Payment Amount : \(amount)"
+                    let save: String = "Mortgage#Payment: \(payment) , Interest Rate: \(interest) , Loan Terms: \(numOfYears), Payment Amount : \(amount)"
                     print(save)
                     var arr = UserDefaults.standard.array(forKey: MORTGAGE_AMOUNT) as? [String] ?? []
                     arr.append(save)
                     UserDefaults.standard.set(arr, forKey: MORTGAGE_AMOUNT)
         
                     saveBtn.isEnabled = false
-                    SaveSuccess.instance.showAlert()
+                    SaveSuccess.instance.showAlert(text: "The calculation is Successfully saved!")
     }
     
     
