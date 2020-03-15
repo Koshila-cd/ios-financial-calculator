@@ -31,17 +31,17 @@ class SaveSuccess: UIView {
     
     private func commonInit() {
         parentView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-        
         parentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         
     }
     
     func showAlert() {
+        parentView.isHidden = false
         UIApplication.shared.keyWindow?.addSubview(parentView)
     }
     
     @IBAction func okBtn(_ sender: Any) {
-        parentView.removeFromSuperview()
+        parentView.isHidden = true
     }
     
 }
