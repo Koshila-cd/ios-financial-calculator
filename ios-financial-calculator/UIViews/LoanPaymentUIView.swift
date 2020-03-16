@@ -93,6 +93,7 @@ class LoanPaymentUIView: UIView {
         // calculate payment if all the fields in the view are not empty and is valid
         if validation {
             payment = paymentFormulae(loanAmount: loanAmount, interestRate: interestRate, numOfYears: numOfYears)
+            print(payment)
             paymentLbl.text = "£" + String(format:"%.2f", payment)
             
             saveBtn.isEnabled = true
@@ -112,17 +113,8 @@ class LoanPaymentUIView: UIView {
      */
     func paymentFormulae(loanAmount: Double, interestRate: Double, numOfYears: Int)-> Double
     {
-        
-        var payment: Double = 0.0
-        
-        let n = 12 * Double(numOfYears)
-        let interest = interestRate * (1 / 100)
-        let formulae1 = pow((1 + interest), -n)
-        
-        payment = (interest * loanAmount) / (1 - formulae1)
-        print(payment)
-        
-        return payment
+        let r : Double = Double( interestRate / 100)
+        return loanAmount * pow(( 1 + r/Double(12)), Double(numOfYears*12)) / Double(numOfYears * 12)
         
     }
     
