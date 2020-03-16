@@ -117,10 +117,14 @@ class LoanTermsUIView: UIView {
         
         var value1: Double = 0.0
         
+        let interest = interestRate * (1 / 100)
         
-        //        compoundInterest =
-        //        print(loanTerms)
-        //
+        let formulae1 = log10(futureValue / principleAmount)
+        let formulae2 = log10(1+(interest / 12))
+        
+        value1 = formulae1 / (12 * formulae2)
+        print(value1)
+        
         return value1
         
     }
