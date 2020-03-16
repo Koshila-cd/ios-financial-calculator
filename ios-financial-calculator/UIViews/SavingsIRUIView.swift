@@ -127,19 +127,14 @@ class SavingsIRUIView: UIView {
     {
         
         var value: Double = 0.0
+
+        let t = Double(numOfYears)      
+        let formulae1 = pow((futureValue / payment),(1 / (12 * t)))
         
-        let interest = interestRate * (1 / 100)
-        let t = Double(numOfYears)
-        
-        let formulae1 = pow(1 + (interest / 12), (12 * t))
-        
-        value = payment * formulae1
-        print(value)
+        value = 12 * (formulae1 - 1)
         
         return value
         
     }
-    
-    
     
 }

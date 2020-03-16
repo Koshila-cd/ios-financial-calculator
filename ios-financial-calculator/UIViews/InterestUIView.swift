@@ -117,11 +117,7 @@ class InterestUIView: UIView {
         
         var interest: Double = 0.0
         
-        // number of months calculated from the given number of years
-        let n = 12 * Double(numOfYears)
-        
-        interest = (payment / (loanAmount * n)) * 100
-        print(interest)
+        interest = (payment / (loanAmount * 12)) * 100
         
         return interest
         
