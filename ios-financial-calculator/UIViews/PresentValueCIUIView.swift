@@ -12,17 +12,17 @@ let COMPOUND_PRESENT_VALUE = "COMPOUND_PRESENT_VALUE"
 
 class PresentValueCIUIView: UIView {
     
+    // mapping UI with code
     @IBOutlet weak var totalAmountFld: UITextField!
     @IBOutlet weak var interestRateFld: UITextField!
     @IBOutlet weak var numOfYearsFld: UITextField!
-    @IBOutlet weak var amountLbl: UILabel!
-    
+    @IBOutlet weak var amountLbl: UILabel!   
     @IBOutlet weak var saveBtn: UIButton!
     
+    // value initialization
     var totalAmount: Double = 0
     var interestRate: Double = 0
     var numOfYears: Int = 0
-    
     var amount: Double = 0
     
     /**
@@ -51,6 +51,7 @@ class PresentValueCIUIView: UIView {
             totalAmountFld.showErr()
         }
         
+        // interest field validation
         if let input = interestRateFld.text {
             if input.isEmpty {
                 validation = false
@@ -69,6 +70,7 @@ class PresentValueCIUIView: UIView {
             interestRateFld.showErr()
         }
         
+        // loan terms field validation
         if let input = numOfYearsFld.text {
             if input.isEmpty {
                 validation = false
@@ -93,6 +95,7 @@ class PresentValueCIUIView: UIView {
             amount = principleAmountFormulae(totalAmount: totalAmount, interestRate: interestRate, numOfYears: numOfYears)
             amountLbl.text = "£" + String(format:"%.2f", amount)
             
+            // button styles when the utton is enabled
             saveBtn.isEnabled = true
             saveBtn.backgroundColor = UIColor(red:1.00, green:0.83, blue:0.47, alpha:1.0)
             saveBtn.layer.cornerRadius = 15

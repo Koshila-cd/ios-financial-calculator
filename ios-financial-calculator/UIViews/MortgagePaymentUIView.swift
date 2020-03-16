@@ -12,23 +12,29 @@ let MORTGAGE_PAYMENT = "MORTGAGE_PAYMENT"
 
 class MortgagePaymentUIView: UIView {
     
+    // mapping UI with code
     @IBOutlet weak var loanAmountFld: UITextField!
     @IBOutlet weak var interestFld: UITextField!
-    @IBOutlet weak var noOfYearsFld: UITextField!
-    
+    @IBOutlet weak var noOfYearsFld: UITextField!    
     @IBOutlet weak var saveBtn: UIButton!
     @IBOutlet weak var mortgageLabel: UILabel!
     @IBOutlet weak var futureValueLbl: UILabel!
     
+    // value initialization
     var loanAmount: Double = 0
     var interestRate: Double = 0
     var numOfYears: Int = 0
     var mortgage: Double = 0
     
+    /**
+     - Get values from textfields in the View and pass them into the formulae for calculating the mortgage
+     */
     @IBAction func calculateMortgage(_ sender: UIButton) {
         
+        // validation is true when text fields are not empty and is string values are not added
         var validation: Bool = true
         
+        // loan amount field validation
         if let input = loanAmountFld.text {
             if input.isEmpty {
                 validation = false
@@ -47,6 +53,7 @@ class MortgagePaymentUIView: UIView {
             loanAmountFld.showErr()
         }
         
+        // interest rate field validation
         if let input = interestFld.text {
             if input.isEmpty {
                 validation = false
@@ -65,6 +72,7 @@ class MortgagePaymentUIView: UIView {
             interestFld.showErr()
         }
         
+        // loan terms field validation
         if let input = noOfYearsFld.text {
             if input.isEmpty {
                 validation = false
@@ -92,6 +100,7 @@ class MortgagePaymentUIView: UIView {
             let futureValue = mortgage * 12 * Double(numOfYears)
             futureValueLbl.text = "£" + String(format:"%.2f", futureValue)
             
+            // save buttons styles and its enabling
             saveBtn.isEnabled = true
             saveBtn.backgroundColor = UIColor(red:1.00, green:0.83, blue:0.47, alpha:1.0)
             saveBtn.layer.cornerRadius = 15

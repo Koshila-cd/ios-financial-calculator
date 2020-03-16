@@ -12,14 +12,15 @@ class LedgerViewController: UIViewController ,UITableViewDataSource,UITableViewD
     
     var ledger = [Ledger]()
     
+    // mapping UI with code
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var deleteBarButton: UIBarButtonItem!
     
+    // the user default keys
     let keys = ["MORTGAGE_PAYMENT", "MORTGAGE_AMOUNT", "MORTGAGE_INTEREST", "LOAN_INTEREST", "LOAN_PAYMENT", "LOAN_PRESENT_VALUE", "LOAN_FUTURE_VALUE", "COMPOUND_INTEREST", "COMPOUND_PRESENT_VALUE", "COMPOUND_PRESENT_VALUE", "SAVINGS_FUTURE_VALUE", "SAVINGS_INTEREST", "SAVINGS_DEPOSIT"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -29,7 +30,7 @@ class LedgerViewController: UIViewController ,UITableViewDataSource,UITableViewD
         deleteBarButton.isEnabled = true
         
     }
-    
+     // initialized and reloads the ledger when coming to ledger view
     override func viewDidAppear(_ animated: Bool) {
         createLedger()
     }
@@ -40,6 +41,9 @@ class LedgerViewController: UIViewController ,UITableViewDataSource,UITableViewD
         cell.backgroundColor = UIColor.purple
     }
     
+    /**
+     - Looping through user default keys and adding the values into the arrray ledger 
+     */
     func createLedger() {
         ledger = []
         for key in keys {
@@ -54,7 +58,6 @@ class LedgerViewController: UIViewController ,UITableViewDataSource,UITableViewD
         }
         tableView.reloadData()
     }
-    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         

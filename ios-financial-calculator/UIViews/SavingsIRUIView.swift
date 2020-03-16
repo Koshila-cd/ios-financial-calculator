@@ -11,13 +11,15 @@ import UIKit
 let SAVINGS_INTEREST = "SAVINGS_INTEREST"
 
 class SavingsIRUIView: UIView {
-    
+
+    // mapping UI to code
     @IBOutlet weak var paymentFld: UITextField!
     @IBOutlet weak var futureValueFld: UITextField!
     @IBOutlet weak var loanTermsFld: UITextField!
     @IBOutlet weak var interestLbl: UILabel!
     @IBOutlet weak var saveBtn: UIButton!
     
+    // value initialization
     var payment: Double = 0
     var futureValue: Double = 0
     var numOfYears: Int = 0
@@ -25,9 +27,9 @@ class SavingsIRUIView: UIView {
     
     @IBAction func calculateInterestRate(_ sender: UIButton) {
         
+        // validation is true when text fields are not empty and is string values are not added
         var validation: Bool = true
-        
-        
+          
         if let input = paymentFld.text {
             if input.isEmpty {
                 validation = false

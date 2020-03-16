@@ -12,17 +12,17 @@ let COMPOUND_LOAN_TERMS = "COMPOUND_PRESENT_VALUE"
 
 class LoanTermsUIView: UIView {
     
+    // mapping UI with code
     @IBOutlet weak var futureValueFld: UITextField!
     @IBOutlet weak var interestRateFld: UITextField!
     @IBOutlet weak var principleAmountFld: UITextField!
-    @IBOutlet weak var loanTermsLbl: UILabel!
-    
+    @IBOutlet weak var loanTermsLbl: UILabel!   
     @IBOutlet weak var saveBtn: UIButton!
     
+    // value initialization
     var futureValue: Double = 0
     var interestRate: Double = 0
-    var principleAmount: Double = 0
-    
+    var principleAmount: Double = 0   
     var value: Double = 0
     
     /**

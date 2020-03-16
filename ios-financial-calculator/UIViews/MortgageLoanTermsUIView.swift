@@ -10,12 +10,11 @@ import UIKit
 
 class MortgageLoanTermsUIView: UIView {
     
-    
+    // mapping UI with code
     @IBOutlet weak var paymentFld: UITextField!
     @IBOutlet weak var interestRateFld: UITextField!
     @IBOutlet weak var loanAmountFld: UITextField!
-    @IBOutlet weak var termLbl: UILabel!
-    
+    @IBOutlet weak var termLbl: UILabel!    
     @IBAction func calculateTerms(_ sender: UIButton) {
         
     }

@@ -12,21 +12,25 @@ let SAVINGS_DEPOSIT = "SAVINGS_DEPOSIT"
 
 class SavingsDepositUIView: UIView {
     
+    // mapping UI to code
     @IBOutlet weak var paymentFld: UITextField!
     @IBOutlet weak var interestRateFld: UITextField!
     @IBOutlet weak var numOfYearsFld: UITextField!
     @IBOutlet weak var depositeLbl: UILabel!
     @IBOutlet weak var saveBtn: UIButton!
     
+    // value initialization
     var payment: Double = 0
     var interestRate: Double = 0
     var numOfYears: Int = 0
     var deposit: Double = 0
     
     @IBAction func calculateDeposit(_ sender: UIButton) {
+
+        // validation is true when text fields are not empty and is string values are not added
         var validation: Bool = true
         
-        
+        // loan payment field validation
         if let input = paymentFld.text {
             if input.isEmpty {
                 validation = false
@@ -45,6 +49,7 @@ class SavingsDepositUIView: UIView {
             paymentFld.showErr()
         }
         
+        // interest rate field validation
         if let input = interestRateFld.text {
             if input.isEmpty {
                 validation = false
@@ -63,6 +68,7 @@ class SavingsDepositUIView: UIView {
             interestRateFld.showErr()
         }
         
+        // loan terms field validation
         if let input = numOfYearsFld.text {
             if input.isEmpty {
                 validation = false
@@ -122,16 +128,16 @@ class SavingsDepositUIView: UIView {
      */
     func depositFormulae(payment: Double, interestRate: Double, numOfYears: Int)-> Double
     {
-        
+
         var deposit: Double = 0.0
         
         let interest = interestRate * (1 / 100)
         let t = Double(numOfYears)
         
-        let formulae1 = pow((1 + (interest/12)), (12 * t) )
-        let formulae2 = (formulae1 - 1 ) / (interest / 12)
+        let formulae1 = pow(1 + (interest / 12), (12 * t))
         
-        deposit = payment * formulae2
+        deposit = payment * formulae1
+        print(deposit)
         
         return deposit
         

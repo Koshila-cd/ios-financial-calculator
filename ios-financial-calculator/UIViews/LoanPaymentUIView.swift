@@ -15,8 +15,7 @@ class LoanPaymentUIView: UIView {
     @IBOutlet weak var loanAmountFld: UITextField!
     @IBOutlet weak var interestRateFld: UITextField!
     @IBOutlet weak var numOfYearsFld: UITextField!
-    @IBOutlet weak var paymentLbl: UILabel!
-    
+    @IBOutlet weak var paymentLbl: UILabel!    
     @IBOutlet weak var saveBtn: UIButton!
     
     // Value initialization
@@ -30,7 +29,7 @@ class LoanPaymentUIView: UIView {
      */
     @IBAction func calculatePayment(_ sender: UIButton) {
         
-        / validation is true when text fields are not empty and is string values are not added
+        // validation is true when text fields are not empty and is string values are not added
         var validation: Bool = true
         
         // loan amount field validation
@@ -100,9 +99,7 @@ class LoanPaymentUIView: UIView {
             saveBtn.backgroundColor = UIColor(red:1.00, green:0.83, blue:0.47, alpha:1.0)
             saveBtn.layer.cornerRadius = 15
             
-        }
-        
-        
+        }    
     }
     
     

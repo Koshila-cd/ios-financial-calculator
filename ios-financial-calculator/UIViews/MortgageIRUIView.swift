@@ -11,25 +11,28 @@ import UIKit
 let MORTGAGE_INTEREST = "MORTGAGE_INTEREST"
 class MortgageIRUIView: UIView {
     
-    
+    // mapping UI wuth code
     @IBOutlet weak var loanAmountFld: UITextField!
     @IBOutlet weak var paymentFld: UITextField!
     @IBOutlet weak var loanTermsFld: UITextField!
-    @IBOutlet weak var saveBtn: UIButton!
-    
+    @IBOutlet weak var saveBtn: UIButton!  
     @IBOutlet weak var interestLbl: UILabel!
     
+    // value initialization
     var loanAmount: Double = 0
     var payment: Double = 0
     var numOfYears: Int = 0
     var interestRate: Double = 0
     
-    @IBAction func calculateInterestRate(_ sender: UIButton) {
+    /**
+     - Get values from textfields in the View and pass them into the formulae for calculating the interest rate
+     */
+    @IBAction func calculateInterestRate(_ sender: UIButton) {   
         
-        
-        
+        // validation is true when text fields are not empty and is string values are not added
         var validation: Bool = true
         
+        // loan amount field valdation
         if let input = loanAmountFld.text {
             if input.isEmpty {
                 validation = false
@@ -48,6 +51,7 @@ class MortgageIRUIView: UIView {
             loanAmountFld.showErr()
         }
         
+        // payment field valdation
         if let input = paymentFld.text {
             if input.isEmpty {
                 validation = false
@@ -66,6 +70,7 @@ class MortgageIRUIView: UIView {
             paymentFld.showErr()
         }
         
+        // loan terms field valdation
         if let input = loanTermsFld.text {
             if input.isEmpty {
                 validation = false
@@ -91,7 +96,7 @@ class MortgageIRUIView: UIView {
             interestLbl.text = String(format:"%.2f", interestRate) + "%"
             
             
-            // Save button is enabled and made visible with colours
+            // save button is enabled and made visible with colours
             saveBtn.isEnabled = true
             saveBtn.backgroundColor = UIColor(red:1.00, green:0.83, blue:0.47, alpha:1.0)
             saveBtn.layer.cornerRadius = 15

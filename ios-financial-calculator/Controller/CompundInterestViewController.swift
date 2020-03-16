@@ -24,12 +24,13 @@ class CompundInterestViewController: UIViewController {
         presentValueView = PresentValueCIViewController().view
         loanTermsView = LoanTermsViewController().view
         
+        // adding sub views into segments in compound savings
         segmentView.addSubview(compundInterestView)
         segmentView.addSubview(presentValueView)
         segmentView.addSubview(loanTermsView)
     }
     
-    
+    // adding segment views into segments in compound savings
     @IBAction func segmentControl(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:

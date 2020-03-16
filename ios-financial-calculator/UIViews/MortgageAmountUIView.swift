@@ -25,9 +25,10 @@ class MortgageAmountUIView: UIView {
     
     @IBAction func calculateAmount(_ sender: UIButton) {
         
+        // validation is true when text fields are not empty and is string values are not added
         var validation: Bool = true
-        
-        
+         
+         // loan payment field validation
         if let input = paymentFld.text {
             if input.isEmpty {
                 validation = false
@@ -46,6 +47,7 @@ class MortgageAmountUIView: UIView {
             paymentFld.showErr()
         }
         
+        // interest rate field validation
         if let input = interestFld.text {
             if input.isEmpty {
                 validation = false
@@ -64,6 +66,7 @@ class MortgageAmountUIView: UIView {
             interestFld.showErr()
         }
         
+        // loan terms field validation
         if let input = numOfYearsFld.text {
             if input.isEmpty {
                 validation = false
@@ -88,6 +91,7 @@ class MortgageAmountUIView: UIView {
             amount = amountFormulae(payment: payment, interest: interest, numOfYears: numOfYears)
             amountLbl.text = "£" + String(format:"%.2f", amount)
             
+            // save button is enabled and made visible with colours
             saveBtn.isEnabled = true
             saveBtn.backgroundColor = UIColor(red:1.00, green:0.83, blue:0.47, alpha:1.0)
             saveBtn.layer.cornerRadius = 15

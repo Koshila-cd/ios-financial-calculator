@@ -10,6 +10,7 @@ import UIKit
 
 class HelpViewController: UIViewController, UIScrollViewDelegate {
     
+    // mapping UI with code
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     
@@ -28,25 +29,29 @@ class HelpViewController: UIViewController, UIScrollViewDelegate {
         
     }
     
-    
     func setupScreens() {
         for index in 0..<helpScreens.count {
-            // 1.
+            // 1. set frame size to scroll view
             frame.origin.x = scrollView.frame.size.width * CGFloat(index)
             frame.size = scrollView.frame.size
             
-            // 2.
+            // 2. add images into scroll view
             let imgView = UIImageView(frame: frame)
             imgView.image = UIImage(named: helpScreens[index])
             
             self.scrollView.addSubview(imgView)
         }
         
-        // 3.
+        // 3. set entire content size to scroll view
         scrollView.contentSize = CGSize(width: (scrollView.frame.size.width * CGFloat(helpScreens.count)), height: scrollView.frame.size.height)
         scrollView.delegate = self
     }
     
+    /**
+     - Indicating end or scroll view with the number of pages from page control
+     - parameters:
+     -  scrollView: The UI scroll view
+     */
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let pageNumber = scrollView.contentOffset.x / scrollView.frame.size.width
         pageControl.currentPage = Int(pageNumber)

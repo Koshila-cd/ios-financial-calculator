@@ -30,8 +30,8 @@ class SavingsFutureValueUIView: UIView {
     
     @IBAction func calculateFutureValue(_ sender: UIButton) {
         
+        // validation is true when text fields are not empty and is string values are not added
         var validation: Bool = true
-        
         
         if let input = paymentFld.text {
             if input.isEmpty {
@@ -128,16 +128,17 @@ class SavingsFutureValueUIView: UIView {
      */
     func valueFormulae(payment: Double, interestRate: Double, numOfYears: Int)-> Double
     {
-        
+
+        // formulae for calculating future value of savings
         var value: Double = 0.0
         
         let interest = interestRate * (1 / 100)
         let t = Double(numOfYears)
         
-        let formulae1 = pow(1 + (interest / 12), (12 * t))
+        let formulae1 = pow((1 + (interest/12)), (12 * t) )
+        let formulae2 = (formulae1 - 1 ) / (interest / 12)
         
-        value = payment * formulae1
-        print(value)
+        value = payment * formulae2
         
         return value
         
