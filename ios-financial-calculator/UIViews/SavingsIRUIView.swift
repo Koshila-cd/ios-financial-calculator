@@ -91,7 +91,7 @@ class SavingsIRUIView: UIView {
         // calculate mortgae if all the fields in the view are not empty and is valid
         if validation {
             interestRate = interestFormulae(payment: payment, futureValue: futureValue, numOfYears: numOfYears)
-            interestLbl.text = "£" + String(format:"%.2f", interestRate)
+            interestLbl.text = String(format:"%.2f", interestRate) + "%"
             
             saveBtn.isEnabled = true
             saveBtn.backgroundColor = UIColor(red:1.00, green:0.83, blue:0.47, alpha:1.0)
@@ -134,7 +134,7 @@ class SavingsIRUIView: UIView {
         let t = Double(numOfYears)      
         let formulae1 = pow((futureValue / payment),(1 / (12 * t)))
         
-        value = 12 * (formulae1 - 1)
+        value = 12 * (formulae1 - 1) * 100
         
         return value
         
