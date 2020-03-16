@@ -11,7 +11,9 @@ import UIKit
 class MortgagePaymentViewController: UIViewController {
     
     override func viewDidLoad() {
-        super.viewDidLoad()        
+        super.viewDidLoad()    
+
+        // apply background color    
         self.view.applyGradient(colours: [.black, .purple, .darkGray], locations: [0.0, 0.5, 1.0])
         
     }

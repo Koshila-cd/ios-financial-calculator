@@ -12,10 +12,12 @@ class Ledger {
     
     let calculation: String
     
+    // initiate the calculation
     init(calculation: String) {
         self.calculation = calculation
     }
     
+    // get the calculation
     func getCalculation() -> String {
         return calculation
     }

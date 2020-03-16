@@ -33,6 +33,7 @@ class SavingsFutureValueUIView: UIView {
         // validation is true when text fields are not empty and is string values are not added
         var validation: Bool = true
         
+        // payment field validation
         if let input = paymentFld.text {
             if input.isEmpty {
                 validation = false
@@ -51,6 +52,7 @@ class SavingsFutureValueUIView: UIView {
             paymentFld.showErr()
         }
         
+        // interest rate field validation
         if let input = interestRateFld.text {
             if input.isEmpty {
                 validation = false
@@ -69,6 +71,7 @@ class SavingsFutureValueUIView: UIView {
             interestRateFld.showErr()
         }
         
+        // loan amount field validation
         if let input = loanTermsFld.text {
             if input.isEmpty {
                 validation = false
@@ -93,6 +96,7 @@ class SavingsFutureValueUIView: UIView {
             futureValue = valueFormulae(payment: payment, interestRate: interestRate, numOfYears: numOfYears)
             futureValueLbl.text = "£" + String(format:"%.2f", futureValue)
             
+            // save button enabling and style changing
             saveBtn.isEnabled = true
             saveBtn.backgroundColor = UIColor(red:1.00, green:0.83, blue:0.47, alpha:1.0)
             saveBtn.layer.cornerRadius = 15

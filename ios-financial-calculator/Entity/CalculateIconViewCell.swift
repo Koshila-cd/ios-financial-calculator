@@ -10,9 +10,8 @@ import UIKit
 
 class CalculateIconViewCell: UICollectionViewCell {
     
-    
-    @IBOutlet weak var calculateIcon: UIImageView!
-    
+    // mapping UI with code
+    @IBOutlet weak var calculateIcon: UIImageView!   
     @IBOutlet weak var calculateName: UILabel!
     
 }

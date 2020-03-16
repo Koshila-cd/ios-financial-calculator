@@ -30,6 +30,7 @@ class SavingsIRUIView: UIView {
         // validation is true when text fields are not empty and is string values are not added
         var validation: Bool = true
           
+        // payment field validation
         if let input = paymentFld.text {
             if input.isEmpty {
                 validation = false
@@ -48,6 +49,7 @@ class SavingsIRUIView: UIView {
             paymentFld.showErr()
         }
         
+        // future value field validation
         if let input = futureValueFld.text {
             if input.isEmpty {
                 validation = false
@@ -66,6 +68,7 @@ class SavingsIRUIView: UIView {
             futureValueFld.showErr()
         }
         
+        // loan terms field validation
         if let input = loanTermsFld.text {
             if input.isEmpty {
                 validation = false

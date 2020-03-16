@@ -15,7 +15,14 @@ class CalculateIcons {
     let segueID: String
     let cellColour: UIColor
     
-    
+    /**
+     - Home page icons
+     - parameters:
+     - name: The amount loaned
+     - icon: Image of the icon
+     - sequeId: The segue Id of the cell
+     - cell color: The cell color
+     */
     init(name: String, icon: UIImage, segueID: String, cellColour: UIColor) {
         self.name = name
         self.icon = icon

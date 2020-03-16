@@ -10,6 +10,7 @@ import UIKit
 
 class LedgerTableViewCell: UITableViewCell {
     
+    // mapping UI with code
     @IBOutlet weak var ledgerText: UILabel!
     @IBOutlet weak var ledgerType: UILabel!
     
@@ -18,11 +19,13 @@ class LedgerTableViewCell: UITableViewCell {
         
     }
     
+    // generated function for selected set
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
     }
     
+    // generated function for layout subviews
     override func layoutSubviews() {
         super.layoutSubviews()
     }

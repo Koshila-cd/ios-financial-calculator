@@ -99,8 +99,7 @@ class CompoundInterestUIView: UIView {
             saveBtn.isEnabled = true
             saveBtn.backgroundColor = UIColor(red:1.00, green:0.83, blue:0.47, alpha:1.0)
             saveBtn.layer.cornerRadius = 15
-        }
-        
+        }  
         
     }
     
