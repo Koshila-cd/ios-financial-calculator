@@ -22,9 +22,9 @@ class HelpViewController: UIViewController, UIScrollViewDelegate {
         
         self.view.applyGradient(colours: [.black, .purple, .darkGray], locations: [0.0, 0.5, 1.0])
         
+        // scroll view and page control
         pageControl.numberOfPages = helpScreens.count
-        setupScreens()
-        
+        setupScreens()       
         scrollView.delegate = self
         
     }

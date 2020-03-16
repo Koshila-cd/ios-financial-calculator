@@ -29,8 +29,7 @@ class LoanViewController: UIViewController {
         segmentView.addSubview(paymentView)
         segmentView.addSubview(interestView)
         segmentView.addSubview(futureValueView)
-        segmentView.addSubview(presentValueView)
-        
+        segmentView.addSubview(presentValueView)    
         
     }
     

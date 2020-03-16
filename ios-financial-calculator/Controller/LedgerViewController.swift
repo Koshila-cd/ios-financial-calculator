@@ -34,7 +34,14 @@ class LedgerViewController: UIViewController ,UITableViewDataSource,UITableViewD
     override func viewDidAppear(_ animated: Bool) {
         createLedger()
     }
-    
+     
+    /**
+        - initialize cell stlyes
+        - parameters:
+        - tableView: The UI table view
+        - cell: The UI table view cell
+        - indexPath: The index of the cell
+     */
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.contentView.layer.borderWidth = 3.0
         cell.contentView.layer.borderColor = UIColor.black.cgColor
@@ -59,6 +66,12 @@ class LedgerViewController: UIViewController ,UITableViewDataSource,UITableViewD
         tableView.reloadData()
     }
     
+    /**
+        - Add values into ledger cells
+        - parameters:
+        - tableView: The UI table view
+        - indexPath: The index of the cell
+     */
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Ledger") as! LedgerTableViewCell
@@ -71,6 +84,7 @@ class LedgerViewController: UIViewController ,UITableViewDataSource,UITableViewD
             cell.ledgerType.text = String(parts[0])
         }
         
+        // cell styles
         cell.isUserInteractionEnabled = false
         cell.contentView.layer.cornerRadius = 10.0
         cell.contentView.layer.borderColor = UIColor(red: 0.25, green: 0.25, blue: 0.25, alpha: 1.00).cgColor
@@ -79,6 +93,12 @@ class LedgerViewController: UIViewController ,UITableViewDataSource,UITableViewD
         return cell
     }
     
+    /**
+        - add table empty message is there are no values in ledger array
+        - parameters:
+        - tableView: The UI table view
+        - section: The integer section
+     */
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if ledger.count == 0 {
             self.tableView.setEmptyMessage("No saved calculations found", UIColor.black)
@@ -88,11 +108,21 @@ class LedgerViewController: UIViewController ,UITableViewDataSource,UITableViewD
         return ledger.count
     }
     
+    /**
+        - The row height of cell
+        - parameters:
+        - tableView: The UI table view
+        - indexPath: The index of the cell
+     */
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 130
     }
     
-    
+    /**
+        - Ledgr delete function
+        - parameters:
+        - sender: The UI bar button item
+     */
     @IBAction func deleteLedger(_ sender: UIBarButtonItem) {
         if ledger.count > 0 {
             
@@ -103,7 +133,7 @@ class LedgerViewController: UIViewController ,UITableViewDataSource,UITableViewD
             SaveSuccess.instance.showAlert(text: "The ledger is Successfully Deleted!")
             deleteBarButton.isEnabled = false
             
-            // refetch hitory and reload table
+            // refetch and reload table
             createLedger()
             DispatchQueue.main.async{ self.tableView.reloadData() }
             
