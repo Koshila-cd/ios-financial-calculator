@@ -94,7 +94,7 @@ class LoanTermsUIView: UIView {
         // calculate mortgae if all the fields in the view are not empty and is valid
         if validation {
             value = loanTermsFormulae(futureValue: futureValue, interestRate: interestRate, principleAmount: principleAmount)
-            loanTermsLbl.text =  String(value) + "Years"
+            loanTermsLbl.text =  String(value) + "Compounds"
             
             // add changes to save button when the calculation is done
             saveBtn.isEnabled = true
@@ -116,13 +116,13 @@ class LoanTermsUIView: UIView {
     {
         
         var value1: Double = 0.0
-        
+
         let interest = interestRate * (1 / 100)
         
         let formulae1 = log10(futureValue / principleAmount)
         let formulae2 = log10(1+(interest / 12))
         
-        value1 = formulae1 / (12 * formulae2)
+        value1 = (formulae1 / (12 * formulae2)) * 12
         print(value1)
         
         return value1

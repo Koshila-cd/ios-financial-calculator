@@ -116,16 +116,12 @@ class PresentValueCIUIView: UIView {
         
         var amount: Double = 0.0
         
-        // number of months calculated from the given number of years
-        let n = Double(12 * numOfYears)
         let t = Double(numOfYears)
         
-        amount = totalAmount/pow((1 + (interestRate/n)),n*t)
-        
-        print(amount)
+        amount = totalAmount/pow((1 + (interestRate/12)),12*t)
         
         return amount
-        
+
     }
     
     /**
