@@ -23,7 +23,7 @@ class FutureValueUIView: UIView {
     var amount: Double = 0
     var interestRate: Double = 0
     var numOfYears: Int = 0
-    var futureValue: Double = 0
+    var futureValue: Double = 0 // payment
     
     /**
      - Get values from textfields in the View and pass them into the formulae for future value calculation
@@ -114,16 +114,13 @@ class FutureValueUIView: UIView {
     func futureValueFormulae(loanAmount: Double, interestRate: Double, numOfYears: Int)-> Double
     {
         
-        var value: Double = 0.0
+        var endFutureValue: Double = 0.0
         
-        // n is to convert years to months
-        let n = 12 * Double(numOfYears)
-        let interest = interestRate * (1 / 100)
-        
-        value = loanAmount * pow((1 + interest),n)
-        
-        return value
-        
+        let r = interestRate * (1 / 100) // from annual interest rate
+
+        endFutureValue =  ( loanAmount*Double( pow( ( 1 + (r / Double(12)) ) , Double(12*numOfYears) ) - 1) ) / (r / Double(12))
+                
+        return round(endFutureValue*100)/100
     }
     
     /**
