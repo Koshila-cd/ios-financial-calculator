@@ -20,12 +20,15 @@ class LoanViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // apply brackground color
         self.view.applyGradient(colours: [.black, .purple, .darkGray], locations: [0.0, 0.5, 1.0])
+        
         paymentView = PresentValueViewController().view
         interestView = CalculateInterestViewController().view
         futureValueView = FutureValueViewController().view
         presentValueView = LoanPresentValueViewController().view
         
+        // adding sub views into segments in compound savings
         segmentView.addSubview(paymentView)
         segmentView.addSubview(interestView)
         segmentView.addSubview(futureValueView)
@@ -33,6 +36,7 @@ class LoanViewController: UIViewController {
         
     }
     
+    // adding segment views into segments in compound savings
     @IBAction func calSegment(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:

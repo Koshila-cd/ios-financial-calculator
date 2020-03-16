@@ -20,6 +20,7 @@ class HelpViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // apply brackground color
         self.view.applyGradient(colours: [.black, .purple, .darkGray], locations: [0.0, 0.5, 1.0])
         
         // scroll view and page control
@@ -29,6 +30,9 @@ class HelpViewController: UIViewController, UIScrollViewDelegate {
         
     }
     
+    /**
+     - setting up scroll view and it's frame size
+     */
     func setupScreens() {
         for index in 0..<helpScreens.count {
             // 1. set frame size to scroll view

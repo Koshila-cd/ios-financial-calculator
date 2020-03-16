@@ -36,7 +36,7 @@ class LedgerViewController: UIViewController ,UITableViewDataSource,UITableViewD
     }
      
     /**
-        - initialize cell stlyes
+        - Initialize cell stlyes
         - parameters:
         - tableView: The UI table view
         - cell: The UI table view cell

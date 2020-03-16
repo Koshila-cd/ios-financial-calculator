@@ -20,6 +20,7 @@ class MortgageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // apply brackground color
         self.view.applyGradient(colours: [.black, .purple, .darkGray], locations: [0.0, 0.5, 1.0])
         
         // Initiate sub views for the segment

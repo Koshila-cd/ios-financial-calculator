@@ -18,6 +18,9 @@ class CalculateViewController: UIViewController, UICollectionViewDataSource, UIC
         generateCalculateIcons()
     }
     
+    /**
+        - The icons in home page
+     */
     func generateCalculateIcons() {
         let interest = CalculateIcons(name: "Interest", icon: UIImage(named: "savings-icon")!, segueID: "goToInterestCalculation", cellColour: UIColor(red: 30/255, green: 30/255, blue: 30/255, alpha: 1.00))
         calculateIcons += [interest]
@@ -26,7 +29,14 @@ class CalculateViewController: UIViewController, UICollectionViewDataSource, UIC
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return calculateIcons.count
     }
-        
+    
+    /**
+        - Initialize cell stlyes
+        - parameters:
+        - tableView: The UI table view
+        - cell: The UI table view cell
+        - indexPath: The index of the cell
+     */
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CalculateIconViewCell
     
