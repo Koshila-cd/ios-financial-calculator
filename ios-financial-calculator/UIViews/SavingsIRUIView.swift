@@ -20,7 +20,7 @@ class SavingsIRUIView: UIView {
     @IBOutlet weak var saveBtn: UIButton!
     
     // value initialization
-    var payment: Double = 0
+    var payment: Double = 0 // principle amount
     var futureValue: Double = 0
     var numOfYears: Int = 0
     var interestRate: Double = 0

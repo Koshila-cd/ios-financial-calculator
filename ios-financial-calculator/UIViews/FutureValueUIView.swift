@@ -20,10 +20,10 @@ class FutureValueUIView: UIView {
     @IBOutlet weak var saveBtn: UIButton!
     
     // value initialization
-    var amount: Double = 0
+    var amount: Double = 0 // payment
     var interestRate: Double = 0
     var numOfYears: Int = 0
-    var futureValue: Double = 0 // payment
+    var futureValue: Double = 0
     
     /**
      - Get values from textfields in the View and pass them into the formulae for future value calculation
